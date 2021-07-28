@@ -1,0 +1,126 @@
+// DON'T TOUCH!!!
+@import '../../modules/sass.sass'
+
+// ================
+
+body
+	overflow-x: hidden !important
+
+*
+	font-family: OpenSans
+	font-size: 16px
+	font-weight: normal
+
+	color: #333
+
+.main
+	position: relative
+
+	width: 100vw
+
+section
+	margin-bottom: p(80, 1920)
+
+.container
+	width: 100%
+	max-width: 1600px
+	margin: 0 auto
+
+.btn
+	width: 314px
+	height: 70px
+
+	font-size: 18px
+	font-weight: 700
+	color: #fff
+
+	background: #9d5cd0
+	border-radius: 100px
+
+	transition: border-color .3s ease-in-out
+
+	&__box
+		display: inline-block
+
+		padding: 5px
+
+		border: 2px solid transparent
+		border-radius: 100px
+
+		transition: border-color .2s ease-in-out
+
+		transform: translateX(-5px)
+
+	&__box-active
+		border-color: #c283f3
+
+.heading
+	margin-bottom: 30px
+
+	font-size: 48px
+
+.heading--mini
+
+	font-size: 24px
+	font-weight: 600
+
+.text
+	width: p(1080, 1600)
+	line-height: 32px
+
+.swiper
+	&__btns
+		position: relative
+		display: flex
+
+		margin-bottom: 30px
+
+	&__btn
+		&--prev svg,
+		&--next svg,
+		&--prev,
+		&--next
+			width: 30px
+			height: 30px
+
+	&-button-disabled svg
+		background: #b3b3b3 !important
+
+	&__pagination
+		width: 70px !important
+
+		margin: 0 10px
+
+		font-size: 16px
+		color: #fff
+
+		text-align: center
+
+		transform: translateY(20%)
+
+	&__pagination *
+		font-size: 16px
+		color: #fff
+
+#swiper-arrow_left,
+#swiper-arrow_right
+	position: absolute
+	top: 0
+	left: 0
+
+// import for your modules from sass folder
+@import 'sass/header.sass'
+@import 'sass/hero.sass'
+@import 'sass/about.sass'
+@import 'sass/gallery.sass'
+@import 'sass/catalog.sass'
+@import 'sass/events.sass'
+@import 'sass/edition.sass'
+@import 'sass/projects.sass'
+@import 'sass/contacts.sass'
+@import 'sass/footer.sass'
+@import 'sass/media.sass'
+
+// ================
+
+// Your styles (but we recommend to write only the main page styles here)

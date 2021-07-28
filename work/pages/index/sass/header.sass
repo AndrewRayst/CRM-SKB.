@@ -1,0 +1,262 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+
+	z-index: 10
+
+	width: 100%
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__up
+
+		padding: 30px 0
+
+		background: #000
+
+	&__down
+		padding: 23px 0
+
+		background: rgba(0, 0, 0, .4)
+
+.logo
+	position: relative
+	display: inline-block
+
+	width: 173px
+	height: 40px
+
+	background: url(../img/sprite.svg#logo) no-repeat center
+	background-size: cover
+
+	&:focus::after
+		width: 100%
+
+	&::after
+		@include pseudo
+		bottom: 0
+
+		width: 0
+		height: 1px
+
+		// margin-left: 10%
+
+		background: #7943a4
+
+		transition: width .3s ease-in-out
+
+.nav
+
+	display: block
+
+	&__list
+		display: flex
+		justify-content: space-between
+
+	&__item:not(:last-child)
+		margin-right: 62px
+
+	&__item:last-child
+		margin-right: 100px
+
+	&__link
+		font-family: OpenSans
+		font-size: 18px
+		font-weight: 600
+
+		color: #fff
+
+		&:focus
+			background: #7943a4
+
+			transition: background .3s ease-in-out
+
+		&:active
+			color: #7943a4 !important
+			background: transparent
+
+			transition: color .3s ease-in-out
+
+		&:hover
+			color: #c283f3
+			background: transparent
+
+			transition: color .3s ease-in-out
+
+.signIn
+
+	position: relative
+
+	display: block
+
+	cursor: pointer
+	user-select: none
+
+	&:focus
+		background: #7943a4
+
+		transition: background .3s ease-in-out
+
+	&:active
+		background: transparent
+
+		.signIn__text
+			color: #7943a4 !important
+
+			transition: color .3s ease-in-out
+
+		svg
+			fill: #7943a4 !important
+
+			transition: fill .3s ease-in-out
+
+	&:hover
+		background: transparent
+
+		.signIn__text
+			color: #c283f3
+
+			transition: color .3s ease-in-out
+
+		svg
+			fill: #c283f3
+			transition: fill .3s ease-in-out
+
+	&__text
+		font-family: OpenSans
+		font-size: 18px
+
+		color: #fff
+
+	svg
+		width: 13px
+		height: 13px
+
+		margin-right: 5px
+
+		fill: #fff
+
+.groups
+	display: flex
+	justify-content: space-between
+
+.group
+	cursor: pointer
+	user-select: none
+
+	&:focus
+		background: #7943a4
+
+		transition: background .3s ease-in-out
+
+	&:active *
+		color: #7943a4 !important
+		background: transparent
+		stroke: #7943a4 !important
+
+		transition: color .3s ease-in-out, stroke .1s ease-in-out
+
+	&:hover
+		background: transparent
+
+	&:hover *
+		color: #c283f3
+		background: transparent !important
+		stroke: #c283f3
+
+		transition: color .3s ease-in-out, stroke .1s ease-in-out
+
+	&__icon svg
+		width: 10px
+		height: 5px
+
+		stroke: #fff
+
+		transform: translateY(-2px)
+		transform-origin: center 25%
+
+	&:not(:last-child)
+		margin-right: 96px
+
+	&__text
+		font-size: 18px
+		color: #fff
+
+.search
+
+	display: flex
+	align-items: center
+
+	&__input
+
+		width: 218px
+
+		color: #fff
+
+		background: transparent
+		border-bottom: 1px solid rgba(256, 256, 256, .85)
+
+		transform: translateY(4px)
+
+		&:focus
+			border-color: #c283f3
+
+			transition: border-color .3s ease-in-out
+
+			&::placeholder
+				color: rgba(256, 256, 256, 0) !important
+
+		&:hover
+			border-color: #c283f3
+
+			transition: border-color .3s ease-in-out
+
+		&:active
+			border-color: #7943a4 !important
+
+			transition: border-color .3s ease-in-out
+
+		&::placeholder
+			font-size: 18px
+
+			color: rgba(256, 256, 256, .85)
+
+	&__btn
+		width: 23px
+		height: 22px
+
+		background-color: transparent
+		background-size: 450%
+		transform: translateX(-50%) translateY(2px)
+
+	&__icon
+		width: 22px
+		height: 22px
+
+.search__btn--1024
+	display: none
+
+	width: 30px
+	height: 30px
+
+	transform: translate(0%)
+
+	svg
+		width: inherit
+		height: inherit
+
+.burger
+	display: none
+
+	width: 36px !important
+	height: 28px !important
+
+	background: transparent
+
+	svg
+		width: inherit
+		height: inherit

@@ -1,0 +1,15 @@
+extends ../../modules/pug/html.pug
+
+block var
+	-var name = 'This is the best page is the world'
+	-var language = 'en'
+
+block content
+
+	main.main
+		include ../../modules/pug/header.pug
+		include pug/content.pug
+
+		include ../../modules/pug/footer.pug
+
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")

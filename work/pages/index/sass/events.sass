@@ -1,0 +1,142 @@
+.events
+	margin-bottom: 138px !important
+
+	&__inner
+		position: relative
+
+	&__cards
+
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		max-height: inherit
+
+		overflow: hidden
+
+		transition: max-height .6s ease-in-out
+
+	&__card
+		display: flex
+		flex: 0 1 p(500, 1600)
+		flex-direction: column
+		justify-content: space-between
+
+		height: 700px
+
+		padding-bottom: 48px
+		margin-bottom: 50px
+
+		border: 1px solid rgba(202, 202, 202, 1)
+
+	&__img
+		margin-bottom: 14px
+
+	&__place,
+	&__date
+
+		padding-right: 19px
+		padding-left: p(300, 500)
+
+		font-size: 12px
+		font-weight: 600
+		line-height: 16px
+
+		color: #999
+
+		text-align: right
+
+	&__date
+		margin-bottom: 5px
+
+	&__heading
+		margin-bottom: 23px
+
+		&--mini
+			margin: 0 30px 0 50px
+			line-height: 32px
+
+	&__paragraph
+		width: p(400, 500)
+		margin: 0 0 auto 50px
+
+		line-height: 33px
+
+	&__link
+		position: relative
+
+		display: inline
+		width: p(108, 500)
+
+		margin-left: 50px
+		color: #9d5cd0
+
+		transition: color .2s ease-in-out, background .2s ease-in-out
+
+		// padding: p(8, 500)
+
+		&::before
+			width: p(92, 108)
+			// width: 100%
+			@include pseudo
+			bottom: -6px
+			// left: p(8, 108)
+			border-bottom: 1px solid #9d5cd0
+
+			transition: border-color .2s ease-in-out
+
+		&:hover
+			color: #7943a4
+
+			&::before
+				border-color: #7943a4
+
+		&:active
+			color: #333
+
+			&::before
+				border-color: #333
+
+		&:focus
+			color: #fff
+			background: #9d5cd0
+
+			&::before
+				border-color: #fff
+
+	&-btn__box
+		position: absolute
+		top: 99%
+		left: 50%
+
+		transform: translateX(-50%)
+
+	&__btn
+		// position: absolute
+		// top: 100%
+		// left: 50%
+
+		width: 188px
+		height: 59px
+
+		color: #9d5cd0
+
+		background: transparent
+
+		border: 3px solid #9d5cd0
+
+		transition: color .2s ease-in-out, background .2s ease-in-out, border-color .2s ease-in-out
+
+		// transform: translateX(-50%)
+
+		&:hover
+			color: #fff
+			background: #9d5cd0
+
+		&:active
+			color: #fff
+			background: #7943a4
+			border-color: #d1a9f0
+
+	&Swiper
+		display: none

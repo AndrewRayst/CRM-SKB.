@@ -1,0 +1,66 @@
+header.header
+	.header__up
+		.container
+			.header__inner
+				button.burger
+					+icon('burger')
+						
+				a.logo(tabindex = '1'  href='#' aria-label='Бланчард, художественная галерея')
+
+				button.search__btn(class='search__btn--1024')
+					+icon('search', 'search__icon')
+
+				nav.nav 
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href="" data-section='about' tabindex = '2') О нас
+						li.nav__item
+							a.nav__link(href="" data-section='gallery' tabindex = '3') Галерея
+						li.nav__item
+							a.nav__link(href="" data-section='catalog' tabindex = '4') Каталог
+						li.nav__item
+							a.nav__link(href="" data-section='events' tabindex = '5') События
+						li.nav__item
+							a.nav__link(href="" data-section='edition' tabindex = '6') Издания
+						li.nav__item
+							a.nav__link(href="" data-section='projects' tabindex = '7') Проекты
+						li.nav__item
+							a.nav__link(href="" data-section='contacts' tabindex = '8') Контакты
+
+				a.signIn(tabindex = '9'  href='#')
+					+icon('signIn-arrow')
+					span.signIn__text Войти
+
+	.header__down
+		.container
+			.header__inner
+				ul.groups
+					li.group(tabindex = '10')
+						span.group__text Реализм
+						span.group__icon 
+							+icon('groups-arrow')
+
+					li.group(tabindex = '11')
+						span.group__text Импрессионизм
+						span.group__icon 
+							+icon('groups-arrow')
+
+					li.group(tabindex = '12')
+						span.group__text Постимпрессионизм
+						span.group__icon 
+							+icon('groups-arrow')
+
+					li.group(tabindex = '13')
+						span.group__text Авангард
+						span.group__icon 
+							+icon('groups-arrow')
+
+					li.group(tabindex = '14')
+						span.group__text Футуризм
+						span.group__icon 
+							+icon('groups-arrow')
+
+				forum.search
+					button.search__btn
+						+icon('search', 'search__icon')
+					input.search__input( type = 'text' placeholder = 'Поиск по сайту' tabindex = '15')

@@ -1,0 +1,889 @@
+section.hero 
+	.hero-swiper--container
+		.hero__inner 
+			.container
+				h1.hero__title Прикоснитесь к прекрасному
+				p.hero__subtitle Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+
+				.btn__box
+					button.hero__btn(class='btn' tabindex='16') Подписаться на рассылку
+		.swiper-wrapper
+			.swiper-slide(class='hero__slide hero__slide--1')
+			.swiper-slide(class='hero__slide hero__slide--2')
+			.swiper-slide(class='hero__slide hero__slide--3')
+
+section.about
+	.container
+		h2.heading(class='about__heading') О нас
+		p.about__paragraph(class='text') Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+
+section.gallery
+	.container 
+		.gallery__inner 
+			.gallery__left
+				h2.heading(class = 'gallery__heading') Галерея
+				p.gallery__subtitle Фильтр:
+				.gallery__select--box
+					select#gallery__select(name="filter")
+						option(value="") Живопись
+						option(value="") Рисунок
+						option(value="") Скульптура
+
+				p.gallery__paragraph
+					| Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
+					a.gallery__paragraph--link(tabindex = '49'  href='#') авторизуйтесь, 
+					| либо воспользуйтесь лицензией. 
+
+			.gallery__right
+				.swiper-container(class='gallerySwiper')
+					.swiper__btns( aria-hidden='true' )
+						.swiper__btn--prev(class='gallery__btn--prev' tabindex = '50' aria-hidden='true')
+							+icon('swiper-arrow')
+						.swiper__pagination(class='gallery__pagination' id='gallery__pagination')
+						.swiper__btn--next(class='gallery__btn--next' tabindex = '51' aria-hidden='true')
+							+icon('swiper-arrow')
+					.swiper-wrapper(class='gallery__wrapper')
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-1.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-2.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-3.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-4.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-5.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide') 
+							img(loading="lazy" src="img/gallery-6.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img(loading="lazy" src="img/gallery-7.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img(loading="lazy" src="img/gallery-8.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img(loading="lazy" src="img/gallery-9.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-10.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-11.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-12.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-13.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-14.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-15.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-16.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-17.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-18.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-19.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-20.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-21.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-22.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-23.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+		
+						.swiper-slide(class='gallery-slide' aria-hidden='true') 
+							img( loading="lazy" src="img/gallery-24.jpg", alt="Произведение исскуства")
+							.gallery-slide__inner 
+								.gallery-slide__hover
+									+icon('gallery__hover')
+
+			p.gallery__paragraph--768
+				| Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
+				a.gallery__paragraph--link(tabindex = '49'  href='#') авторизуйтесь, 
+				| либо воспользуйтесь лицензией. 
+								
+	.gallery-modal
+		.gallery-modal__inner
+			.gallery-modal__exit(tabindex='501')
+				+icon('gallery__exit')
+
+			.gallery-modal__img(tabindex='500')
+				//- img(src="img/gallery-1.jpg", alt="Произведение исскуства")
+
+			.gallery-modal__info
+				.gallery-modal__text
+					.gallery-modal__name Название
+					.gallery-modal__author Автор - Творец
+					.gallery-modal__since Нарисована, сделано в...
+					.gallery-modal__description Описание: это прекрасное произведение искусства Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut ea consequuntur eaque, ducimus asperiores aliquid recusandae architecto nihil facere deserunt facilis. Cumque pariatur adipisci iure quos aliquid iusto rem!
+
+					.btn__box
+						button.gallery-modal__btn(class='btn' tabindex='502') Скачать
+
+section.catalog
+	.container
+		.catalog__header 
+			h2.heading(class = 'catalog__heading') Каталог	
+			ul.catalog-languages
+				li.catalog-languages__item(tabindex='80' aria-label='Французский язык')
+					img(loading="lazy" src="img/lang-french.jpg", alt="lang french" aria-label='Французский язык')
+				li.catalog-languages__item(tabindex='81' aria-label='Немецкий язык')
+					img(loading="lazy" src="img/lang-germany.jpg", alt="lang germany" aria-label='Немецкий язык')
+				li.catalog-languages__item(tabindex='82' aria-label='Итальянский язык')
+					img(loading="lazy" src="img/lang-italian.jpg", alt="lang italian" aria-label='Итальянский язык')
+				li.catalog-languages__item(tabindex='83' aria-label='Русский язык')
+					img(loading="lazy" src="img/lang-russian.jpg", alt="lang russian" aria-label='Русский язык')
+				li.catalog-languages__item(tabindex='84' aria-label='Бельгийский язык')
+					img(loading="lazy" src="img/lang-belgia.jpg", alt="lang belgia" aria-label='Бельгийский язык')
+
+		p.catalog__subtitle(class = 'text') Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
+
+		.catalog__creators
+
+			ul.catalog__persons
+				li.catalog__person(class='catalog__person--prev')
+				li.catalog__person(class='catalog__person--curent')
+					img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
+
+					h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+					p.catalog__date 2 июня 1448 — 11 января 1494.
+					p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+
+
+
+			.catalog-accordion 
+				ul.accordion__list 
+					li.accordion__item(class = 'accordion__item--active' tabindex='100')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							ul.accordion__creators 
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Бенедетто ди Биндо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Веккьетта
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Парентино, Бернардо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Бергоньоне, Амброджо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Андреа Верроккьо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Пезеллино
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Биссоло, Франческо
+								li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+									span Доменико Гирландайо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Пьетро Перуджино
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Больтраффио, Джованни
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Беноццо Гоццоли
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Перуцци, Бальдассаре
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Бонсиньори, Франческо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Граначчи, Франческо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Пизанелло
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Боттичини, Рафаэлло
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Грегорио ди Чекко
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Пинтуриккьо
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Брамантино
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Джованни да Удине
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Бреа, Людовико
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Джованни ди Паоло
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Бьяджо д’Антонио Туччи
+								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+									span Джорджоне
+
+					li.accordion__item(tabindex='101')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+					li.accordion__item(tabindex='102')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+					li.accordion__item(tabindex='103')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+					li.accordion__item(tabindex='104')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+					li.accordion__item(tabindex='105')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+					li.accordion__item(tabindex='106')
+						.accordion__name
+							h3.accordion__heading(class='heading--mini') C 2000 г.
+							+icon('accordion__arrow')
+						.accordion__content
+							.nothing
+								.nothing__picture 
+									div 
+
+								.nothing__info
+									h3.nothing__heading(class='heading--mini') Здесь пока пусто
+									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+
+section.events 
+	.container
+		.events__inner
+			h2.heading(class='events__heading') События
+			.events__cards
+				.events__card 
+					.events__info
+						img.events__img(src="img/event__img-1.jpg", alt="news picture" loading="lazy")
+						p.events__place Музей им. Щусева
+						p.events__date с 20 марта по 30 апреля
+
+						h3.heading--mini(class='events__heading--mini') Книжная гравюра в живом восприятии
+						p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+				.events__card 
+					img.events__img(src="img/event__img-2.jpg", alt="news picture" loading="lazy")
+					p.events__place ММОМА
+					p.events__date 24 марта 19:00
+
+					h3.heading--mini(class='events__heading--mini') «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+					p.events__paragraph(class='text') Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+
+				.events__card 
+					img.events__img(src="img/event__img-3.jpg", alt="news picture" loading="lazy")
+					p.events__place Еврейский музей
+					p.events__date с 31 марта по 21 апреля
+
+					h3.heading--mini(class='events__heading--mini') Выставка «Формация 2020»
+					p.events__paragraph(class='text') Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+				.events__card 
+					img.events__img(src="img/event__img-4.jpg", alt="news picture" loading="lazy")
+					p.events__place Третьяковка на Крымском валу
+					p.events__date с 30 марта по 30 апреля
+
+					h3.heading--mini(class='events__heading--mini') XXIV Международная биеннале молодого искусства
+					p.events__paragraph(class='text') Внезапно, реплицированные с зарубежных источников, современные исследования.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+
+				.events__card 
+					img.events__img(src="img/event__img-5.jpg", alt="news picture" loading="lazy")
+					p.events__place ММАМ
+					p.events__date с 8 апреля по 20 мая
+
+					h3.heading--mini(class='events__heading--mini') Джон Винзор. Фотографии из серии «Метафора серебра»
+					p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+			.btn__box( class='events-btn__box' )
+				button.events__btn(class='btn') Все события
+
+			.swiper-container(class='eventsSwiper')
+					.swiper-wrapper(class='events__wrapper')
+						.events__card(class='swiper-slide')
+							.events__info
+								img.events__img(src="img/event__img-1.jpg", alt="news picture" loading="lazy")
+								p.events__place Музей им. Щусева
+								p.events__date с 20 марта по 30 апреля
+
+								h3.heading--mini(class='events__heading--mini') Книжная гравюра в живом восприятии
+								p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+
+							a.events__link(href="#" tabindex='-1') Подробнее
+
+						.events__card(class='swiper-slide')
+							img.events__img(src="img/event__img-2.jpg", alt="news picture" loading="lazy")
+							p.events__place ММОМА
+							p.events__date 24 марта 19:00
+
+							h3.heading--mini(class='events__heading--mini') «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+							p.events__paragraph(class='text') Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+
+							a.events__link(href="#" tabindex='-1') Подробнее
+
+
+						.events__card(class='swiper-slide')
+							img.events__img(src="img/event__img-3.jpg", alt="news picture" loading="lazy")
+							p.events__place Еврейский музей
+							p.events__date с 31 марта по 21 апреля
+
+							h3.heading--mini(class='events__heading--mini') Выставка «Формация 2020»
+							p.events__paragraph(class='text') Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+
+							a.events__link(href="#" tabindex='-1') Подробнее
+
+						.events__card(class='swiper-slide')
+							img.events__img(src="img/event__img-4.jpg", alt="news picture" loading="lazy")
+							p.events__place Третьяковка на Крымском валу
+							p.events__date с 30 марта по 30 апреля
+
+							h3.heading--mini(class='events__heading--mini') XXIV Международная биеннале молодого искусства
+							p.events__paragraph(class='text') Внезапно, реплицированные с зарубежных источников, современные исследования.
+
+							a.events__link(href="#" tabindex='-1') Подробнее
+
+
+						.events__card(class='swiper-slide')
+							img.events__img(src="img/event__img-5.jpg", alt="news picture" loading="lazy")
+							p.events__place ММАМ
+							p.events__date с 8 апреля по 20 мая
+
+							h3.heading--mini(class='events__heading--mini') Джон Винзор. Фотографии из серии «Метафора серебра»
+							p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+
+							a.events__link(href="#" tabindex='-1') Подробнее
+
+					.swiper__pagination(class='events__pagination' id='events__pagination')
+
+section.edition
+	.container
+		.edition__inner
+
+			.edition__menu 
+				h2.heading(class='edition__heading') Издания
+				form.edition__form(action="#")
+					fieldset.edition__group
+						legend.edition__legend Категории
+
+						input.edition__checkbox(type=`checkbox` id=`categories-best-sellers` name=`categories`)
+						label.edition__checkbox-label(for=`categories-best-sellers` tabindex='150') 
+							.edition__checkbox__rect
+							div Бестселлеры
+
+						input.edition__checkbox(type=`checkbox` id=`categories-art` name=`categories`)
+						label.edition__checkbox-label(for=`categories-art` tabindex='151') 
+							.edition__checkbox__rect
+							div Искусство
+
+						input.edition__checkbox(type=`checkbox` id=`categories-architecture` name=`categories`)
+						label.edition__checkbox-label(for=`categories-architecture`  tabindex='152') 
+							.edition__checkbox__rect
+							div Архитектура
+
+						input.edition__checkbox(type=`checkbox` id=`categories-design` name=`categories`)
+						label.edition__checkbox-label(for=`categories-design` tabindex='153') 
+							.edition__checkbox__rect
+							div Дизайн
+
+						input.edition__checkbox(type=`checkbox` id=`categories-fashion` name=`categories`)
+						label.edition__checkbox-label(for=`categories-fashion` tabindex='154') 
+							.edition__checkbox__rect
+							div Мода
+
+						input.edition__checkbox(type=`checkbox` id=`categories-for-children` name=`categories`)
+						label.edition__checkbox-label(for=`categories-for-children` tabindex='155') 
+							.edition__checkbox__rect
+							div Детям
+
+						input.edition__checkbox(type=`checkbox` id=`categories-fiction` name=`categories`)
+						label.edition__checkbox-label(for=`categories-fiction` tabindex='156') 
+							.edition__checkbox__rect
+							div Художественная литература
+
+						input.edition__checkbox(type=`checkbox` id=`categories-journalism` name=`categories`)
+						label.edition__checkbox-label(for=`categories-journalism` tabindex='157') 
+							.edition__checkbox__rect
+							div Публицистика
+
+						input.edition__checkbox(type=`checkbox` id=`categories-travel-guides` name=`categories`)
+						label.edition__checkbox-label(for=`categories-travel-guides` tabindex='158') 
+							.edition__checkbox__rect
+							div Путеводители
+
+						input.edition__checkbox(type=`checkbox` id=`categories-philosophy` name=`categories`)
+						label.edition__checkbox-label(for=`categories-philosophy` tabindex='159') 
+							.edition__checkbox__rect
+							div Философия
+
+						input.edition__checkbox(type=`checkbox` id=`categories-educational-literature` name=`categories`)
+						label.edition__checkbox-label(for=`categories-educational-literature`  tabindex='160') 
+							.edition__checkbox__rect
+							div Учебная литература
+
+						input.edition__checkbox(type=`checkbox` id=`categories-magazines-newspapers` name=`categories`)
+						label.edition__checkbox-label(for=`categories-magazines-newspapers` tabindex='161') 
+							.edition__checkbox__rect
+							div Журналы и газеты
+
+					fieldset.edition__sets
+						legend.edition__legend Категории
+
+						.edition__set
+
+							input.edition__checkbox(type=`checkbox` id=`categories-best-sellers--768` name=`categories` checked='checked')
+							label.edition__checkbox-label(for=`categories-best-sellers--768` tabindex='150') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Бестселлеры
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-art--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-art--768` tabindex='151') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Искусство
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-architecture--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-architecture--768`  tabindex='152') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Архитектура
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-design--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-design--768` tabindex='153' ) 
+								.edition__checkbox__rect
+								.edition__checkbox__text Дизайн
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+						.edition__set
+
+							input.edition__checkbox(type=`checkbox` id=`categories-fashion--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-fashion--768` tabindex='154') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Мода
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-for-children--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-for-children--768` tabindex='155') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Детям
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-fiction--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-fiction--768` tabindex='156') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Художественная литература
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-journalism--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-journalism--768` tabindex='157') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Публицистика
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+						.edition__set
+							input.edition__checkbox(type=`checkbox` id=`categories-travel-guides--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-travel-guides--768` tabindex='158') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Путеводители
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-philosophy--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-philosophy--768` tabindex='159') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Философия
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-educational-literature--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-educational-literature--768`  tabindex='160') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Учебная литература
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+							input.edition__checkbox(type=`checkbox` id=`categories-magazines-newspapers--768` name=`categories`)
+							label.edition__checkbox-label(for=`categories-magazines-newspapers--768` tabindex='161') 
+								.edition__checkbox__rect
+								.edition__checkbox__text Журналы и газеты
+
+								.edition__checkbox__cross
+									+icon(`cross`)
+
+					fieldset.edition__group
+						legend.edition__legend(class='edition__legend--cost') Цена
+						.edition__cost 
+							div От
+							input(type="text", name="#" placeholder='50' autocomplete='off' tabindex='162')
+							div до
+							input(type="text", name="#" placeholder='2500' autocomplete='off' tabindex='163')
+							div руб.
+
+			.edition__swiper
+				.swiper-container(class='editionSwiper')
+					.swiper__btns(class='edition__btns')
+						.swiper__btn--prev(id='edition__button--prev' class='edition__btn--prev' tabindex='164' aria-hidden='true')
+							+icon('swiper-arrow')
+						.swiper__pagination(id='edition__pagination'  aria-hidden='true')
+						.swiper__btn--next(id='edition__button--next' class='edition__btn--next' tabindex='165' aria-hidden='true')
+							+icon('swiper-arrow')
+							
+					.swiper-wrapper(class='edition__wrapper')
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-1.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Искусство цвета
+
+									.edition-slide__cost 620 руб
+
+								.edition-slide__author Иттен, Иоханнес 
+
+								.edition-slide__cost--320 620 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-2.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Типографика
+
+									.edition-slide__cost 2 450 руб
+
+								.edition-slide__author Рудер, Эмиль 
+
+								.edition-slide__cost--320 2 450 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-3.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Книга про буквы
+
+									.edition-slide__cost 2 200 руб
+
+								.edition-slide__author Гордон, Юрий 
+
+								.edition-slide__cost--320 2 200 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-4.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Николай Ильин
+
+									.edition-slide__cost 1 100 руб
+
+								.edition-slide__author Кричевский, Владимир 
+
+								.edition-slide__cost--320 1 100 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-5.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Модульные сетки в граф...
+
+									.edition-slide__cost 1 450 руб
+
+								.edition-slide__author Мюллер-Брокманн, Йозеф 
+
+								.edition-slide__cost--320 1 450 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-6.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Эволюция графических ст...
+
+									.edition-slide__cost 3 200 руб
+
+								.edition-slide__author Хеллер, Чваст
+
+								.edition-slide__cost--320 3 200 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+						.swiper-slide(class='edition-slide') 
+							img(src="img/edition-7.jpg", alt="Произведение исскуства" loading="lazy")
+							.edition-slide__box 
+								.edition-slide__info 
+									.edition-slide__name Искусство и визуальное в...
+
+									.edition-slide__cost 2 200 руб
+
+								.edition-slide__author Арнхейм, Рудольф 
+
+								.edition-slide__cost--320 2 200 руб
+
+								.btn__box
+									button.btn(class='edition-slide__btn' tabindex='-1') Заказать
+
+section.projects 
+	.container
+		h2.heading(class='projects__heading') Проекты
+
+		p.projects__paragraph(class = 'text') 
+			| Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
+			span.projects__i( id='projects__popup-1' tabindex='190') i
+			| обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+			span.projects__i( id='projects__popup-2' tabindex='191') i
+			| исключительно в разрезе маркетинговых и финансовых 
+			span.projects__i( id='projects__popup-3' tabindex='192') i
+			| предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
+			a.projects__link(  tabindex='193' href='blanchard-art.ru/projects/about' ) blanchard-art.ru/projects/about
+
+		h3.heading--mini(class='projects__heading--mini') Партнёры проектов:
+		.projects__partners
+			.projects__button--prev( class='projects__button' tabindex='200'  aria-hidden='true')
+					+icon('projects__arrow')
+					
+			.swiper-container(class='projectsSwiper')
+				.swiper-wrapper(class='projects__wrapper')
+
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-1.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-2.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-3.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-4.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-5.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-6.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-7.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-8.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+					.swiper-slide(class='projects__slide')
+						a(href="#" tabindex='-1' aria-hidden='true') 
+							img(src="img/project__img-9.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
+
+			.projects__button--next( class='projects__button'  tabindex='201'  aria-hidden='true')
+				+icon('projects__arrow')
+
+section.contacts
+
+	.container
+		h2.heading(class='contacts__heading') Контакты
+
+	.contacts__inner
+		.contacts__menu
+			.contacts__address
+				h3.heading--mini Шоурум №4
+				p.contacts__paragraph Леонтьевский переулок, дом 5/1
+
+			form.contacts__form(id='contacts__form')
+				fieldset
+					legend.contacts__legend Заказать обратный звонок
+
+					label
+						//- span.js-valid__text Uncorrect name
+						input.contacts__input(type="text" placeholder = 'Имя*' data-validate-field="name" tabindex='220')
+
+					label
+						input.contacts__input(type="tel" placeholder = 'Телефон*' data-validate-field="phone" tabindex='221')
+
+					.btn__box
+						button.btn(class = 'contacts__btn'  tabindex='222') Заказать
+
+			.socials__title Связаться в один клик
+
+			.socials
+				ul.socials__list
+					li.socials__item
+						a.socials__link(href="#"  tabindex='223' aria-label='Whatsapp') 
+							+icon('whatsapp')
+					li.socials__item
+						a.socials__link(href="#"  tabindex='224' aria-label='Telegramm') 
+							+icon('telegram')
+
+		.contacts__map(id = 'map' aria-hidden='true')
+
+		.contacts__address--320
+				h3.heading--mini(class='contacts__heading--mini') Шоурум №4
+				p.contacts__paragraph Леонтьевский переулок, дом 5/1

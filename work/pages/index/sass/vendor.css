@@ -1,0 +1,13 @@
+/*  DON'T TOUCH!!! */
+@import 'normalize.css';
+
+/* ================ */
+
+/* import package from node_modules */
+
+@import 'swiper/swiper-bundle.css';
+@import 'choices.js/public/assets/styles/choices.min.css';
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/animations/scale.css';
+
+/* ================ */
