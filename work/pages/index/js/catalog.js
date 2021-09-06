@@ -3,7 +3,7 @@ export default () => {
 	const accordionItems = document.querySelectorAll( `.accordion__item` )
 	const creators = document.querySelectorAll( `.accordion__creator` )
 	const catalogPersons = document.querySelector( `.catalog__persons` )
-	const languages = document.querySelectorAll( `.catalog-languages__item ` )
+	const languages = document.querySelectorAll( `.catalog__languages-item` )
 
 	function clouseAccordion() {
 
@@ -20,9 +20,11 @@ export default () => {
 
 	}
 
-	function personInfo( creator ) {
+	function personInfo( creator, catalog ) {
 
-		const personPrev = document.querySelector( `.catalog__person--prev` )
+		const personPrev = catalog.querySelector( `.catalog__person--prev` )
+
+		let catalogPersons = catalog.querySelector(`.catalog__persons`)
 
 		let creators = {
 
@@ -102,8 +104,8 @@ export default () => {
 
 		personPrev.remove()
 
-		const personCurent = document.querySelector( `.catalog__person--curent` )
-		personNext = document.querySelector( `.catalog__person--next` )
+		const personCurent = catalog.querySelector( `.catalog__person--curent` )
+		personNext = catalog.querySelector( `.catalog__person--next` )
 
 		setTimeout( () => {
 
@@ -241,7 +243,7 @@ export default () => {
 
 	} )
 
-	function creatorsUnactive() {
+	function creatorsUnactive( creators ) {
 
 		creators.forEach( ( item ) => {
 
@@ -257,10 +259,12 @@ export default () => {
 
 			if ( !e.target.classList.contains( `accordion__creator--active` ) ) {
 
-				let creator = e.target
+				let creatorName = e.target
+				let creator = e.target.parentElement
+				let catalog = creator.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
 
-				creatorsUnactive()
-				personInfo( creator.textContent )
+				creatorsUnactive( catalog.querySelectorAll( `.accordion__creator` ) )
+				personInfo( creatorName.textContent, catalog )
 
 				creator.classList.toggle( `accordion__creator--active` )
 
@@ -268,78 +272,21 @@ export default () => {
 
 		} )
 
-		// item.addEventListener( `keydown`, ( e ) => {
+		item.addEventListener( `keydown`, ( e ) => {
 
-		// 	if ( e.keyCode === 13 ) {
+			if ( e.keyCode === 13 ) e.target.children[0].click()
 
-		// 		if ( !e.target.classList.contains( `accordion__creator--active` ) ) {
-
-		// 			let creator = e.target
-
-		// 			creatorsUnactive()
-		// 			personInfo( creator.textContent )
-
-		// 			creator.classList.toggle( `accordion__creator--active` )
-
-		// 		}
-
-		// 	}
-
-		// } )
+		} )
 
 	} )
 
 	// LANG
 
-	function langActive( target ) {
-
-		if ( target.classList.contains( `catalog-languages__item--active` ) ) {
-
-			target.classList.remove( `catalog-languages__item--active` )
-
-		}
-
-		else {
-
-			languages.forEach( lang => {
-
-				if ( lang.classList.contains( `catalog-languages__item--active` ) ) {
-
-					lang.classList.remove( `catalog-languages__item--active` )
-
-				}
-
-				target.classList.add( `catalog-languages__item--active` )
-
-			} )
-
-		}
-
-	}
-
 	languages.forEach( ( lang ) => {
-
-		lang.addEventListener( `click`, ( event ) => {
-
-			if ( event.currentTarget === lang ) {
-
-				langActive( event.currentTarget )
-
-			}
-
-		} )
 
 		lang.addEventListener( `keydown`, ( event ) => {
 
-			if ( event.keyCode === 13 ) {
-
-				if ( event.currentTarget === lang ) {
-
-					langActive( event.currentTarget )
-
-				}
-
-			}
+			if ( event.keyCode === 13 ) lang.click()
 
 		} )
 

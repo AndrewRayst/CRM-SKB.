@@ -105,20 +105,20 @@ export default () => {
 
 		modalImg.focus()
 
-		document.querySelector( `body` ).style.overflow = `hidden`
+		document.querySelector( `body` ).style.background = `rgba(0,0,0,.6)`
 
-		gallery.scrollIntoView( {
+		// gallery.scrollIntoView( {
 
-			behavior: `smooth`,
-			block: `start`,
+		// 	behavior: `smooth`,
+		// 	block: `start`,
 
-		} )
+		// } )
 
 		modalExit.addEventListener( `keydown`, event => {
 
 			if ( event.keyCode === 13 ) {
 
-				document.querySelector( `body` ).style.overflow = ``
+				document.querySelector( `body` ).style.background = ``
 
 				modal.style.display = ''
 				target.focus()
@@ -130,7 +130,7 @@ export default () => {
 
 		modalExit.addEventListener( `click`, event => {
 
-			document.querySelector( `body` ).style.overflow = ``
+			document.querySelector( `body` ).style.background = ``
 
 			modal.style.display = ''
 			target.focus()

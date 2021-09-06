@@ -1,0 +1,28 @@
+.taby__panels {
+	position: relative;
+
+	width: 100%;
+
+	overflow: hidden;
+
+}
+
+.taby__panel {
+	position: absolute;
+	top: 0;
+
+	display: none;
+
+	width: 100%;
+
+
+	transition: transform .3s ease-in-out;
+}
+
+.taby__panel-active {
+
+	position: relative !important;
+
+	display: block;
+
+}

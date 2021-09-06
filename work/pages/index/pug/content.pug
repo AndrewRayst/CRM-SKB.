@@ -38,153 +38,281 @@ section.gallery
 				.swiper-container(class='gallerySwiper')
 					.swiper__btns( aria-hidden='true' )
 						.swiper__btn--prev(class='gallery__btn--prev' tabindex = '50' aria-hidden='true')
-							+icon('swiper-arrow')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
+
 						.swiper__pagination(class='gallery__pagination' id='gallery__pagination')
 						.swiper__btn--next(class='gallery__btn--next' tabindex = '51' aria-hidden='true')
-							+icon('swiper-arrow')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
 					.swiper-wrapper(class='gallery__wrapper')
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-1.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
+
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-2.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-3.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-4.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-5.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide') 
 							img(loading="lazy" src="img/gallery-6.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img(loading="lazy" src="img/gallery-7.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img(loading="lazy" src="img/gallery-8.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img(loading="lazy" src="img/gallery-9.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-10.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-11.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-12.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-13.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-14.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-15.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-16.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-17.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-18.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-19.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-20.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-21.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-22.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-23.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 		
 						.swiper-slide(class='gallery-slide' aria-hidden='true') 
 							img( loading="lazy" src="img/gallery-24.jpg", alt="Произведение исскуства")
 							.gallery-slide__inner 
 								.gallery-slide__hover
-									+icon('gallery__hover')
+									<svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
+										<path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/>
+										<path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/>
+									</svg>
 
 			p.gallery__paragraph--768
 				| Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
@@ -194,193 +322,917 @@ section.gallery
 	.gallery-modal
 		.gallery-modal__inner
 			.gallery-modal__exit(tabindex='501')
-				+icon('gallery__exit')
+				<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M20 10L15 15M15 15L10 10M15 15L10 20M15 15L20 20"/>
+				</svg>
+
 
 			.gallery-modal__img(tabindex='500')
-				//- img(src="img/gallery-1.jpg", alt="Произведение исскуства")
+				//- img(src="img/gallery-3.jpg", alt="Произведение исскуства")
 
 			.gallery-modal__info
 				.gallery-modal__text
-					.gallery-modal__name Название
-					.gallery-modal__author Автор - Творец
-					.gallery-modal__since Нарисована, сделано в...
-					.gallery-modal__description Описание: это прекрасное произведение искусства Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut ea consequuntur eaque, ducimus asperiores aliquid recusandae architecto nihil facere deserunt facilis. Cumque pariatur adipisci iure quos aliquid iusto rem!
-
-					.btn__box
-						button.gallery-modal__btn(class='btn' tabindex='502') Скачать
+					.gallery-modal__author Казимир Малевич
+					.gallery-modal__name “Женщина с граблями”
+					.gallery-modal__since 1931-1932
+					.gallery-modal__description 
+						| Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
 
 section.catalog
 	.container
 		.catalog__header 
 			h2.heading(class = 'catalog__heading') Каталог	
-			ul.catalog-languages
-				li.catalog-languages__item(tabindex='80' aria-label='Французский язык')
+			ul.catalog__languages-btns
+				li.catalog__languages-item(tabindex='80' aria-label='Французский язык')
 					img(loading="lazy" src="img/lang-french.jpg", alt="lang french" aria-label='Французский язык')
-				li.catalog-languages__item(tabindex='81' aria-label='Немецкий язык')
+				li.catalog__languages-item(tabindex='81' aria-label='Немецкий язык')
 					img(loading="lazy" src="img/lang-germany.jpg", alt="lang germany" aria-label='Немецкий язык')
-				li.catalog-languages__item(tabindex='82' aria-label='Итальянский язык')
+				li.catalog__languages-item(tabindex='82' aria-label='Итальянский язык')
 					img(loading="lazy" src="img/lang-italian.jpg", alt="lang italian" aria-label='Итальянский язык')
-				li.catalog-languages__item(tabindex='83' aria-label='Русский язык')
+				li.catalog__languages-item(tabindex='83' aria-label='Русский язык' class='taby__btn-active')
 					img(loading="lazy" src="img/lang-russian.jpg", alt="lang russian" aria-label='Русский язык')
-				li.catalog-languages__item(tabindex='84' aria-label='Бельгийский язык')
+				li.catalog__languages-item(tabindex='84' aria-label='Бельгийский язык')
 					img(loading="lazy" src="img/lang-belgia.jpg", alt="lang belgia" aria-label='Бельгийский язык')
 
-		p.catalog__subtitle(class = 'text') Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
+		ul.catalog__languages-panels
+			li.catalog__languages-panel 
+				p.catalog__subtitle(class = 'text') Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant de la culture politique de type continental-européen, seront déclarés violant les normes universelles d'éthique et de moralité. En tant que partie seulement du tableau d'ensemble, cherchant à supplanter la fabrication traditionnelle, la nanotechnologie reste à ce jour le lot des libéraux désireux d'être fonctionnellement dispersés en éléments indépendants.
+				.catalog__creators
 
-		.catalog__creators
+					ul.catalog__persons
+						li.catalog__person(class='catalog__person--prev')
+						li.catalog__person(class='catalog__person--curent')
+							img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
 
-			ul.catalog__persons
-				li.catalog__person(class='catalog__person--prev')
-				li.catalog__person(class='catalog__person--curent')
-					img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
-
-					h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
-					p.catalog__date 2 июня 1448 — 11 января 1494.
-					p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+							h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+							p.catalog__date 2 июня 1448 — 11 января 1494.
+							p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
 
 
 
-			.catalog-accordion 
-				ul.accordion__list 
-					li.accordion__item(class = 'accordion__item--active' tabindex='100')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							ul.accordion__creators 
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Бенедетто ди Биндо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Веккьетта
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Парентино, Бернардо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Бергоньоне, Амброджо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Андреа Верроккьо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Пезеллино
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Биссоло, Франческо
-								li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
-									span Доменико Гирландайо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Пьетро Перуджино
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Больтраффио, Джованни
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Беноццо Гоццоли
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Перуцци, Бальдассаре
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Бонсиньори, Франческо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Граначчи, Франческо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Пизанелло
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Боттичини, Рафаэлло
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Грегорио ди Чекко
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Пинтуриккьо
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Брамантино
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Джованни да Удине
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Бреа, Людовико
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Джованни ди Паоло
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Бьяджо д’Антонио Туччи
-								li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
-									span Джорджоне
+					.catalog-accordion 
+						ul.accordion__list 
+							li.accordion__item(class = 'accordion__item--active' tabindex='100')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
 
-					li.accordion__item(tabindex='101')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+								.accordion__content
+									ul.accordion__creators 
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бенедетто ди Биндо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Веккьетта
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Парентино, Бернардо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бергоньоне, Амброджо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Андреа Верроккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пезеллино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Биссоло, Франческо
+										li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+											span Доменико Гирландайо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пьетро Перуджино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Больтраффио, Джованни
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Беноццо Гоццоли
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Перуцци, Бальдассаре
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бонсиньори, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Граначчи, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пизанелло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Боттичини, Рафаэлло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Грегорио ди Чекко
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пинтуриккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Брамантино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни да Удине
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бреа, Людовико
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни ди Паоло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бьяджо д’Антонио Туччи
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джорджоне
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='101')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
-					li.accordion__item(tabindex='102')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='102')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
-					li.accordion__item(tabindex='103')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='103')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
-					li.accordion__item(tabindex='104')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='104')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
-					li.accordion__item(tabindex='105')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='105')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
-					li.accordion__item(tabindex='106')
-						.accordion__name
-							h3.accordion__heading(class='heading--mini') C 2000 г.
-							+icon('accordion__arrow')
-						.accordion__content
-							.nothing
-								.nothing__picture 
-									div 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
-								.nothing__info
-									h3.nothing__heading(class='heading--mini') Здесь пока пусто
-									p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
-									a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+							li.accordion__item(tabindex='106')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 2000 г.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
 
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+			li.catalog__languages-panel 
+				p.catalog__subtitle(class = 'text') Den Aktionären der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische politische Kultur darstellen, wird erklärt, dass sie gegen die universellen Normen der Ethik und Moral verstoßen. Als nur ein Teil des großen Ganzen, der die traditionelle Fertigung zu ersetzen sucht, bleibt die Nanotechnologie bis heute das Los der Liberalen, die bestrebt sind, funktional in unabhängige Elemente aufgeteilt zu werden.
+				.catalog__creators
+					ul.catalog__persons
+						li.catalog__person(class='catalog__person--prev')
+						li.catalog__person(class='catalog__person--curent')
+							img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
+
+							h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+							p.catalog__date 2 июня 1448 — 11 января 1494.
+							p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+
+					.catalog-accordion 
+						ul.accordion__list 
+							li.accordion__item(class = 'accordion__item--active' tabindex='100')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+
+								.accordion__content
+									ul.accordion__creators 
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бенедетто ди Биндо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Веккьетта
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Парентино, Бернардо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бергоньоне, Амброджо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Андреа Верроккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пезеллино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Биссоло, Франческо
+										li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+											span Доменико Гирландайо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пьетро Перуджино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Больтраффио, Джованни
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Беноццо Гоццоли
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Перуцци, Бальдассаре
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бонсиньори, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Граначчи, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пизанелло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Боттичини, Рафаэлло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Грегорио ди Чекко
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пинтуриккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Брамантино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни да Удине
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бреа, Людовико
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни ди Паоло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бьяджо д’Антонио Туччи
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джорджоне
+
+							li.accordion__item(tabindex='101')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='102')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='103')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='104')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='105')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='106')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 2000 г.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+			li.catalog__languages-panel 
+				p.catalog__subtitle(class = 'text') Gli azionisti delle maggiori società, che rappresentano un vivido esempio della cultura politica di tipo continentale-europeo, saranno dichiarati violatori delle norme universali di etica e morale. Essendo solo una parte del quadro generale, che cerca di soppiantare la produzione tradizionale, la nanotecnologia rimane fino ad oggi il destino dei liberali desiderosi di essere funzionalmente dispersi in elementi indipendenti.
+				.catalog__creators
+					ul.catalog__persons
+						li.catalog__person(class='catalog__person--prev')
+						li.catalog__person(class='catalog__person--curent')
+							img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
+
+							h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+							p.catalog__date 2 июня 1448 — 11 января 1494.
+							p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+
+					.catalog-accordion 
+						ul.accordion__list 
+							li.accordion__item(class = 'accordion__item--active' tabindex='100')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+
+								.accordion__content
+									ul.accordion__creators 
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бенедетто ди Биндо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Веккьетта
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Парентино, Бернардо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бергоньоне, Амброджо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Андреа Верроккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пезеллино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Биссоло, Франческо
+										li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+											span Доменико Гирландайо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пьетро Перуджино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Больтраффио, Джованни
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Беноццо Гоццоли
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Перуцци, Бальдассаре
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бонсиньори, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Граначчи, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пизанелло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Боттичини, Рафаэлло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Грегорио ди Чекко
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пинтуриккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Брамантино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни да Удине
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бреа, Людовико
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни ди Паоло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бьяджо д’Антонио Туччи
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джорджоне
+
+							li.accordion__item(tabindex='101')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+									
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='102')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='103')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='104')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='105')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='106')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 2000 г.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+			li.catalog__languages-panel 
+				p.catalog__subtitle(class = 'text') Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
+				.catalog__creators
+					ul.catalog__persons
+						li.catalog__person(class='catalog__person--prev')
+						li.catalog__person(class='catalog__person--curent')
+							img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
+
+							h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+							p.catalog__date 2 июня 1448 — 11 января 1494.
+							p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+
+					.catalog-accordion 
+						ul.accordion__list 
+							li.accordion__item(class = 'accordion__item--active' tabindex='100')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+
+								.accordion__content
+									ul.accordion__creators 
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бенедетто ди Биндо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Веккьетта
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Парентино, Бернардо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бергоньоне, Амброджо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Андреа Верроккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пезеллино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Биссоло, Франческо
+										li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+											span Доменико Гирландайо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пьетро Перуджино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Больтраффио, Джованни
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Беноццо Гоццоли
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Перуцци, Бальдассаре
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бонсиньори, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Граначчи, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пизанелло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Боттичини, Рафаэлло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Грегорио ди Чекко
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пинтуриккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Брамантино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни да Удине
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бреа, Людовико
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни ди Паоло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бьяджо д’Антонио Туччи
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джорджоне
+
+							li.accordion__item(tabindex='101')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='102')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='103')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='104')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='105')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='106')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 2000 г.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+			li.catalog__languages-panel 
+				p.catalog__subtitle(class = 'text') De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van het continentaal-Europese type politieke cultuur, zullen worden verklaard in strijd met de universele normen van ethiek en moraliteit. Als slechts een deel van het grote geheel, dat de traditionele productie wil vervangen, blijft nanotechnologie tot op de dag van vandaag het lot van liberalen die graag functioneel worden verspreid in onafhankelijke elementen. 
+				.catalog__creators
+					ul.catalog__persons
+						li.catalog__person(class='catalog__person--prev')
+						li.catalog__person(class='catalog__person--curent')
+							img.catalog__img(src="img/catalog__img-1.jpg", alt="Х-художник" loading="lazy")
+
+							h3.catalog__heading--mini(class = 'heading--mini') Доменико Гирландайо
+							p.catalog__date 2 июня 1448 — 11 января 1494.
+							p.catalog__paragraph Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+
+					.catalog-accordion 
+						ul.accordion__list 
+							li.accordion__item(class = 'accordion__item--active' tabindex='100')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1400 по 1499 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+
+								.accordion__content
+									ul.accordion__creators 
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бенедетто ди Биндо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Веккьетта
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Парентино, Бернардо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бергоньоне, Амброджо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Андреа Верроккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пезеллино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Биссоло, Франческо
+										li.accordion__creator(class='accordion__creator--active' data-accordion__tabindex  tabindex='-1') 
+											span Доменико Гирландайо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пьетро Перуджино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Больтраффио, Джованни
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Беноццо Гоццоли
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Перуцци, Бальдассаре
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бонсиньори, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Граначчи, Франческо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пизанелло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Боттичини, Рафаэлло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Грегорио ди Чекко
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Пинтуриккьо
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Брамантино
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни да Удине
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бреа, Людовико
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джованни ди Паоло
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Бьяджо д’Антонио Туччи
+										li.accordion__creator(data-accordion__tabindex  tabindex='-1') 
+											span Джорджоне
+
+							li.accordion__item(tabindex='101')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1500 по 1599 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='102')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1600 по 1699 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='103')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1700 по 1799 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='104')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1800 по 1899 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='105')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 1900 по 1999 гг.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
+
+							li.accordion__item(tabindex='106')
+								.accordion__name
+									h3.accordion__heading(class='heading--mini') C 2000 г.
+									<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+										<path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+									</svg>
+								.accordion__content
+									.nothing
+										.nothing__picture 
+											div 
+
+										.nothing__info
+											h3.nothing__heading(class='heading--mini') Здесь пока пусто
+											p.nothing__paragraph А в галерее вы всегда можете найти что-то интересное для себя
+											a.nothing__link(href="#" data-accordion__tabindex tabindex='-1') В галерею
 
 section.events 
 	.container
@@ -399,44 +1251,48 @@ section.events
 					a.events__link(href="#" tabindex='-1') Подробнее
 
 				.events__card 
-					img.events__img(src="img/event__img-2.jpg", alt="news picture" loading="lazy")
-					p.events__place ММОМА
-					p.events__date 24 марта 19:00
+					.events__info
+						img.events__img(src="img/event__img-2.jpg", alt="news picture" loading="lazy")
+						p.events__place ММОМА
+						p.events__date 24 марта 19:00
 
-					h3.heading--mini(class='events__heading--mini') «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-					p.events__paragraph(class='text') Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
-
-					a.events__link(href="#" tabindex='-1') Подробнее
-
-
-				.events__card 
-					img.events__img(src="img/event__img-3.jpg", alt="news picture" loading="lazy")
-					p.events__place Еврейский музей
-					p.events__date с 31 марта по 21 апреля
-
-					h3.heading--mini(class='events__heading--mini') Выставка «Формация 2020»
-					p.events__paragraph(class='text') Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
-
-					a.events__link(href="#" tabindex='-1') Подробнее
-
-				.events__card 
-					img.events__img(src="img/event__img-4.jpg", alt="news picture" loading="lazy")
-					p.events__place Третьяковка на Крымском валу
-					p.events__date с 30 марта по 30 апреля
-
-					h3.heading--mini(class='events__heading--mini') XXIV Международная биеннале молодого искусства
-					p.events__paragraph(class='text') Внезапно, реплицированные с зарубежных источников, современные исследования.
+						h3.heading--mini(class='events__heading--mini') «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+						p.events__paragraph(class='text') Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
 
 					a.events__link(href="#" tabindex='-1') Подробнее
 
 
 				.events__card 
-					img.events__img(src="img/event__img-5.jpg", alt="news picture" loading="lazy")
-					p.events__place ММАМ
-					p.events__date с 8 апреля по 20 мая
+					.events__info
+						img.events__img(src="img/event__img-3.jpg", alt="news picture" loading="lazy")
+						p.events__place Еврейский музей
+						p.events__date с 31 марта по 21 апреля
 
-					h3.heading--mini(class='events__heading--mini') Джон Винзор. Фотографии из серии «Метафора серебра»
-					p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+						h3.heading--mini(class='events__heading--mini') Выставка «Формация 2020»
+						p.events__paragraph(class='text') Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+				.events__card 
+					.events__info
+						img.events__img(src="img/event__img-4.jpg", alt="news picture" loading="lazy")
+						p.events__place Третьяковка на Крымском валу
+						p.events__date с 30 марта по 30 апреля
+
+						h3.heading--mini(class='events__heading--mini') XXIV Международная биеннале молодого искусства
+						p.events__paragraph(class='text') Внезапно, реплицированные с зарубежных источников, современные исследования.
+
+					a.events__link(href="#" tabindex='-1') Подробнее
+
+
+				.events__card 
+					.events__info
+						img.events__img(src="img/event__img-5.jpg", alt="news picture" loading="lazy")
+						p.events__place ММАМ
+						p.events__date с 8 апреля по 20 мая
+
+						h3.heading--mini(class='events__heading--mini') Джон Винзор. Фотографии из серии «Метафора серебра»
+						p.events__paragraph(class='text') Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
 
 					a.events__link(href="#" tabindex='-1') Подробнее
 
@@ -511,168 +1367,131 @@ section.edition
 						legend.edition__legend Категории
 
 						input.edition__checkbox(type=`checkbox` id=`categories-best-sellers` name=`categories`)
-						label.edition__checkbox-label(for=`categories-best-sellers` tabindex='150') 
-							.edition__checkbox__rect
-							div Бестселлеры
+						label.edition__checkbox--label(for=`categories-best-sellers` tabindex='150') 
+							| Бестселлеры
 
 						input.edition__checkbox(type=`checkbox` id=`categories-art` name=`categories`)
-						label.edition__checkbox-label(for=`categories-art` tabindex='151') 
-							.edition__checkbox__rect
-							div Искусство
+						label.edition__checkbox--label(for=`categories-art` tabindex='151') 
+							| Искусство
 
 						input.edition__checkbox(type=`checkbox` id=`categories-architecture` name=`categories`)
-						label.edition__checkbox-label(for=`categories-architecture`  tabindex='152') 
-							.edition__checkbox__rect
-							div Архитектура
+						label.edition__checkbox--label(for=`categories-architecture`  tabindex='152') 
+							| Архитектура
 
 						input.edition__checkbox(type=`checkbox` id=`categories-design` name=`categories`)
-						label.edition__checkbox-label(for=`categories-design` tabindex='153') 
-							.edition__checkbox__rect
-							div Дизайн
+						label.edition__checkbox--label(for=`categories-design` tabindex='153') 
+							| Дизайн
 
 						input.edition__checkbox(type=`checkbox` id=`categories-fashion` name=`categories`)
-						label.edition__checkbox-label(for=`categories-fashion` tabindex='154') 
-							.edition__checkbox__rect
-							div Мода
+						label.edition__checkbox--label(for=`categories-fashion` tabindex='154') 
+							| Мода
 
 						input.edition__checkbox(type=`checkbox` id=`categories-for-children` name=`categories`)
-						label.edition__checkbox-label(for=`categories-for-children` tabindex='155') 
-							.edition__checkbox__rect
-							div Детям
+						label.edition__checkbox--label(for=`categories-for-children` tabindex='155') 
+							| Детям
 
 						input.edition__checkbox(type=`checkbox` id=`categories-fiction` name=`categories`)
-						label.edition__checkbox-label(for=`categories-fiction` tabindex='156') 
-							.edition__checkbox__rect
-							div Художественная литература
+						label.edition__checkbox--label(for=`categories-fiction` tabindex='156') 
+							| Художественная литература
 
 						input.edition__checkbox(type=`checkbox` id=`categories-journalism` name=`categories`)
-						label.edition__checkbox-label(for=`categories-journalism` tabindex='157') 
-							.edition__checkbox__rect
-							div Публицистика
+						label.edition__checkbox--label(for=`categories-journalism` tabindex='157') 
+							| Публицистика
 
 						input.edition__checkbox(type=`checkbox` id=`categories-travel-guides` name=`categories`)
-						label.edition__checkbox-label(for=`categories-travel-guides` tabindex='158') 
-							.edition__checkbox__rect
-							div Путеводители
+						label.edition__checkbox--label(for=`categories-travel-guides` tabindex='158') 
+							| Путеводители
 
 						input.edition__checkbox(type=`checkbox` id=`categories-philosophy` name=`categories`)
-						label.edition__checkbox-label(for=`categories-philosophy` tabindex='159') 
-							.edition__checkbox__rect
-							div Философия
+						label.edition__checkbox--label(for=`categories-philosophy` tabindex='159') 
+							| Философия
 
 						input.edition__checkbox(type=`checkbox` id=`categories-educational-literature` name=`categories`)
-						label.edition__checkbox-label(for=`categories-educational-literature`  tabindex='160') 
-							.edition__checkbox__rect
-							div Учебная литература
+						label.edition__checkbox--label(for=`categories-educational-literature`  tabindex='160') 
+							| Учебная литература
 
 						input.edition__checkbox(type=`checkbox` id=`categories-magazines-newspapers` name=`categories`)
-						label.edition__checkbox-label(for=`categories-magazines-newspapers` tabindex='161') 
-							.edition__checkbox__rect
-							div Журналы и газеты
+						label.edition__checkbox--label(for=`categories-magazines-newspapers` tabindex='161') 
+							| Журналы и газеты
 
 					fieldset.edition__sets
 						legend.edition__legend Категории
 
 						.edition__set
+							.edition__checkbox--container(class=`checkbox--active`)
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-design--768` name=`categories` checked)
+									label.edition__checkbox--label(for=`categories-design--768` tabindex='153') 
+										| Дизайн
 
-							input.edition__checkbox(type=`checkbox` id=`categories-best-sellers--768` name=`categories` checked='checked')
-							label.edition__checkbox-label(for=`categories-best-sellers--768` tabindex='150') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Бестселлеры
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-art--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-art--768` tabindex='151') 
+										| Искусство
 
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-architecture--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-architecture--768`  tabindex='152') 
+										| Архитектура
 
-							input.edition__checkbox(type=`checkbox` id=`categories-art--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-art--768` tabindex='151') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Искусство
-
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-architecture--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-architecture--768`  tabindex='152') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Архитектура
-
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-design--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-design--768` tabindex='153' ) 
-								.edition__checkbox__rect
-								.edition__checkbox__text Дизайн
-
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-best-sellers-768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-best-sellers-768` tabindex='150') 
+										| Бестселлеры
 
 						.edition__set
 
-							input.edition__checkbox(type=`checkbox` id=`categories-fashion--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-fashion--768` tabindex='154') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Мода
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-fashion--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-fashion--768` tabindex='154') 
+										| Мода
 
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-for-children--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-for-children--768` tabindex='155') 
+										| Детям
 
-							input.edition__checkbox(type=`checkbox` id=`categories-for-children--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-for-children--768` tabindex='155') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Детям
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-fiction--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-fiction--768` tabindex='156') 
+										| Художественная литература
 
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-fiction--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-fiction--768` tabindex='156') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Художественная литература
-
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-journalism--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-journalism--768` tabindex='157') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Публицистика
-
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-journalism--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-journalism--768` tabindex='157') 
+										| Публицистика
 
 						.edition__set
-							input.edition__checkbox(type=`checkbox` id=`categories-travel-guides--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-travel-guides--768` tabindex='158') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Путеводители
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-travel-guides--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-travel-guides--768` tabindex='158') 
+										| Путеводители
 
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-philosophy--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-philosophy--768` tabindex='159') 
+										| Философия
 
-							input.edition__checkbox(type=`checkbox` id=`categories-philosophy--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-philosophy--768` tabindex='159') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Философия
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-educational-literature--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-educational-literature--768`  tabindex='160') 
+										| Учебная литература
 
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-educational-literature--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-educational-literature--768`  tabindex='160') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Учебная литература
-
-								.edition__checkbox__cross
-									+icon(`cross`)
-
-							input.edition__checkbox(type=`checkbox` id=`categories-magazines-newspapers--768` name=`categories`)
-							label.edition__checkbox-label(for=`categories-magazines-newspapers--768` tabindex='161') 
-								.edition__checkbox__rect
-								.edition__checkbox__text Журналы и газеты
-
-								.edition__checkbox__cross
-									+icon(`cross`)
+							.edition__checkbox--container
+								.edition__checkbox--inner
+									input.edition__checkbox(type=`checkbox` id=`categories-magazines-newspapers--768` name=`categories`)
+									label.edition__checkbox--label(for=`categories-magazines-newspapers--768` tabindex='161') 
+										| Журналы и газеты
 
 					fieldset.edition__group
 						legend.edition__legend(class='edition__legend--cost') Цена
@@ -687,10 +1506,16 @@ section.edition
 				.swiper-container(class='editionSwiper')
 					.swiper__btns(class='edition__btns')
 						.swiper__btn--prev(id='edition__button--prev' class='edition__btn--prev' tabindex='164' aria-hidden='true')
-							+icon('swiper-arrow')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
 						.swiper__pagination(id='edition__pagination'  aria-hidden='true')
 						.swiper__btn--next(id='edition__button--next' class='edition__btn--next' tabindex='165' aria-hidden='true')
-							+icon('swiper-arrow')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
 							
 					.swiper-wrapper(class='edition__wrapper')
 						.swiper-slide(class='edition-slide') 
@@ -799,18 +1624,34 @@ section.projects
 
 		p.projects__paragraph(class = 'text') 
 			| Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
-			span.projects__i( id='projects__popup-1' tabindex='190') i
+			span.projects__i( id='projects__popup-1' tabindex='190')
+				<svg width="16" height="16" viewBox="0 0 16 16" fill='none' xmlns="http://www.w3.org/2000/svg">
+					<path class='border' d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"/>
+					<path class='i' d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"/>
+				</svg>
+
 			| обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
-			span.projects__i( id='projects__popup-2' tabindex='191') i
+			span.projects__i( id='projects__popup-2' tabindex='191')
+				<svg width="16" height="16" viewBox="0 0 16 16" fill='none' xmlns="http://www.w3.org/2000/svg">
+					<path class='border' d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"/>
+					<path class='i' d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"/>
+				</svg>
 			| исключительно в разрезе маркетинговых и финансовых 
-			span.projects__i( id='projects__popup-3' tabindex='192') i
+			span.projects__i( id='projects__popup-3' tabindex='192')
+				<svg width="16" height="16" viewBox="0 0 16 16" fill='none' xmlns="http://www.w3.org/2000/svg">
+					<path class='border' d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"/>
+					<path class='i' d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"/>
+				</svg>
 			| предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
 			a.projects__link(  tabindex='193' href='blanchard-art.ru/projects/about' ) blanchard-art.ru/projects/about
 
 		h3.heading--mini(class='projects__heading--mini') Партнёры проектов:
 		.projects__partners
 			.projects__button--prev( class='projects__button' tabindex='200'  aria-hidden='true')
-					+icon('projects__arrow')
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="transparent"/>
+						<path d="M16 20L11 15L16 10" stroke="black"/>
+					</svg>
 					
 			.swiper-container(class='projectsSwiper')
 				.swiper-wrapper(class='projects__wrapper')
@@ -844,8 +1685,10 @@ section.projects
 							img(src="img/project__img-9.png", alt="alt" loading="lazy" aria-label='Компания такая-то такая')
 
 			.projects__button--next( class='projects__button'  tabindex='201'  aria-hidden='true')
-				+icon('projects__arrow')
-
+				<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="transparent"/>
+					<path d="M16 20L11 15L16 10" stroke="black"/>
+				</svg>
 section.contacts
 
 	.container
@@ -877,10 +1720,15 @@ section.contacts
 				ul.socials__list
 					li.socials__item
 						a.socials__link(href="#"  tabindex='223' aria-label='Whatsapp') 
-							+icon('whatsapp')
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z" fill="#30BF39"/>
+								<path d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z" fill="white"/>
+							</svg>
+
 					li.socials__item
 						a.socials__link(href="#"  tabindex='224' aria-label='Telegramm') 
-							+icon('telegram')
+							<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"/><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"/><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"/></svg>
+
 
 		.contacts__map(id = 'map' aria-hidden='true')
 

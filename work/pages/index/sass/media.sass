@@ -6,17 +6,23 @@
 	.nav__item:not(:last-child)
 		margin-right: 24px
 
-	.search__input
-		display: none
-
 	.group
 		display: flex
+
+		&__title
+			display: flex
 
 		&:not(:last-child)
 			margin-right: 12%
 
 		&__icon
 			transform: translate(6px, 3px)
+
+	.header__inner
+		overflow: hidden
+
+	.search
+		transform: translateX(90%)
 
 	// hero
 	.hero
@@ -33,6 +39,14 @@
 
 	.gallerySwiper
 		width: 100%
+
+	// catalog
+	.accordion
+		&__creator
+			position: relative
+
+			flex: 0 1 50%
+			line-height: 26px
 
 @media screen and ( max-width: 1024px )
 
@@ -54,17 +68,69 @@
 	.nav
 		display: none
 
+		&--menu
+			display: block
+
+			.nav__list
+				display: flex
+
+				flex-direction: column
+
 	.signIn
 		display: none
 
-	.header__up
-		padding: 29px 0
+	.header
+		&__up
+			padding: 29px 0
 
-	.header__down
-		display: none
+		&__down
+			display: none
 
-	.search__btn--1024
-		display: block
+		&__btn
+			background: transparent
+
+			width: 257px
+			height: 60px
+
+			border: 2px solid #9d5cd0
+
+			&--cross
+				display: block
+
+				width: 29px
+				height: 29px
+
+				margin-bottom: 5.4%
+
+				transform: translateX(0px)
+
+				svg
+					width: 29px
+					height: 29px
+
+			svg
+				fill: white
+
+				transform: translateX(-45%)
+
+	.nav
+		&__link
+			font-size: 24px
+
+		&__item
+
+			&:not(:last-child)
+				margin-bottom: 4.3%
+
+		&--menu
+			margin-bottom: 14.7%
+
+	.search
+		&__btn--1024
+			display: block
+
+		&--1024
+			display: block
 
 	.burger
 		display: block
@@ -107,6 +173,7 @@
 		padding: 0px
 
 		background: url('../img/gallery--1024.jpg')
+		background-size: cover
 
 		&__inner
 			padding-top: 106px
@@ -132,6 +199,37 @@
 		&__select--box
 			margin-bottom: 364px
 
+		&-modal
+			padding: p(309, 1920) p(403.2, 1920) p(146, 1920)
+
+			&__img
+				flex: 0 1 94%
+
+				margin-right: 48px
+
+				overflow: hidden
+
+				img
+					width: 200%
+
+					transform: translateX(-25%)
+
+			&__info
+				padding-top: 21.3%
+
+			&__name
+				margin-bottom: 2%
+
+			&__author
+				margin-bottom: p(48, 1920)
+
+			&__since
+
+				margin-bottom: 12.5%
+
+			&__description
+				width: 80%
+
 	// catalog
 
 	.catalog
@@ -147,21 +245,28 @@
 			padding-right: 0px
 
 		&__subtitle
-			margin-bottom: 38px
+			margin-bottom: 40px
 
-	.accordion
-		&__creator
-			position: relative
+		&__languages
+			&-btns
+				transform: translateY(3px)
 
-			flex: 0 1 50%
-			line-height: 26px
+		&__paragraph
+			padding-right: 0px
+
+	// .accordion
+	// 	&__creator
+	// 		position: relative
+
+	// 		flex: 0 1 50%
+	// 		line-height: 26px
 
 	// events
 	.events
 		margin-bottom: 150px !important
 
-		&__card
-			height: 670px
+		&__info
+			margin-bottom: 22px
 
 		&__heading
 			margin-bottom: 26px
@@ -181,7 +286,7 @@
 			line-height: 32px
 
 		&__link
-			margin-left: 36px
+			margin-left: 26px
 			width: p(100, 290)
 
 			&::before
@@ -198,6 +303,10 @@
 
 	.edition
 		background: url('../img/edition__bg--1024.jpg')
+		background-size: cover
+
+		&Swiper
+			padding-left: 0px !important
 
 		&__inner
 			padding-bottom: 80px
@@ -222,7 +331,7 @@
 			margin-bottom: 19px
 
 			&--mini
-				margin-bottom: 28px !important
+				// margin-bottom: 28px !important
 
 		&__paragraph
 			margin-bottom: 24px
@@ -291,6 +400,34 @@
 	// .text
 	// 	width: 100%
 
+	// header
+	.search
+		transform: translateX(-1.8%)
+
+		background: transparent
+
+		&__btn
+			&--1024
+				transform: translateY(-4px)
+
+		&__input
+			margin-right: 3.3vw
+
+		&--1024
+			.search
+				transform: translateX(-2%) !important
+
+	.header
+		&__btn--cross
+			margin-bottom: 7.4%
+
+	.nav
+		&__item:not(:last-child)
+			margin-bottom: 6%
+
+		&--menu
+			margin-bottom: 19.9%
+
 	// hero
 	.hero
 
@@ -323,7 +460,7 @@
 		background-position: 0 0
 		background-size: cover
 
-		margin-bottom: 77px
+		margin-bottom: 90px
 
 		&__inner
 			display: block
@@ -342,25 +479,67 @@
 
 		&-slide
 			width: 317px !important
+			margin-bottom: -1px
+
+		&__select--box
+			margin-bottom: 364px
+
+		&-modal
+			padding: 53.4% 6.5% 13.5%
+
+			&__img
+				flex: 0 1 94%
+
+				margin-right: 51px
+
+				overflow: hidden
+
+				img
+					width: 200%
+
+					transform: translateX(-25%)
+
+			&__info
+				padding-top: 19%
+
+			&__name
+				margin-bottom: 2%
+
+				// transform: translateX(3px)
+
+			&__author
+				margin-bottom: 2%
+
+			&__since
+
+				margin-bottom: 11%
+
+			&__description
+				width: 79%
 
 	// catalog
 
 	.catalog
 		margin-bottom: 90px
 
-		&-languages
+		&__languages
 			margin-bottom: 20px
 
 			position: static
 			display: inline-flex
 			transform: translateY(6px)
 
-			&__item
+			&-item
 				&:not(:last-child)
 					margin-right: 30px
 
+			&-btns
+				transform: translateY(-6px)
+				// flex-wrap: nowrap
+
 		&__heading
 			margin-bottom: 25px
+			// margin-right: 38px
 
 		&__subtitle
 			margin-bottom: 20px
@@ -376,7 +555,7 @@
 			flex-direction: column-reverse
 
 		&-accordion
-			margin-bottom: 80px
+			margin-bottom: 84px
 
 	.accordion
 		&__creator
@@ -384,20 +563,25 @@
 
 	// events
 	.events
-		margin-bottom: 138px !important
+		margin-bottom: 124px !important
 
 		&__heading
+			margin-bottom: 22px
+
 			&--mini
 				margin-bottom: 0px
 
 		&__card
 			flex: 0 1 p(317, 668)
-			height: 683px
+			// height: 683px
 
 			padding-bottom: 58px
 
+		&__info
+			margin-bottom: 64px
+
 		&__link
-			margin-left: 36px
+			margin-left: 26px
 			width: p(100, 290)
 
 			&::before
@@ -408,7 +592,7 @@
 			height: 200px
 
 		&-btn__box
-			top: 99%
+			top: 97%
 
 	// edition
 	.edition
@@ -423,19 +607,50 @@
 			margin-bottom: 32px
 
 		&__menu
-			margin-bottom: 22px
+			margin-bottom: 27px
 
 		&__group:first-child
 			display: none !important
 
-		&__checkbox__text
-			transform: translateX(10px)
+		&__legend
+			margin-bottom: 21px !important
 
-		&__checkbox__rect
-			margin: 0
+			&--cost
+				margin-bottom: 15px !important
+
+		&__checkbox
+			&__text
+				transform: translateX(10px)
+
+			&--container
+				border: none
+				padding: 0
+
+				margin-bottom: 13%
+
+			&__rect
+				margin: 0
+
+		&__set
+			&:not(:last-child)
+				margin-right: 59px
+
+			&:nth-child(2)
+				.edition__checkbox--container
+					margin-bottom: 13%
+
+			&:nth-child(3)
+				.edition__checkbox--container
+					margin-bottom: 6.5%
+
+			&:last-child
+				.edition__checkbox--container
+					margin-bottom: 8.8%
 
 		&__sets
 			display: flex
+
+			margin-bottom: 21px
 
 		&__btns
 			transform: translateX(-22px)
@@ -527,6 +742,7 @@
 	// gallery
 	.gallery
 		background: url('../img/gallery--768.jpg')
+		background-size: cover
 
 		&-slide
 			width: 100% !important
@@ -552,10 +768,25 @@
 	// catalog
 
 	.catalog
-		&-languages
-			&__item
+		&__header
+			margin-bottom: 20px
+
+		&__languages
+			&-item
+				width: 32px
+				height: 32px
+
+				img
+					width: 32px
+					height: 32px
+
 				&:not(:last-child)
-					margin-right: 24px
+					margin-right: 32px
+
+			&-btns
+				display: flex
+				position: static
+				transform: translateY(0px)
 
 	.accordion
 		&__creator
@@ -564,6 +795,7 @@
 	// edition
 	.edition
 		background: url('../img/edition__bg--768.jpg')
+		background-size: cover
 
 		&__group
 			&:first-child
@@ -684,17 +916,124 @@
 		&__up
 			padding: 12px 0 11px 0
 
+		&__down
+			display: block
+			background: rgba(0, 0, 0, .9)
+			position: absolute
+			top: -200%
+			left: 0
+			width: 100vw
+
+			padding: 15px 0 17px 0
+
+			.header__inner
+				display: flex
+				flex-direction: column
+
+				.search__input
+					width: 84%
+					border-bottom-width: 2px
+
+				.search__btn
+					margin-right: 0px
+					transform: translateY(15%)
+
+		&__menu
+			padding: 15px 0 27px 0
+
+		&__btn
+			width: 115px
+			height: 40px
+
+			font-size: 12px
+
+			&--cross
+				margin-bottom: 8.3% !important
+
+				transform: translateX(0px) !important
+
+			svg
+				width: 9px
+				height: 9px
+
+				transform: translate(-30%, -18%)
+
+		// &__inner
+		// 	overflow: visible
+
+	.signIn__text
+		font-size: 12px
+
+	.nav
+		&__link
+			font-size: 16px
+
+		&__item:not(:last-child)
+			margin-bottom: 5.5%
+
+		&--menu
+			margin-bottom: 9.4%
+
+	.groups
+		display: none
+
 	.logo
 		width: 96.8px
 		height: 21.7px
 
-	.search__btn--1024
-		width: 18px !important
-		height: 18px !important
+	.search
+		transform: translateX(0%)
 
-		svg
-			width: 18px
-			height: 18px
+		&__btn
+			&--cross
+				display: block
+				width: 15px
+				height: 15px
+
+				transform: translateX(43vw)
+
+				margin-bottom: 2%
+
+				svg
+					width: 15px
+					height: 15px
+
+			svg
+				width: 16px
+				height: 16px
+
+			&--1024
+				width: 18px !important
+				height: 18px !important
+
+				transform: translateY(0%)
+
+				svg
+					width: 18px
+					height: 18px
+
+	.search--1024
+		transform: translateX(64%)
+
+		.search
+			&__input
+				display: none
+
+			&__btn
+				margin-right: 85vw
+
+				&--cross
+					width: 15px
+					height: 15px
+
+					transform: translateY(0%)
+
+					svg
+						width: 15px
+						height: 15px
+
+		.search__btn--cross
+			display: none
 
 	.burger
 		width: 25px !important
@@ -764,6 +1103,7 @@
 	// gallery
 	.gallery
 		background: url('../img/gallery--320.jpg')
+		background-size: cover
 
 		margin-bottom: 55px
 
@@ -787,7 +1127,7 @@
 			height: 40px
 
 		.swiper__btns
-			margin-bottom: 19px
+			margin-bottom: 28px
 
 		&-slide
 			width: 290px !important
@@ -802,6 +1142,54 @@
 
 		&__paragraph--768
 			margin-top: 0px
+
+		&-modal
+			display: none
+			padding: 92% 4.5% 0%
+
+			&__exit
+				z-index: 1
+				top: -0.6%
+				right: -1.1%
+
+			&__inner
+				display: block
+
+			&__img
+				height: 33%
+
+				margin-right: 0
+				margin-bottom: 8%
+
+				// overflow: hidden
+
+				img
+					width: 100%
+					height: 130%
+
+					transform: translateY(-21%)
+
+			&__info
+				padding: 0 20px
+				height: 60%
+
+			&__name
+				margin-bottom: 2%
+
+				// transform: translateX(3px)
+
+			&__author
+				margin-bottom: 2%
+
+			&__since
+
+				margin-bottom: 3%
+
+			&__description
+				width: 99%
+
+	.swiper__btns
+		transform: translateY(32%)
 
 	// catalog
 
@@ -872,9 +1260,9 @@
 			display: none
 
 		&__card
-			min-height: 683px
+			// min-height: 683px
 
-			padding-bottom: 56px
+			padding-bottom: 40px
 			margin-bottom: 14px
 
 			img
@@ -905,10 +1293,13 @@
 			margin-bottom: 0px
 
 		&__link
-			margin-left: 28px
+			margin-left: 21px
 
 			&::before
 				width: 94%
+
+		&__info
+			margin-bottom: 19.9%
 
 		&-btn
 			&__box
@@ -941,6 +1332,7 @@
 	// edition
 	.edition
 		background: url('../img/edition__bg--320.jpg')
+		// background-size: cover
 
 		&__inner
 			padding-top: 55px
@@ -970,6 +1362,7 @@
 			&::before
 				@include pseudo
 				top: 2px
+				left: 0
 
 				width: 100%
 				height: 1px
@@ -991,11 +1384,13 @@
 			position: relative
 			display: block
 
-			height: 84px
+			// height: 82px
 
 			margin-bottom: 24px
 
 			overflow: hidden
+
+			transition: height .2s ease-in-out
 
 			&::after
 
@@ -1008,15 +1403,14 @@
 				background: rgba(256, 256, 256, .5)
 
 			.edition__legend
+				position: relative
 				margin: 0px !important
-
-			.edition__legend
 
 				&::after
 					@include pseudo
 					right: 0%
 
-					top: 18%
+					top: 31%
 					width: 30.34px
 					height: 21.34px
 
@@ -1027,18 +1421,41 @@
 			margin-right: 0px !important
 
 		&__checkbox
-			&-label
-				max-width: 320px
+			&--container
+				position: absolute
+				top: 0
+				left: 0
 
-				display: inline-flex
+				width: 100%
+
+				margin-bottom: 0 !important
+
+				transition: transform .2s ease-in-out
+
+			&--inner
+				position: relative
 
 				padding: 13px 0
+
+				&::before
+					@include pseudo
+					top: 0
+					left: 0
+					width: 100%
+					height: 1px
+
+					background: rgba(255, 255, 255, 0.5)
+
+			&--label
+				max-width: 320px
+
+				display: block
+
 				margin: 0px !important
 
-				border-top: 1px solid rgba(256, 256, 256, .5)
-
-			&__cross
-				display: block
+				&::after
+					display: block
+					position: absolute
 
 		&Swiper
 			padding: 0px !important
@@ -1094,12 +1511,18 @@
 
 				font-size: 12px
 
+	.checkbox--active
+		.edition__checkbox--label::after
+			height: 13px
+
+			transform: rotateZ(0)
+
 	// projects 
 	.projects
 		margin-bottom: 56px
 
 		&__heading
-			// margin-bottom: 17px !important
+			margin-bottom: 16px !important
 
 			&--mini
 				font-size: 18px
@@ -1109,7 +1532,7 @@
 			letter-spacing: 1.1px
 			line-height: 32px
 
-			margin-bottom: 11px
+			margin-bottom: 7px
 
 		&__partners
 			height: 65px
@@ -1122,97 +1545,11 @@
 				margin-left: 18px
 
 		&__slide
-			// width: 195px !important
-			// height: 65px !important
-
 			img
 				width: 195px
 				height: 65px
 
-	// // contacts
-	// .contacts
-	// 	height: auto
-
-	// 	margin-bottom: 29px
-
-	// 	&__inner
-	// 		flex-direction: column-reverse
-
-	// 	&__address
-	// 		display: none
-
-	// 		&--320
-	// 			display: block
-	// 			margin-left: 15px
-
-	// 	&__heading
-	// 		margin-bottom: 20px
-
-	// 		&--mini
-	// 			font-size: 18px
-	// 			margin-bottom: 5px !important
-
-	// 	&__paragraph
-	// 		font-size: 14px
-
-	// 	&__menu
-	// 		padding: 4px 14px 0 14px
-
-	// 	&__form
-	// 		margin-bottom: 11px
-
-	// 	&__map
-	// 		width: 100%
-	// 		height: 320px !important
-
-	// 		.ymaps-2-1-78-map
-	// 			height: 320px !important
-
-	// 	&__legend
-	// 		font-size: 18px
-	// 		margin-bottom: 24px
-
-	// 	&__input
-	// 		margin-bottom: 20px
-
-	// 		&:last-child
-	// 			margin-bottom: 21px
-
-	// 	&__btn
-	// 		width: 128px
-	// 		height: 40px
-
-	// 		font-size: 12px
-
-	// .socials
-
-	// 	&__title
-	// 		font-size: 18px
-	// 		margin-bottom: 14px
-
-	// 	&__item
-	// 		width: 50px
-	// 		height: 50px
-
-	// 	&__link
-
-	// 		width: 50px !important
-	// 		height: 50px !important
-
-	// 		svg
-	// 			width: 50px !important
-	// 			height: 50px !important
-
-	// // footer
-	// .footer
-	// 	padding: 20px 0
-
-	// 	&__inner
-	// 		flex-direction: column-reverse
-
-	// 	.logo
-	// 		width: 96.7px
-	// 		height: 21.67px
-
-	// 	.socials
-	// 		margin-bottom: 20px
+	// contacts
+	.ymaps-2-1-79-map,
+	.contacts__map
+		height: 320px !important

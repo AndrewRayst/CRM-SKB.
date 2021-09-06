@@ -7,9 +7,10 @@
 	&__heading
 		display: inline-block
 		margin-right: 30px
+		margin-bottom: 23px
 
 	&__subtitle
-		margin-bottom: 32px
+		margin-bottom: 40px
 
 	&__creators
 		display: flex
@@ -75,14 +76,16 @@
 	&-accordion
 		flex: 0 1 50%
 
-	&-languages
+	&__languages
+		&-btns
+			position: absolute
 
-		position: absolute
+			display: inline-flex
+			flex-wrap: wrap
 
-		display: inline-flex
-		flex-wrap: wrap
+			transform: translateY(-8px)
 
-		&__item
+		&-item
 			display: flex
 			align-items: center
 			justify-content: center
@@ -123,10 +126,16 @@
 				&:hover
 					box-shadow: 0 0 29px rgba(157, 92, 208, .8)
 
+.taby__btn-active
+	border: 2px solid #7943a4
+
 .accordion
 	&__item
 		position: relative
 		overflow: hidden
+
+		&::after
+			transition: border-color .3s ease-in-out
 
 		&:hover
 			.accordion__heading
@@ -143,6 +152,11 @@
 				svg
 					background: #d1a9f0
 
+		&:last-child:hover
+			&::after
+				border-color: #9d5cd0 !important
+				// transform: translateY(-1px)
+
 		&:focus
 			.accordion__heading
 				color: #fff !important
@@ -158,6 +172,13 @@
 
 				svg
 					background: #d1a9f0
+
+				&:last-child
+					&::after
+						border-color: #9d5cd0 !important
+
+					&::after
+						transform: translateY(-1px)
 
 		&:last-child
 			&::after

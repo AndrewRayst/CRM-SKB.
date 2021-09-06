@@ -12,7 +12,10 @@
 		align-items: center
 		justify-content: space-between
 
+		transition: transform .3s ease-in-out
+
 	&__up
+		position: relative
 
 		padding: 30px 0
 
@@ -23,15 +26,29 @@
 
 		background: rgba(0, 0, 0, .4)
 
+		transition: top .3s ease-in-out
+
+	&__menu
+		position: absolute
+		top: 0
+		left: 0
+
+		width: 100vw
+
+		padding: 37px 0 51px 0
+
+		background: rgba(0, 0, 0, .9)
+
+		transform: translateY(-100%)
+
+		transition: transform .3s ease-in-out
+
 .logo
 	position: relative
 	display: inline-block
 
 	width: 173px
 	height: 40px
-
-	background: url(../img/sprite.svg#logo) no-repeat center
-	background-size: cover
 
 	&:focus::after
 		width: 100%
@@ -145,51 +162,198 @@
 	justify-content: space-between
 
 .group
-	cursor: pointer
+	position: relative
+
 	user-select: none
 
-	&:focus
-		background: #7943a4
+	transform: translateX(-8px)
+
+	transition: transform .3s ease-in-out
+
+	&--search
+		transform: translateY(-200%)
+
+	&--active
+		.group__icon
+			svg
+				transform: rotateZ(180deg)
+
+	&:not(:last-child)
+		margin-right: 83px
+
+	&:nth-child(3)
+		.group__box
+			transform: translateX(-7px)
+
+	&:nth-child(2n)
+		.group__box
+			transform: translateX(-1px)
+
+	&__title
+		padding: 4px 8px
+
+		cursor: pointer
 
 		transition: background .3s ease-in-out
 
-	&:active *
-		color: #7943a4 !important
-		background: transparent
-		stroke: #7943a4 !important
+		&:active *
+			color: #7943a4 !important
+			background: transparent
+			stroke: #7943a4 !important
 
-		transition: color .3s ease-in-out, stroke .1s ease-in-out
+			transition: color .3s ease-in-out, stroke .1s ease-in-out
 
-	&:hover
-		background: transparent
+		&:hover
+			background: transparent !important
 
-	&:hover *
-		color: #c283f3
-		background: transparent !important
-		stroke: #c283f3
+			*
+				color: #c283f3
+				background: transparent !important
+				stroke: #c283f3
 
-		transition: color .3s ease-in-out, stroke .1s ease-in-out
+				transition: color .3s ease-in-out, stroke .1s ease-in-out
 
-	&__icon svg
-		width: 10px
-		height: 5px
+		&:focus
+			background: #7943a4
 
-		stroke: #fff
+			transition: background .3s ease-in-out
 
-		transform: translateY(-2px)
-		transform-origin: center 25%
+	&__icon
+		svg
+			width: 10px
+			height: 5px
 
-	&:not(:last-child)
-		margin-right: 96px
+			stroke: #fff
+
+			transform: translateY(-2px)
+			transform-origin: center 25%
+
+	.group__icon
+		svg
+			transition: transform .3s ease-in-out
 
 	&__text
 		font-size: 18px
 		color: #fff
 
+	&__box
+		position: absolute
+
+		top: 190%
+		left: 0
+
+		z-index: 1000
+
+		width: 300px
+		height: 300px
+		max-height: 0%
+
+		padding: 0 19px 0 40px
+
+		overflow: hidden
+
+		background: rgba(0, 0, 0, .6)
+
+		transition: max-height .3s ease-in-out, padding .2s ease-in-out
+
+		transform: translateX(8px)
+
+	&__list
+		width: 100%
+		height: 100%
+
+		padding-right: 21px
+
+		overflow: auto
+
+	&__item
+		position: relative
+
+		width: 100%
+		padding: 13px 14px
+
+		cursor: pointer
+
+		background: blue
+
+		*
+			font-size: 12px
+			color: #fff
+			letter-spacing: 1.5px
+
+		&:not(:last-child)
+			margin-bottom: 19px
+
+		&::before
+			@include pseudo
+			top: 0
+			left: 0
+
+			width: 100%
+			height: 100%
+
+			background: rgba(194, 131, 243, 0)
+
+			border: 2px solid transparent
+
+			transition: border-color .2s ease-in-out, background .2s ease-in-out
+
+		&:hover
+			&::before
+				border-color: #9d5cd0
+
+		&:focus
+			&::before
+				border-color: #9d5cd0
+
+		&:active
+			&::before
+				background: rgba(194, 131, 243, .4)
+				border-color: #d1a9f0
+
+.simplebar
+	&-content-wrapper
+		overflow: auto
+
+	&-scrollbar
+		&::before
+
+			top: 0 !important
+			right: 0 !important
+			bottom: 0 !important
+			left: 0 !important
+
+			background: #fff !important
+
+			opacity: 1 !important
+
+	&-vertical
+		width: 2px !important
+		background: #000
+
 .search
 
 	display: flex
 	align-items: center
+
+	transition: transform .4s ease-in-out, background .2s ease-in-out
+
+	&--active
+		transform: translateX(0%) !important
+
+	&--1024
+		display: none
+		position: relative
+
+		width: 31px
+		height: 22px
+
+		.search
+			position: absolute
+			top: 0
+			left: 0
+
+			transform: translateX(-3%)
 
 	&__input
 
@@ -200,10 +364,10 @@
 		background: transparent
 		border-bottom: 1px solid rgba(256, 256, 256, .85)
 
-		transform: translateY(4px)
+		// transform: translateY(4px)
 
 		&:focus
-			border-color: #c283f3
+			border-color: #7943a4
 
 			transition: border-color .3s ease-in-out
 
@@ -229,9 +393,18 @@
 		width: 23px
 		height: 22px
 
+		margin-right: 10px
+
 		background-color: transparent
 		background-size: 450%
-		transform: translateX(-50%) translateY(2px)
+		// transform: translateX(-50%) translateY(2px)
+
+		&--cross
+			display: none
+			color: white
+			background: transparent
+
+			transform: translateY(-6px)
 
 	&__icon
 		width: 22px

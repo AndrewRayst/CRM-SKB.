@@ -20,7 +20,7 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 
 		const windowWidth = document.querySelector( `body` ).offsetWidth
 
-		if ( windowWidth > 1630 ) return [3, 3, 2, 40, 350]
+		if ( windowWidth > 1630 ) return [3, 3, 2, 47, 350]
 
 		// else if ( windowWidth > 768 ) return [2, 2, 2, 34, 280]
 

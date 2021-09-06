@@ -3,44 +3,60 @@
 	margin-bottom: 90px
 
 	.heading
-		margin-bottom: 22px
+		margin-bottom: 26px
 
 	&__paragraph
 		width: 65%
-		margin-bottom: 23px
+		margin-bottom: 25px
+
+	[aria-describedby]
+		svg
+			background: #9d5cd0 !important
+
+			.i
+				fill: #fff
 
 	&__i
-		position: relative
-
-		display: inline-flex
-		align-items: center
-		justify-content: center
 
 		width: 18px
 		height: 18px
 
-		margin: 0 2px
-
-		font-size: 14px
-		font-weight: bold
+		margin: 0 2px 0 5px
 
 		cursor: pointer
 		user-select: none
 
-		border: 1px solid #9d5cd0
-		border-radius: 50%
-
-		transition: color .2s ease-in-out, background .2s ease-in-out
-
-		&:hover
-			background: #d1a9f0
+		display: inline-block
+		transform: translate(-4px, 5px)
 
 		&:focus
-			background: #d1a9f0
+			svg
+				background: #d1a9f0
 
-		&:active
-			color: #fff
-			background: #9d5cd0
+		svg
+			width: 18px
+			height: 18px
+
+			border-radius: 50%
+
+			transition: background .2s ease-in-out
+
+			.i
+				fill: #000
+
+				transition: fill .2s ease-in-out
+
+			.border
+				stroke: #9d5cd0
+
+			&:hover
+				background: #d1a9f0
+
+			&:active
+				background: #9d5cd0
+
+				.i
+					fill: #fff
 
 	.heading--mini
 		margin-bottom: 25px
@@ -106,8 +122,6 @@
 			border: 2px solid transparent
 			border-radius: 50%
 
-			box-shadow: 0 1px 4px #000
-
 			transition: border-color .2s ease-in-out, background .2s ease-in-out
 
 			&:hover
@@ -140,10 +154,15 @@
 			user-select: none
 			border: 2px solid transparent
 
-			transition: filter .2s ease-in-out, border-color .2s ease-in-out
+			opacity: .6
+
+			transition: filter .2s ease-in-out, border-color .2s ease-in-out, opacity .2s ease-in-out
 
 		&:hover
 			filter: grayscale(0) brightness(1)
+
+			img
+				opacity: 1
 
 		&:active
 			img

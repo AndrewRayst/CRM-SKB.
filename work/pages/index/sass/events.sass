@@ -1,5 +1,5 @@
 .events
-	margin-bottom: 138px !important
+	margin-bottom: 137px !important
 
 	&__inner
 		position: relative
@@ -22,12 +22,15 @@
 		flex-direction: column
 		justify-content: space-between
 
-		height: 700px
+		// height: 700px
 
-		padding-bottom: 48px
+		padding-bottom: 36px
 		margin-bottom: 50px
 
 		border: 1px solid rgba(202, 202, 202, 1)
+
+	&__info
+		margin-bottom: 80px
 
 	&__img
 		margin-bottom: 14px
@@ -68,18 +71,18 @@
 		display: inline
 		width: p(108, 500)
 
-		margin-left: 50px
+		margin-left: 42px
 		color: #9d5cd0
 
 		transition: color .2s ease-in-out, background .2s ease-in-out
 
-		// padding: p(8, 500)
+		padding: 8px 8px 12px 8px
 
 		&::before
 			width: p(92, 108)
 			// width: 100%
 			@include pseudo
-			bottom: -6px
+			bottom: 5px
 			// left: p(8, 108)
 			border-bottom: 1px solid #9d5cd0
 
@@ -92,10 +95,11 @@
 				border-color: #7943a4
 
 		&:active
-			color: #333
+			color: #333 !important
+			background: transparent !important
 
 			&::before
-				border-color: #333
+				border-color: #333 !important
 
 		&:focus
 			color: #fff

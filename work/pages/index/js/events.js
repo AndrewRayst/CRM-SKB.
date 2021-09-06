@@ -6,16 +6,10 @@ export default () => {
 	const cardsLink = document.querySelectorAll( `.events__link` )
 	const cards = document.querySelectorAll( `.events__card` )
 
-	const cardsHeight = cardsBox.offsetHeight
 	const card = cards[0]
-	const cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( cardsBox.children[0] ).marginBottom.replace( `px`, `` ) ) + `px`
 
 	const viewQuantityCards = Math.floor( eventsInner.offsetWidth / card.offsetWidth )
-
 	const btn = document.querySelector( `.events__btn` )
-
-	cardsBox.style.maxHeight = cardFullHeight
-	sectionEvents.style.marginBottom = +window.getComputedStyle( sectionEvents ).marginBottom.replace( `px`, `` ) + btn.offsetHeight + `px`
 
 	function eventTabindexOne() {
 
@@ -55,37 +49,47 @@ export default () => {
 
 	}
 
-	btn.addEventListener( `click`, () => {
+	setTimeout( () => {
 
-		if ( cardsBox.style.maxHeight === (cardsHeight + `px`) ) {
+		const cardsFullHeight = cardsBox.offsetHeight + `px`
+		const cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
 
-			cardsBox.style.maxHeight = cardFullHeight
-			btn.textContent = `Все события`
+		cardsBox.style.maxHeight = cardFullHeight
 
-			sectionEvents.scrollIntoView( {
+		btn.addEventListener( `click`, () => {
 
-				behavior: `smooth`,
-				block: `start`,
+			if ( cardsBox.style.maxHeight === cardFullHeight ) {
 
-			} )
+				cardsBox.style.maxHeight = cardsFullHeight
 
-			eventTabindexClear()
-			eventTabindexOne()
+				btn.textContent = `Скрыть`
 
-		}
+				eventTabindexTwo()
 
-		else {
+			}
 
-			cardsBox.style.maxHeight = cardsHeight + `px`
+			else {
 
-			btn.textContent = `Скрыть`
+				cardsBox.style.maxHeight = cardFullHeight
 
-			eventTabindexTwo()
+				btn.textContent = `Все события`
 
-		}
+				sectionEvents.scrollIntoView( {
 
-	} )
+					behavior: `smooth`,
+					block: `start`,
 
-	eventTabindexOne()
+				} )
+
+				eventTabindexClear()
+				eventTabindexOne()
+
+			}
+
+		} )
+
+		eventTabindexOne()
+
+	}, 1000 )
 
 }
