@@ -27,8 +27,7 @@ section
 	margin: 0 auto
 
 .btn
-	width: 314px
-	height: 70px
+	padding: 22px 31px
 
 	font-size: 18px
 	font-weight: 700
@@ -83,8 +82,11 @@ section
 			width: 30px
 			height: 30px
 
-	&-button-disabled svg
-		background: inherit !important
+	&-button-disabled
+		svg
+			background: #666 !important
+			border-color: transparent !important
+			opacity: .5
 
 	&__pagination
 		width: 70px !important
@@ -101,6 +103,34 @@ section
 	&__pagination *
 		font-size: 16px
 		color: #fff
+
+.focus-bg
+	position: relative
+
+	z-index: 1
+
+	&::before
+		position: absolute
+		top: -2px
+		right: -6px
+		bottom: -7px
+		left: -6px
+
+		z-index: -1
+
+		content: ""
+
+		background-color: #7943a4
+
+		opacity: 0
+
+		transition: opacity .2s ease-in-out
+
+	&:focus::before
+		opacity: 1
+
+	&:active::before
+		opacity: 0
 
 #swiper-arrow_left,
 #swiper-arrow_right

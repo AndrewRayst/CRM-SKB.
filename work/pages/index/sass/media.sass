@@ -89,9 +89,6 @@
 		&__btn
 			background: transparent
 
-			width: 257px
-			height: 60px
-
 			border: 2px solid #9d5cd0
 
 			&--cross
@@ -138,7 +135,7 @@
 	// hero
 	.hero
 		&__inner
-			padding-top: 212px
+			padding: 212px 0 10.5% 0
 
 		&__title
 			width: p(585, 924)
@@ -263,13 +260,16 @@
 
 	// events
 	.events
-		margin-bottom: 150px !important
+		margin-bottom: 138px !important
 
 		&__info
 			margin-bottom: 22px
 
 		&__heading
 			margin-bottom: 26px
+
+		&__card
+			padding-bottom: 44px
 
 		&__place, &__date
 			padding-left: 41%
@@ -297,7 +297,7 @@
 			height: 200px
 
 		&-btn__box
-			top: 100.5%
+			top: 99%
 
 	// edition
 
@@ -310,6 +310,9 @@
 
 		&__inner
 			padding-bottom: 80px
+
+		&__heading
+			margin-bottom: 34px
 
 		&-slide
 			img
@@ -328,7 +331,7 @@
 		padding-top: 0
 
 		&__heading
-			margin-bottom: 19px
+			margin-bottom: 23px !important
 
 			&--mini
 				// margin-bottom: 28px !important
@@ -344,7 +347,7 @@
 	.contacts
 		&__menu
 			flex: 0 1 p(487, 1024)
-			padding: 100px 102px 0 50px
+			padding: 102px 102px 0 50px
 
 		&__menu h3
 			line-height: 62px
@@ -358,10 +361,20 @@
 		.btn__box
 			transform: translateY(-9px) translateX(-5px)
 
-		.socials__link
-			svg
-				width: 60px
-				height: 60px
+		.socials__item
+			&:first-child
+				margin-right: 23px
+
+				svg
+					width: 60px
+					height: 60px
+
+			&:last-child
+				transform: translateY(-4px)
+
+				svg
+					width: 74px
+					height: 74px
 
 		&__map
 			flex: 0 1 p(537, 1024)
@@ -430,6 +443,10 @@
 
 	// hero
 	.hero
+		margin-bottom: 11.1%
+
+		&__inner
+			padding-bottom: 14.1%
 
 		&__title
 			width: p(585, 668)
@@ -455,6 +472,9 @@
 	.about
 		margin-bottom: 70px
 
+		&__heading
+			margin-bottom: 26px
+
 	// gallery
 	.gallery
 		background-position: 0 0
@@ -466,6 +486,9 @@
 			display: block
 			padding-top: 104px
 			padding-bottom: 68px
+
+		&__heading
+			margin-bottom: 16px
 
 		&__paragraph
 			display: none
@@ -563,7 +586,7 @@
 
 	// events
 	.events
-		margin-bottom: 124px !important
+		margin-bottom: 140px !important
 
 		&__heading
 			margin-bottom: 22px
@@ -575,7 +598,7 @@
 			flex: 0 1 p(317, 668)
 			// height: 683px
 
-			padding-bottom: 58px
+			padding-bottom: 41px
 
 		&__info
 			margin-bottom: 64px
@@ -586,20 +609,22 @@
 
 			&::before
 				width: p(86, 108)
+				bottom: 8px
+				left: 10px
 
 		&__img
 			width: 100%
 			height: 200px
 
 		&-btn__box
-			top: 97%
+			top: 99.3%
 
 	// edition
 	.edition
 		&__inner
 			flex-direction: column
 			padding-top: 92px
-			padding-bottom: 54px
+			padding-bottom: 50px
 
 			margin-bottom: 88px
 
@@ -621,6 +646,12 @@
 		&__checkbox
 			&__text
 				transform: translateX(10px)
+
+			&--inner
+				transform: translateY(-4px)
+
+			&--label::before
+				top: 3px
 
 			&--container
 				border: none
@@ -677,14 +708,14 @@
 		margin-bottom: 76px
 
 		&__heading
-			margin-bottom: 20px
+			margin-bottom: 23px !important
 
 			&--mini
 				margin-bottom: 22px !important
 
 		&__paragraph
 			width: 99%
-			margin-bottom: 27px
+			margin-bottom: 30px
 
 		&__link
 			display: block
@@ -695,7 +726,7 @@
 	// contacts
 	.contacts
 		&__heading
-			margin-bottom: 24px
+			margin-bottom: 26px
 
 		&__menu
 			flex: 0 1 p(430, 768)
@@ -704,14 +735,17 @@
 
 		.heading--mini
 			line-height: 1
-			margin-bottom: 15px
+			margin-bottom: 16px
 
 		&__paragraph
-			margin-bottom: 43px !important
+			margin-bottom: 40px !important
 
 		&__map
 			flex: 0 1 p(338, 768)
 			height: 703px !important
+
+		&__btn
+			padding: 17px 32px
 
 @media ( max-width: 668px )
 	.container
@@ -856,9 +890,6 @@
 				margin-bottom: 21px
 
 		&__btn
-			width: 128px
-			height: 40px
-
 			font-size: 12px
 
 	.socials
@@ -942,9 +973,6 @@
 			padding: 15px 0 27px 0
 
 		&__btn
-			width: 115px
-			height: 40px
-
 			font-size: 12px
 
 			&--cross
@@ -1045,12 +1073,13 @@
 
 	// hero
 	.hero
+		margin-bottom: 16%
 
 		&-swiper--container
 			height: 355px
 
 		&__inner
-			padding: 76px 0 0 0
+			padding: 76px 0 13% 0
 
 		&__title
 			width: 100%
@@ -1076,9 +1105,7 @@
 			text-align: center
 
 		&__btn
-			width: 200px
-			height: 40px
-
+			padding: 10px 17px
 			font-size: 12px
 
 		.btn__box
@@ -1262,8 +1289,8 @@
 		&__card
 			// min-height: 683px
 
-			padding-bottom: 40px
-			margin-bottom: 14px
+			padding-bottom: 46px
+			margin-bottom: 9px
 
 			img
 				width: 290px
@@ -1347,8 +1374,8 @@
 
 		&__wrapper
 			display: grid !important
-			grid-template-columns: repeat(2, 1fr)
-			gap: 43px 30px
+			grid-template-columns: 1fr 1fr
+			gap: 46px 30px
 
 		&__heading
 			margin-bottom: 15px
@@ -1507,8 +1534,7 @@
 					margin-bottom: 6px
 
 			&__btn
-				width: 128px
-
+				padding: 10px 33px
 				font-size: 12px
 
 	.checkbox--active
@@ -1522,7 +1548,7 @@
 		margin-bottom: 56px
 
 		&__heading
-			margin-bottom: 16px !important
+			margin-bottom: 19px !important
 
 			&--mini
 				font-size: 18px
@@ -1551,5 +1577,25 @@
 
 	// contacts
 	.ymaps-2-1-79-map,
-	.contacts__map
 		height: 320px !important
+
+	.contacts
+		&__menu
+			height: 320px !important
+			padding: 6px 14px 0 14px
+
+		&__btn
+			padding: 12px 32px
+
+		.socials
+			&__item
+				&:first-child
+					margin-right: 16px
+
+				&:last-child
+					transform: translateY(-5px)
+
+					svg,
+					.socials__link
+						width: 60px !important
+						height: 60px !important

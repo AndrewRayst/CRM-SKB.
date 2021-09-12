@@ -39,6 +39,58 @@ export default () => {
 
 	// groups
 
+	function groupFocusFirstElement( event ) {
+
+		if ( event.keyCode === 9 && event.shiftKey === true ) {
+	
+			event.preventDefault()
+
+			document.querySelector( `.group--active` ).children[0].focus()
+
+		} 
+
+	}
+
+	function groupFocusLastElement( event ) {
+
+		event.preventDefault()
+
+		if ( event.keyCode === 9 ) document.querySelector( `.group--active` ).children[0].focus()
+
+	}
+
+	function groupTabindex( group, mode ) {
+
+		const items = group.nextElementSibling.querySelectorAll( `.group__item` )
+
+		if ( mode === `on` ) {
+	
+			let tabIndex = 700
+	
+			for ( let index = 0; index < items.length; index++ ) {
+	
+				items[index].tabIndex = tabIndex
+	
+				++tabIndex
+	
+			}
+	
+			items[0].addEventListener( `keydown`, event => groupFocusFirstElement( event ) )
+
+			items[0].focus()
+	
+			items[items.length - 1].addEventListener( `keydown`, event => {
+
+				groupFocusLastElement( event )
+
+			} )
+
+		}
+
+		else if ( mode === `off` ) document.querySelectorAll( `.group__item` ).forEach( item => item.tabIndex = -1 )
+
+	}
+
 	function group( event ) {
 
 		const groupCurrent = event.currentTarget.parentElement
@@ -46,6 +98,8 @@ export default () => {
 		const groupCurrentContent = groupCurrent.querySelector( `.group__box` )
 
 		if ( groupCurrent.classList.contains( `group--active` ) ) {
+
+			groupTabindex( event.currentTarget, `off` )
 
 			groupCurrentContent.style.transition = `max-height .1s ease-in-out, padding .1s ease-in-out`
 
@@ -61,7 +115,6 @@ export default () => {
 
 				const groupBox = group.querySelector( `.group__box` )
 
-
 				group.classList.remove( 'group--active' )
 
 				groupBox.style.transition = `max-height .1s ease-in-out, padding .1s ease-in-out`
@@ -70,12 +123,16 @@ export default () => {
 
 			} )
 
+			groupTabindex( event.currentTarget, `off` )
+
 			groupCurrentContent.style.transition = ``
 
 			groupCurrent.classList.add( 'group--active' )
 
 			groupCurrentContent.style.maxHeight = `300px`
 			groupCurrentContent.style.padding = `32px 19px 40px 40px`
+
+			groupTabindex( event.currentTarget, `on` )
 
 		}
 
@@ -91,15 +148,12 @@ export default () => {
 
 		title.addEventListener( `keydown`, event => {
 
-			console.log(`123`)
-
 			if ( event.keyCode === 13 ) {
 
-
 				group( event )
-	
+
 			}
-	
+
 		} )
 
 	} )

@@ -17,12 +17,12 @@
 	&__up
 		position: relative
 
-		padding: 30px 0
+		padding: 28px 0
 
 		background: #000
 
 	&__down
-		padding: 23px 0
+		padding: 24px 0
 
 		background: rgba(0, 0, 0, .4)
 
@@ -178,8 +178,18 @@
 			svg
 				transform: rotateZ(180deg)
 
+		.group__title
+			background: transparent
+
+			transition: background .3s ease-in-out
+
+		.group__text
+			color: #fff
+
+			transition: color .3s ease-in-out
+
 	&:not(:last-child)
-		margin-right: 83px
+		margin-right: 80.5px
 
 	&:nth-child(3)
 		.group__box
@@ -196,32 +206,31 @@
 
 		transition: background .3s ease-in-out
 
-		&:active *
-			color: #7943a4 !important
-			background: transparent
-			stroke: #7943a4 !important
-
-			transition: color .3s ease-in-out, stroke .1s ease-in-out
-
 		&:hover
 			background: transparent !important
 
 			*
 				color: #c283f3
-				background: transparent !important
+				background: transparent
 				stroke: #c283f3
 
-				transition: color .3s ease-in-out, stroke .1s ease-in-out
+				transition: stroke .01s ease-in-out
+
+		&:active
+			*
+				color: #7943a4
+				background: transparent
+				stroke: #7943a4
+
+				transition: stroke .01s ease-in-out
 
 		&:focus
 			background: #7943a4
 
-			transition: background .3s ease-in-out
-
 	&__icon
 		svg
-			width: 10px
-			height: 5px
+			width: 12px
+			height: 7px
 
 			stroke: #fff
 
@@ -235,6 +244,8 @@
 	&__text
 		font-size: 18px
 		color: #fff
+
+		transition: color .3s ease-in-out
 
 	&__box
 		position: absolute
@@ -358,6 +369,8 @@
 	&__input
 
 		width: 218px
+
+		padding: 3px 0
 
 		color: #fff
 

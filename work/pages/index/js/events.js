@@ -52,11 +52,13 @@ export default () => {
 	setTimeout( () => {
 
 		const cardsFullHeight = cardsBox.offsetHeight + `px`
-		const cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
+		let cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
 
 		cardsBox.style.maxHeight = cardFullHeight
 
 		btn.addEventListener( `click`, () => {
+
+			cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
 
 			if ( cardsBox.style.maxHeight === cardFullHeight ) {
 

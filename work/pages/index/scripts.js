@@ -1,6 +1,6 @@
 // DON'T TOUCH!!!
 
-import './js/vendor'
+// import './js/vendor'
 
 // ================
 

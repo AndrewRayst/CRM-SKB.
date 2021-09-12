@@ -87,6 +87,7 @@ export default () => {
 		const modalExit = document.querySelector( `.gallery-modal__exit` )
 		const gallery = document.querySelector( `.gallery` )
 		const modalImg = document.querySelector( `.gallery-modal__img` )
+		const modalDescribe = document.querySelector( `.gallery-modal__text` )
 
 		gallery.scrollIntoView( {
 
@@ -103,7 +104,7 @@ export default () => {
 
 		modal.style.display = 'block'
 
-		modalImg.focus()
+		modalDescribe.focus()
 
 		document.querySelector( `body` ).style.background = `rgba(0,0,0,.6)`
 
@@ -126,9 +127,16 @@ export default () => {
 
 			}
 
+			if ( event.keyCode === 9 ) {
+
+				console.log(`11111`)
+				event.preventDefault()
+
+			}
+
 		} )
 
-		modalExit.addEventListener( `click`, event => {
+		modalExit.addEventListener( `click`, () => {
 
 			document.querySelector( `body` ).style.background = ``
 
@@ -159,5 +167,11 @@ export default () => {
 		} )
 
 	} )
+
+	document.querySelector( `.gallery-modal__text` ).addEventListener(`keydown`, event => {
+
+		if ( event.keyCode === 9 && event.shiftKey === true ) event.preventDefault()
+
+	})
 
 }

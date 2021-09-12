@@ -14,7 +14,8 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 
 	const choices = document.querySelector( `.choices` )
 
-	choices.setAttribute( `tabindex`, `17` )
+	choices.setAttribute( `tabindex`, `18` )
+	choices.setAttribute( `aria-label`, `Секция - Галерея. Фильтр произведений искусства` )
 
 	function settings() {
 

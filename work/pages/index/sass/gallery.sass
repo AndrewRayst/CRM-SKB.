@@ -23,14 +23,14 @@
 			border-color: #000
 
 		&:hover svg
-			background: #9d5cd0 !important
+			background: #9d5cd0
 
 		&:active svg
-			background: #7943a4 !important
+			background: #7943a4
 			border-color: #000
 
 		svg
-			background: #666 !important
+			background: #666
 
 			border: 2px solid transparent
 			border-radius: 50%
@@ -225,10 +225,17 @@
 
 		background: transparent
 
+		border-color: #fff !important
 		border-radius: 6px
+
+	&__placeholder
+		opacity: 1 !important
 
 	&__item
 		color: #fff !important
+
+	&__list--dropdown
+		z-index: 2
 
 .choices__item--choice[aria-selected="true"]
 	background: rgba(256, 256, 256, .2) !important
@@ -247,7 +254,7 @@
 
 	margin: 0 !important
 
-	background: url( '../img/sprite.svg#choices__arrow' ) no-repeat
+	background: url( '../img/choices__arrow.svg' ) no-repeat
 
 	border: none !important
 
@@ -312,15 +319,14 @@
 
 		cursor: pointer
 
-		// &:focus svg
-		// 	border-color: #7943a4
+		&:focus svg
+			stroke: #9d5cd0
 
-		// &:hover svg
-		// 	background: #9d5cd0
+		&:hover svg
+			stroke: #9d5cd0
 
-		// &:active svg
-		// 	background: #7943a4
-		// 	border-color: #c283f3
+		&:active svg
+			stroke: #7943a4
 
 		svg
 			width: 45px
@@ -333,7 +339,7 @@
 			// border: 3px solid transparent
 			// border-radius: 50%
 
-			// transition: background .2s ease-in-out, border-color .1s ease-in-out
+			transition: stroke .2s ease-in-out
 
 	&__img
 		flex: 0 1 90%

@@ -46,20 +46,21 @@
 		border: 1px solid #333
 		border-radius: 100px
 
-		transition: border-color .2s ease-in-out
+		transition: border-color .2s ease-in-out, background .2s ease-in-out
 
 		&::placeholder
 			color: #999
 
 		&:hover
+			background: #eaeaea
 			border-color: #000
 
 		&:focus
+			background: #eaeaea
 			border-color: #000
 
 	&__btn
-		width: 157px
-		height: 59px
+		padding: 17px 35px
 
 		color: #9d5cd0
 
@@ -76,25 +77,30 @@
 			background: #7943a4
 			border-color: #d1a9f0
 
-	.socials__link
-		svg
-			width: 40px
-			height: 40px
+	.btn__box
+		transform: translate(-9px, -3px)
 
-			border: 1px solid transparent
-			border-radius: 50%
+	.socials
+		&__item:first-child
+			margin-right: 11px
 
-			transition: opacity .2s ease-in-out, border-color .2s ease-in-out
+		&__link
+			svg
 
-		&:hover svg
-			opacity: .5
+				border: 1px solid transparent
+				border-radius: 50%
 
-		&:focus svg
-			opacity: .5
+				transition: opacity .2s ease-in-out, border-color .2s ease-in-out
 
-		&:active svg
-			border-color: #9643a4
-			opacity: 1
+			&:hover svg
+				opacity: .5
+
+			&:focus svg
+				opacity: .5
+
+			&:active svg
+				border-color: #9643a4
+				opacity: 1
 
 	&__map
 		flex: 0 1 64.5%

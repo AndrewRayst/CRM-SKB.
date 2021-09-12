@@ -24,6 +24,12 @@
 		position: absolute
 		opacity: 0
 
+		&:focus + &--label
+			color: #c283f3
+
+			&::before
+				border-color: #c283f3
+
 		&--container
 			padding: 10px 0
 			border-top: 1px solid rgba(256, 256, 256, .5)
@@ -49,15 +55,11 @@
 
 			color: #fff
 
+			cursor: pointer
+
 			transition: color .1s ease-in-out
 
 			&:hover
-				color: #c283f3
-
-				&::before
-					border-color: #c283f3
-
-			&:focus
 				color: #c283f3
 
 				&::before
@@ -140,24 +142,24 @@
 
 			background: #9d5cd0
 
-			filter: grayscale(.5)
+			opacity: .5
 
 			border: 2px solid transparent
 
-			transition: fillter .2s ease-in-out, border-color .2s ease-in-out
+			transition: opacity .2s ease-in-out, border-color .2s ease-in-out
 
 			&::placeholder
 				color: #fff
 
 			&:hover
-				filter: grayscale(0)
+				opacity: 1
 
 			&:active
 				background: #7943a4
-				filter: grayscale(0)
+				opacity: 1
 
 			&:focus
-				filter: grayscale(0) !important
+				opacity: 1 !important
 
 				border-color: #fff
 
@@ -189,13 +191,13 @@
 
 		border-radius: 50%
 
-		transition: background .2s ease-in-out
-
 		&:hover
-			background: #9d5cd0
+			svg
+				background: #9d5cd0
 
 		&:active
-			background: #7943a4
+			svg
+				background: #7943a4
 
 			svg
 				border-color: #000
@@ -208,7 +210,7 @@
 			border: 2px solid transparent
 			border-radius: 50%
 
-			transition: border-color .1s ease-in-out
+			transition: border-color .1s ease-in-out, background .2s ease-in-out
 
 	&__btn--prev
 		transform: rotateZ(180deg)
@@ -245,8 +247,9 @@
 			margin-bottom: 10px
 
 		&__btn
-			width: 120px
-			height: 40px
+			padding: 10px 18px
+
+			font-size: 16px
 
 			background: transparent
 

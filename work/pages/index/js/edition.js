@@ -65,10 +65,19 @@ export default () => {
 
 		if ( event.keyCode === 9 ) {
 
-			const slides = slidesQuantity()
+			let slides = slidesQuantity()
+
+			if ( slides.end > editionSlide.target.length ) {
+
+				slides.end = editionSlide.target.length
+
+				slides.start = editionSlide.target.length - slides.quantity
+	
+			}
+
 			let tabindex = 166
 
-			editionSlide.target.forEach( i => {
+			document.querySelectorAll( `.edition-slide__btn` ).forEach( i => {
 
 				i.setAttribute( `tabindex`, `-1` )
 

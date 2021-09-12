@@ -166,9 +166,9 @@ export default () => {
 
 					if ( event.keyCode === 9 && event.shiftKey === false ) {
 
-						event.preventDefault()
+						target.focus()
 
-						document.querySelector( `[tabindex='110']` ).focus()
+						event.preventDefault()
 
 					}
 
@@ -255,13 +255,37 @@ export default () => {
 
 	creators.forEach( ( item ) => {
 
+		item.addEventListener( `keydown`, event => {
+
+			if ( event.keyCode === 13 ) {
+
+				event.currentTarget.click()
+
+				// setTimeout( () => {
+
+				// 	const personInfo = event.path[6].querySelector( `.catalog__person--curent` )
+
+				// 	console.log( personInfo )
+
+				// 	personInfo.focus()
+
+				// }, 700 )
+
+			}
+
+		} )
+
 		item.addEventListener( `click`, ( e ) => {
+
+			e.stopPropagation()
 
 			if ( !e.target.classList.contains( `accordion__creator--active` ) ) {
 
 				let creatorName = e.target
-				let creator = e.target.parentElement
-				let catalog = creator.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+				let creator = e.currentTarget
+				let catalog = e.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+
+				if ( creatorName === creator ) creatorName = e.target.children[0]
 
 				creatorsUnactive( catalog.querySelectorAll( `.accordion__creator` ) )
 				personInfo( creatorName.textContent, catalog )
@@ -269,12 +293,6 @@ export default () => {
 				creator.classList.toggle( `accordion__creator--active` )
 
 			}
-
-		} )
-
-		item.addEventListener( `keydown`, ( e ) => {
-
-			if ( e.keyCode === 13 ) e.target.children[0].click()
 
 		} )
 
