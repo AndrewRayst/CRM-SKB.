@@ -1,10 +1,5 @@
 export default ( Swiper, SwiperCore, Сhoices ) => {
 
-	const galleryBtnPrev = document.querySelector( `.gallery__btn--prev` )
-	const galleryBtnNext = document.querySelector( `.gallery__btn--next` )
-
-	const wrapper = document.querySelector( `.gallery__wrapper` )
-
 	const gallery_choices = new Сhoices( document.getElementById( `gallery__select` ), {
 		searchEnabled: false,
 
@@ -14,24 +9,8 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 
 	const choices = document.querySelector( `.choices` )
 
-	choices.setAttribute( `tabindex`, `18` )
+	choices.setAttribute( `tabindex`, `0` )
 	choices.setAttribute( `aria-label`, `Секция - Галерея. Фильтр произведений искусства` )
-
-	function settings() {
-
-		const windowWidth = document.querySelector( `body` ).offsetWidth
-
-		if ( windowWidth > 1630 ) return [3, 3, 2, 47, 350]
-
-		// else if ( windowWidth > 768 ) return [2, 2, 2, 34, 280]
-
-		else if ( windowWidth > 668 ) return [2, 2, 2, 34, 280]
-
-		else if ( windowWidth > 0 ) return [1, 1, 1, 30, 280]
-
-	}
-
-	const param = settings()
 
 	// SWIPER
 
@@ -39,10 +18,10 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 
 		direction: `horizontal`,
 
-		slidesPerView: param[0],
-		slidesPerGroup: param[1],
-		slidesPerColumn: param[2],
-		spaceBetween: param[3],
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		slidesPerColumn: 1,
+		spaceBetween: 30,
 
 		simulateTouch: false,
 
@@ -57,22 +36,101 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 			type: `fraction`,
 		},
 
+		breakpoints: {
+			668: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 34,
+			},
+
+			1630: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				slidesPerColumn: 2,
+				spaceBetween: 47,
+			},
+		},
+
 	} )
 
-	// wrapper.style.width = `${(12 * param[4]) + (11 * param[3])}px`
+	// SWIPER INDEX
 
-	function imitateClick( event ) {
+	const gallerySlides = document.querySelectorAll( `.gallery-slide` )
+	const btnLeft = document.querySelector( `.gallery__btn--prev` )
+	const btnRight = document.querySelector( `.gallery__btn--next` )
+	let swiperPage = document.querySelector( `.gallery` ).querySelector( `.swiper-pagination-current` ).textContent
 
-		if ( event.keyCode === 13 ) {
+	btnRight.addEventListener( `click`, () => {
 
-			event.path[0].click()
+		swiperPage = document.querySelector( `.gallery` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		swiperIndex()
+
+	} )
+
+	btnRight.addEventListener( `keydown`, ( event ) => {
+
+		swiperPage = document.querySelector( `.gallery` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		if ( event.keyCode === 13 ) swiperIndex()
+
+	} )
+
+	btnLeft.addEventListener( `click`, () => {
+
+		swiperPage = document.querySelector( `.gallery` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		swiperIndex()
+
+	} )
+
+	btnLeft.addEventListener( `keydown`, ( event ) => {
+
+		swiperPage = document.querySelector( `.gallery` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		if ( event.keyCode === 13 ) swiperIndex()
+
+	} )
+
+	function swiperIndexCount() {
+
+		const width = window.innerWidth
+
+		if ( width < 1630 ) {
+
+			return 4
+
+		}
+
+		else if ( width < 668 ) {
+
+			return 1
+
+		}
+
+		else {
+
+			return 6
 
 		}
 
 	}
 
-	galleryBtnPrev.addEventListener( `keydown`, event => imitateClick( event ) )
+	function swiperIndex() {
 
-	galleryBtnNext.addEventListener( `keydown`, event => imitateClick( event ) )
-	
+		gallerySlides.forEach( el => el.tabIndex = -1 )
+
+		const count = swiperIndexCount()
+
+		for ( let i = ( swiperPage - 1 ) * count; i < count * swiperPage; i++ ) {
+
+			gallerySlides[i].tabIndex = 0
+
+		}
+
+	}
+
+	swiperIndex()
+
 }

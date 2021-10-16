@@ -1,8 +1,5 @@
 export default () => {
 
-	const editionBbtnPrev = document.querySelector( `.edition__btn--prev` )
-	const editionBbtnNext = document.querySelector( `.edition__btn--next` )
-
 	const category = document.querySelector( `.edition__sets` )
 	const categoryBtn = category.querySelector( `.edition__legend` )
 	const categoryItems = category.querySelectorAll( `.edition__checkbox--container` )
@@ -18,12 +15,6 @@ export default () => {
 
 		},
 
-		// height() {
-
-		// 	return this.target.offsetHeight
-
-		// },
-
 	}
 
 	const editionSlide = {
@@ -36,77 +27,7 @@ export default () => {
 
 		},
 
-		// height() {
-
-		// 	return this.target[0].offsetHeight
-
-		// },
-
 	}
-
-	function slidesQuantity() {
-
-		const slidesPage = document.getElementById( `edition__pagination` ).children[0].innerHTML
-
-		const slidesQuantity_row = Math.floor( editionSwiper.width() / editionSlide.width() )
-
-		return {
-
-			quantity: slidesQuantity_row,
-
-			start: slidesQuantity_row * slidesPage - slidesQuantity_row,
-			end: slidesQuantity_row * slidesPage,
-
-		}
-
-	}
-
-	editionBbtnNext.addEventListener( `keydown`, event => {
-
-		if ( event.keyCode === 9 ) {
-
-			let slides = slidesQuantity()
-
-			if ( slides.end > editionSlide.target.length ) {
-
-				slides.end = editionSlide.target.length
-
-				slides.start = editionSlide.target.length - slides.quantity
-	
-			}
-
-			let tabindex = 166
-
-			document.querySelectorAll( `.edition-slide__btn` ).forEach( i => {
-
-				i.setAttribute( `tabindex`, `-1` )
-
-			} )
-
-			for ( let slide = slides.start; slide < slides.end; slide++ ) {
-
-				editionSlide.target[slide].querySelector( `.edition-slide__btn` ).setAttribute( `tabindex`, `${tabindex}` )
-
-				++tabindex
-
-			}
-
-		}
-
-	} )
-
-	function editionClick( event ) {
-
-		if ( event.keyCode === 13 ) {
-
-			event.target.click()
-
-		}
-
-	}
-
-	editionBbtnPrev.addEventListener( `keydown`, event => editionClick( event ) )
-	editionBbtnNext.addEventListener( `keydown`, event => editionClick( event ) )
 
 	// category
 

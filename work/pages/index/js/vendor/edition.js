@@ -2,25 +2,13 @@ export default ( Swiper, SwiperCore ) => {
 
 	const windowWidth = document.querySelector( `body` ).offsetWidth
 
-	function settings( windowWidth ) {
-
-		if ( windowWidth > 1630 ) return [3, 3, 1, 50, 350]
-
-		else if ( windowWidth > 668 ) return [2, 2, 1, 38, 280]
-
-		else if ( windowWidth > 425 ) return [1, 1, 1, 34, 280]
-
-	}
-
-	const param = settings( windowWidth )
-
 	if ( windowWidth > 425 ) {
 
 		const swiper = new Swiper( `.editionSwiper`, {
 	
-			slidesPerView: param[0],
-			slidesPerGroup: param[1],
-			spaceBetween: param[3],
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: 34,
 	
 			simulateTouch: false,
 	
@@ -34,10 +22,107 @@ export default ( Swiper, SwiperCore ) => {
 				el: `#edition__pagination`,
 				type: `fraction`,
 			},
-	
+
+			breakpoints: {
+
+				668: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+					spaceBetween: 38,
+				},
+
+				1630: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+					spaceBetween: 50,
+				},
+			},
+
 		} )
 
 	}
 
+	// SWIPER INDEX
+
+	const gallerySlides = document.querySelectorAll( `.edition-slide__btn` )
+	const btnLeft = document.querySelector( `.edition__btn--prev` )
+	const btnRight = document.querySelector( `.edition__btn--next` )
+	let swiperPage = document.querySelector( `.edition` ).querySelector( `.swiper-pagination-current` ).textContent
+
+	btnRight.addEventListener( `click`, () => {
+
+		swiperPage = document.querySelector( `.edition` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		swiperIndex()
+
+	} )
+
+	btnRight.addEventListener( `keydown`, ( event ) => {
+
+		swiperPage = document.querySelector( `.edition` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		if ( event.keyCode === 13 ) swiperIndex()
+
+	} )
+
+	btnLeft.addEventListener( `click`, () => {
+
+		swiperPage = document.querySelector( `.edition` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		swiperIndex()
+
+	} )
+
+	btnLeft.addEventListener( `keydown`, ( event ) => {
+
+		swiperPage = document.querySelector( `.edition` ).querySelector( `.swiper-pagination-current` ).textContent
+
+		if ( event.keyCode === 13 ) swiperIndex()
+
+	} )
+
+	function swiperIndexCount() {
+
+		const width = window.innerWidth
+
+		if ( width < 1630 ) {
+
+			return 2
+
+		}
+
+		else if ( width < 668 ) {
+
+			return 2
+
+		}
+
+		else {
+
+			return 3
+
+		}
+
+	}
+
+	function swiperIndex() {
+
+		gallerySlides.forEach( el => el.tabIndex = -1 )
+
+		const count = swiperIndexCount()
+
+		for ( let i = ( swiperPage - 1 ) * count; i < count * swiperPage; i++ ) {
+
+			if ( i < gallerySlides.length ) {
+
+				gallerySlides[i].tabIndex = 0
+
+			}
+
+		}
+
+	}
+
+	swiperIndex()
 
 }

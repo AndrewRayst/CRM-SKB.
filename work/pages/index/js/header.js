@@ -138,6 +138,28 @@ export default () => {
 
 	}
 
+	groups.forEach( ( el ) => {
+
+		el.addEventListener( `blur`, ( event ) => {
+
+			if ( event.relatedTarget === null ) {
+
+				const groupCurrent = el
+
+				const groupCurrentContent = groupCurrent.querySelector( `.group__box` )
+
+				groupCurrentContent.style.transition = `max-height .1s ease-in-out, padding .1s ease-in-out`
+
+				groupCurrent.classList.remove( `group--active` )
+				groupCurrentContent.style.maxHeight = ``
+				groupCurrentContent.style.padding = ``
+
+			}
+
+		}, true )
+
+	})
+
 	titles.forEach( title => {
 
 		title.addEventListener( `click`, event => group( event ) )

@@ -1,93 +1,13 @@
 export default () => {
 
-	const btn = document.querySelector( `.gallery__btn--next` )
 	const modal = document.querySelector( `.gallery-modal` )
-
-	const gallerySwiper = {
-
-		target: document.querySelector( `.gallery__right` ),
-
-		width() {
-
-			return this.target.offsetWidth
-
-		},
-
-		height() {
-
-			return this.target.offsetHeight
-
-		},
-
-	}
-
-	const gallerySlide = {
-
-		target: document.querySelectorAll( `.gallery-slide` ),
-
-		width() {
-
-			return this.target[0].offsetWidth
-
-		},
-
-		height() {
-
-			return this.target[0].offsetHeight
-
-		},
-
-	}
-
-	function slidesQuantity() {
-
-		const slidesPage = document.getElementById( `gallery__pagination` ).children[0].innerHTML
-
-		const slidesQuantity_row = Math.floor( gallerySwiper.width() / gallerySlide.width() )
-		const slidesQuantity_column = Math.floor( gallerySwiper.height() / gallerySlide.height() )
-
-		return {
-
-			quantity: slidesQuantity_row * slidesQuantity_column,
-
-			start: slidesQuantity_row * slidesQuantity_column * slidesPage - slidesQuantity_row * slidesQuantity_column,
-			end: slidesQuantity_row * slidesQuantity_column * slidesPage,
-
-		}
-
-	}
-
-	btn.addEventListener( `keydown`, event => {
-
-		if ( event.keyCode === 9 ) {
-
-			const slides = slidesQuantity()
-			let tabindex = 52
-
-			gallerySlide.target.forEach( i => {
-
-				i.removeAttribute( `tabindex` )
-
-			} )
-
-			for ( let slide = slides.start; slide < slides.end; slide++ ) {
-
-				gallerySlide.target[slide].setAttribute( `tabindex`, `${tabindex}` )
-
-				++tabindex
-
-			}
-
-		}
-
-	} )
+	const gallerySlides = document.querySelectorAll( `.gallery-slide` )
 
 	function slideModal( target ) {
 
 		const modalExit = document.querySelector( `.gallery-modal__exit` )
 		const gallery = document.querySelector( `.gallery` )
 		const modalImg = document.querySelector( `.gallery-modal__img` )
-		const modalDescribe = document.querySelector( `.gallery-modal__text` )
 
 		gallery.scrollIntoView( {
 
@@ -102,18 +22,11 @@ export default () => {
 
 		modalImg.append( painting )
 
+		modalExit.focus()
+
 		modal.style.display = 'block'
 
-		modalDescribe.focus()
-
 		document.querySelector( `body` ).style.background = `rgba(0,0,0,.6)`
-
-		// gallery.scrollIntoView( {
-
-		// 	behavior: `smooth`,
-		// 	block: `start`,
-
-		// } )
 
 		modalExit.addEventListener( `keydown`, event => {
 
@@ -129,7 +42,6 @@ export default () => {
 
 			if ( event.keyCode === 9 ) {
 
-				console.log(`11111`)
 				event.preventDefault()
 
 			}
@@ -148,12 +60,12 @@ export default () => {
 
 	}
 
-	gallerySlide.target.forEach( slide => {
+	gallerySlides.forEach( slide => {
 
 		slide.addEventListener( `keydown`, event => {
 
 			if ( event.keyCode === 13 ) {
-
+				
 				slideModal( event.path[0] )
 
 			}

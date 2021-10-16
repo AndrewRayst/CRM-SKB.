@@ -124,60 +124,6 @@ export default () => {
 		const content = item.querySelector( `.accordion__content` )
 		const name = item.querySelector( `.accordion__name` )
 
-		function accordionTabindex( event ) {
-
-			event.stopPropagation()
-
-			const target = event.target
-
-			if ( target.classList.contains( `accordion__item--active` ) && event.keyCode === 9 && event.shiftKey === false ) {
-
-				event.preventDefault()
-
-				const tabindex = target.querySelectorAll( `[data-accordion__tabindex]` )
-
-				for ( let i = 0; i < ( tabindex.length ); i++ ) {
-
-					tabindex[i].setAttribute( `tabindex`, `${i + 600}` )
-
-				}
-
-				tabindex[0].focus()
-
-				tabindex[0].addEventListener( `keydown`, event => {
-
-					if ( event.keyCode === 9 && event.shiftKey === true ) {
-
-						event.stopPropagation()
-
-						if ( event.currentTarget !== target ) {
-
-							event.preventDefault()
-
-							target.focus()
-
-						}
-
-					}
-
-				} )
-
-				tabindex[tabindex.length - 1].addEventListener( 'keydown', event => {
-
-					if ( event.keyCode === 9 && event.shiftKey === false ) {
-
-						target.focus()
-
-						event.preventDefault()
-
-					}
-
-				} )
-
-			}
-
-		}
-
 		if ( !item.classList.contains( `accordion__item--active` ) ) {
 
 			content.style.maxHeight = `0px`
@@ -187,12 +133,16 @@ export default () => {
 
 		name.addEventListener( `click`, ( ) => {
 
+			const creators = item.querySelectorAll( `[data-accordion__tabindex]` )
+
 			if ( content.style.maxHeight === `700px` || item.classList.contains( `accordion__item--active` ) ) {
 
 				item.classList.remove( `accordion__item--active` )
 
 				content.style.maxHeight = `0px`
 				content.style.padding = `0px`
+
+				creators.forEach( item => item.tabIndex = -1 )
 
 			}
 
@@ -205,6 +155,8 @@ export default () => {
 				content.style.maxHeight = `700px`
 				content.style.padding = ``
 
+				creators.forEach( item => item.tabIndex = 0 )
+
 			}
 
 		} )
@@ -215,6 +167,8 @@ export default () => {
 
 			if ( event.keyCode === 13 && event.currentTarget === event.target ) {
 
+				const creators = item.querySelectorAll( `[data-accordion__tabindex]` )
+
 				if ( content.style.maxHeight === `700px` || item.classList.contains( `accordion__item--active` ) ) {
 
 					item.classList.remove( `accordion__item--active` )
@@ -222,6 +176,7 @@ export default () => {
 					content.style.maxHeight = `0px`
 					content.style.padding = `0px`
 
+					creators.forEach( item => item.tabIndex = -1 )
 				}
 
 				else {
@@ -233,13 +188,13 @@ export default () => {
 					content.style.maxHeight = `700px`
 					content.style.padding = ``
 
+					creators.forEach( item => item.tabIndex = 0 )
+
 				}
 
 			}
 
 		} )
-
-		item.addEventListener( `keydown`, ( event ) => accordionTabindex( event ) )
 
 	} )
 
@@ -257,21 +212,7 @@ export default () => {
 
 		item.addEventListener( `keydown`, event => {
 
-			if ( event.keyCode === 13 ) {
-
-				event.currentTarget.click()
-
-				// setTimeout( () => {
-
-				// 	const personInfo = event.path[6].querySelector( `.catalog__person--curent` )
-
-				// 	console.log( personInfo )
-
-				// 	personInfo.focus()
-
-				// }, 700 )
-
-			}
+			if ( event.keyCode === 13 ) event.currentTarget.click()
 
 		} )
 

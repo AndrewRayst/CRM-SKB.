@@ -1,24 +1,10 @@
 export default ( Swiper, SwiperCore, tippy ) => {
 
-	function settings() {
-
-		const windowWidth = document.querySelector( `body` ).offsetWidth
-
-		if ( windowWidth > 1024 ) return [3, 3, 1, 50, 350]
-
-		else if ( windowWidth > 668 ) return [2, 2, 1, 50, 280]
-
-		else if ( windowWidth > 0 ) return [1, 1, 1, 30, 280]
-
-	}
-
-	const param = settings()
-
 	const swiper = new Swiper( `.projectsSwiper`, {
 
-		slidesPerView: param[0],
-		slidesPerGroup: param[1],
-		spaceBetween: param[3],
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 30,
 
 		simulateTouch: false,
 
@@ -27,7 +13,95 @@ export default ( Swiper, SwiperCore, tippy ) => {
 			prevEl: `.projects__button--prev`,
 		},
 
+		breakpoints: {
+
+			668: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 50,
+			},
+
+			1024: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 50,
+			},
+		},
+
 	} )
+
+	// SWIPER INDEX
+
+	const gallerySlides = document.querySelectorAll( `.projects__slide` )
+	const btnLeft = document.querySelector( `.projects__button--prev` )
+	const btnRight = document.querySelector( `.projects__button--next` )
+	let swiperPage = 1
+
+	gallerySlides.forEach( slide => {
+
+		slide.addEventListener( `keydown`, () => slide.children[0].click() )
+
+	} )
+
+	btnRight.addEventListener( `click`, () => {
+
+		if ( swiperPage >= 1 ) swiperPage += 1
+
+		swiperIndex()
+
+	} )
+
+	btnLeft.addEventListener( `click`, () => {
+
+		if ( swiperPage > 1 ) swiperPage -= 1
+
+		swiperIndex()
+
+	} )
+
+	function swiperIndexCount() {
+
+		const width = window.innerWidth
+
+		if ( width < 1024 ) {
+
+			return 2
+
+		}
+
+		else if ( width < 668 ) {
+
+			return 1
+
+		}
+
+		else {
+
+			return 3
+
+		}
+
+	}
+
+	function swiperIndex() {
+
+		gallerySlides.forEach( el => el.tabIndex = -1 )
+
+		const count = swiperIndexCount()
+
+		for ( let i = ( swiperPage - 1 ) * count; i < count * swiperPage; i++ ) {
+
+			if ( i < gallerySlides.length ) {
+
+				gallerySlides[i].tabIndex = 0
+
+			}
+
+		}
+
+	}
+
+	swiperIndex()
 
 	// tippy
 

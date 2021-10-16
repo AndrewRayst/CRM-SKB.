@@ -7,47 +7,11 @@ export default () => {
 	const cards = document.querySelectorAll( `.events__card` )
 
 	const card = cards[0]
-
 	const viewQuantityCards = Math.floor( eventsInner.offsetWidth / card.offsetWidth )
+
 	const btn = document.querySelector( `.events__btn` )
 
-	function eventTabindexOne() {
-
-		for ( let i = 0; i < viewQuantityCards; i++ ) {
-
-			cardsLink[i].setAttribute( `tabindex`, `${i + 110}` )
-
-		}
-
-		btn.setAttribute( `tabindex`, `${viewQuantityCards + 110}` )
-
-	}
-
-	function eventTabindexTwo() {
-
-		cardsLink[viewQuantityCards - 1].focus()
-
-		for ( let i = 0; i < cards.length; i++ ) {
-
-			cardsLink[i].setAttribute( `tabindex`, `${i + 110}` )
-
-		}
-
-		btn.setAttribute( `tabindex`, `${cards.length + 110}` )
-
-	}
-
-	function eventTabindexClear() {
-
-		btn.focus()
-
-		for ( let i = 0; i < cards.length; i++ ) {
-
-			cardsLink[i].setAttribute( `tabindex`, `-1` )
-
-		}
-
-	}
+	for ( let i = 0; i < viewQuantityCards; i++ ) cardsLink[i].tabIndex = 0
 
 	setTimeout( () => {
 
@@ -66,7 +30,7 @@ export default () => {
 
 				btn.textContent = `Скрыть`
 
-				eventTabindexTwo()
+				cardsLink.forEach( el => el.tabIndex = 0 )
 
 			}
 
@@ -83,14 +47,11 @@ export default () => {
 
 				} )
 
-				eventTabindexClear()
-				eventTabindexOne()
+				cardsLink.forEach( el => el.tabIndex = -1 )
 
 			}
 
 		} )
-
-		eventTabindexOne()
 
 	}, 1000 )
 
