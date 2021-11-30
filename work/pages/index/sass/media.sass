@@ -1,6 +1,6 @@
 @media screen and ( max-width: 1400px )
 	.container
-		max-width: 1160px !important
+		margin: 0 2.5vw
 
 	// header
 	.nav__item:not(:last-child)
@@ -12,8 +12,8 @@
 		&__title
 			display: flex
 
-		&:not(:last-child)
-			margin-right: 12%
+		// &:not(:last-child)
+		// 	margin-right: 12%
 
 		&__icon
 			transform: translate(6px, 3px)
@@ -22,7 +22,10 @@
 		overflow: hidden
 
 	.search
-		transform: translateX(90%)
+		transform: translateX(85%)
+
+		&__input
+			width: 15.5vw
 
 	// hero
 	.hero
@@ -48,10 +51,21 @@
 			flex: 0 1 50%
 			line-height: 26px
 
+	// events
+	.events
+		&__cards
+			// grid-template-columns: repeat(2, minmax(200px, 1fr))
+			gap: 52px 24px
+
+	// contacts
+	.contacts
+		&__menu
+			padding: 90px 90px 110px 90px
+
 @media screen and ( max-width: 1024px )
 
 	.container
-		max-width: 924px !important
+		margin: 0 4.88vw
 
 	section
 		margin-bottom: p(80, 924)
@@ -62,8 +76,8 @@
 	// header
 
 	.logo
-		width: 187.6px
-		height: 42px
+		width: 191px
+		height: 43px
 
 	.nav
 		display: none
@@ -81,10 +95,13 @@
 
 	.header
 		&__up
-			padding: 29px 0
+			padding: 29px 0 27px 0
 
 		&__down
 			display: none
+
+		&__menu
+			display: block
 
 		&__btn
 			background: transparent
@@ -123,11 +140,22 @@
 			margin-bottom: 14.7%
 
 	.search
-		&__btn--1024
-			display: block
+		margin-bottom: 4px
+		transform: translateY(-4px)
+
+		&__btn
+			&--1024
+				display: block
+				margin-right: 9px
+
+			&--cross
+				display: none !important
 
 		&--1024
 			display: block
+
+		&__input
+			width: 21.6vw
 
 	.burger
 		display: block
@@ -143,7 +171,7 @@
 
 		&__subtitle
 			width: p(661, 924)
-			margin-bottom: 128px
+			margin-bottom: 12.3vw
 
 		&-swiper--container
 			height: 768px
@@ -163,11 +191,15 @@
 	// about
 	.about
 		padding-top: 0px
-		margin-bottom: 72px
+		margin-bottom: 70px
+
+		&__heading
+			margin-bottom: 25px
 
 	// gallery
 	.gallery
 		padding: 0px
+		margin-bottom: 76px
 
 		background: url('../img/gallery--1024.jpg')
 		background-size: cover
@@ -186,7 +218,7 @@
 			height: auto
 
 		&-slide
-			width: 280px !important
+			// width: 280px !important
 			height: 280px !important
 
 		&Swiper
@@ -242,11 +274,15 @@
 			padding-right: 0px
 
 		&__subtitle
-			margin-bottom: 40px
+			margin-bottom: 38px
 
 		&__languages
 			&-btns
-				transform: translateY(3px)
+				transform: translateY(15px)
+
+				position: static
+				display: inline-flex
+				// transform: translateY(6px)
 
 		&__paragraph
 			padding-right: 0px
@@ -260,16 +296,22 @@
 
 	// events
 	.events
-		margin-bottom: 138px !important
+		margin-bottom: 187px !important
 
 		&__info
-			margin-bottom: 22px
+			margin-bottom: 25px
 
 		&__heading
-			margin-bottom: 26px
+			margin-bottom: 24px
+
+			&--mini
+				margin-right: 26px
 
 		&__card
 			padding-bottom: 44px
+
+			&:nth-child(3)
+				display: flex
 
 		&__place, &__date
 			padding-left: 41%
@@ -281,7 +323,7 @@
 
 		&__paragraph
 			width: 77% !important
-			margin: 0 0 auto 33px
+			margin: 0 0 auto 35px
 
 			line-height: 32px
 
@@ -292,12 +334,14 @@
 			&::after
 				width: 88%
 
+				bottom: 6px
+
 		&__img
 			width: 290px
 			height: 200px
 
 		&-btn__box
-			top: 99%
+			top: 105.5%
 
 	// edition
 
@@ -312,12 +356,20 @@
 			padding-bottom: 80px
 
 		&__heading
-			margin-bottom: 34px
+			margin-bottom: 30px
+
+		&__btns
+			margin-bottom: 28px
+
+		&__legend
+			font-size: 17px
 
 		&-slide
 			img
 				width: 295px
-				height: 320px
+				height: 326px
+
+				margin-bottom: 14px
 
 		&__menu
 			flex: 0 1 p(295, 924)
@@ -345,18 +397,30 @@
 
 	// contacts
 	.contacts
+		&__inner
+			margin-bottom: 10px
+
 		&__menu
 			flex: 0 1 p(487, 1024)
 			padding: 102px 102px 0 50px
 
-		&__menu h3
-			line-height: 62px
+		&__heading
+			margin-bottom: 25px
+
+		&__menu
+			padding: 109px 102px 0 50px
+
+			h3
+				line-height: 62px
 
 		&__form
 			margin-bottom: 26px
 
 		&__input
 			margin-bottom: 24px
+
+		&__btn
+			padding: 16px 32px
 
 		.btn__box
 			transform: translateY(-9px) translateX(-5px)
@@ -405,7 +469,7 @@
 @media screen and ( max-width: 924px )
 
 	.container
-		max-width: 668px !important
+		margin: 0 6.51vw
 
 	section
 		margin-bottom: p(80, 668)
@@ -417,18 +481,25 @@
 	.search
 		transform: translateX(-1.8%)
 
-		background: transparent
+		background: transparent !important
 
 		&__btn
 			&--1024
-				transform: translateY(-4px)
+				transform: translate(-1px, -4px)
+
+			&--cross
+				display: block !important
 
 		&__input
+			width: 75vw
 			margin-right: 3.3vw
 
 		&--1024
+			width: 34px
+			height: 26px
+
 			.search
-				transform: translateX(-2%) !important
+				transform: translateX(0.8%) !important
 
 	.header
 		&__btn--cross
@@ -454,7 +525,7 @@
 
 		&__subtitle
 			width: p(661, 668)
-			margin-bottom: 128px
+			margin-bottom: 16.5vw
 
 		&__slide--1
 			background: url('../img/hero-bg__1--768.jpg')
@@ -480,7 +551,7 @@
 		background-position: 0 0
 		background-size: cover
 
-		margin-bottom: 90px
+		margin-bottom: 78px
 
 		&__inner
 			display: block
@@ -501,7 +572,7 @@
 			margin-bottom: 50px !important
 
 		&-slide
-			width: 317px !important
+			// width: 317px !important
 			margin-bottom: -1px
 
 		&__select--box
@@ -543,26 +614,21 @@
 	// catalog
 
 	.catalog
-		margin-bottom: 90px
+		margin-bottom: 86px
 
 		&__languages
 			margin-bottom: 20px
-
-			position: static
-			display: inline-flex
-			transform: translateY(6px)
 
 			&-item
 				&:not(:last-child)
 					margin-right: 30px
 
 			&-btns
-				transform: translateY(-6px)
-				// flex-wrap: nowrap
+				transform: translateY(8px)
+				margin-bottom: 21px
 
 		&__heading
-			margin-bottom: 25px
-			// margin-right: 38px
+			margin-bottom: 10px
 
 		&__subtitle
 			margin-bottom: 20px
@@ -586,13 +652,22 @@
 
 	// events
 	.events
-		margin-bottom: 140px !important
+		margin-bottom: 192px !important
 
 		&__heading
 			margin-bottom: 22px
 
 			&--mini
-				margin-bottom: 0px
+				margin-bottom: 1px
+
+				line-height: 33px
+
+		&__paragraph
+			line-height: 32px
+
+		&__cards
+			grid-template-columns: repeat(2, minmax(200px, 1fr))
+			gap: 52px 32px
 
 		&__card
 			flex: 0 1 p(317, 668)
@@ -600,24 +675,28 @@
 
 			padding-bottom: 41px
 
+			&:nth-child(3)
+				display: none
+
 		&__info
-			margin-bottom: 64px
+			margin-bottom: 60px
 
 		&__link
 			margin-left: 26px
 			width: p(100, 290)
 
 			&::after
-				width: 81%
+				width: 87px
 				bottom: 8px
-				left: 8px
+				left: 10px
 
 		&__img
 			width: 100%
 			height: 200px
 
 		&-btn__box
-			top: 99.3%
+			top: auto
+			bottom: -118px
 
 	// edition
 	.edition
@@ -681,7 +760,7 @@
 		&__sets
 			display: flex
 
-			margin-bottom: 21px
+			margin-bottom: 18px
 
 		&__btns
 			transform: translateX(-22px)
@@ -715,7 +794,7 @@
 
 		&__paragraph
 			width: 99%
-			margin-bottom: 30px
+			margin-bottom: 26px
 
 		&__link
 			display: block
@@ -725,8 +804,11 @@
 
 	// contacts
 	.contacts
-		&__heading
-			margin-bottom: 26px
+		// &__heading
+		// 	margin-bottom: 26px
+
+		&__inner
+			margin-bottom: 0
 
 		&__menu
 			flex: 0 1 p(430, 768)
@@ -749,7 +831,7 @@
 
 @media ( max-width: 668px )
 	.container
-		max-width: 525px !important
+		margin: 0 7.48vw
 
 	.heading--mini
 		font-size: 22px
@@ -779,7 +861,7 @@
 		background-size: cover
 
 		&-slide
-			width: 100% !important
+			// width: 100% !important
 			height: 100% !important
 
 		&Swiper
@@ -787,6 +869,14 @@
 
 		.swiper__btns
 			justify-content: center
+
+	// events
+	.events
+		&__cards
+			display: block
+
+		&__img
+			height: auto
 
 	// edition
 
@@ -799,8 +889,8 @@
 		&__btns
 			justify-content: center
 
-		.swiper-slide__inner
-				width: auto !important
+		// .swiper-slide__inner
+		// 	width: auto !important
 
 	// catalog
 
@@ -879,6 +969,8 @@
 			width: 100%
 			height: 320px !important
 
+			padding: 0 14px
+
 			.ymaps-2-1-78-map
 				height: 320px !important
 
@@ -931,7 +1023,7 @@
 @media ( max-width: 425px )
 
 	.container
-		max-width: 290px !important
+		margin: 0 4.3vw
 
 	section
 		margin-bottom: p(50, 290)
@@ -947,8 +1039,12 @@
 
 	// header
 	.header
+
+		&__inner
+			transform: translate(0%) !important
+
 		&__up
-			padding: 12px 0 11px 0
+			padding: 10px 0
 
 		&__down
 			display: block
@@ -1047,6 +1143,8 @@
 		transform: translateX(64%)
 
 		.search
+			transform: translateX(-2%) !important
+
 			&__input
 				display: none
 
@@ -1095,7 +1193,7 @@
 			text-align: center
 
 		&__subtitle
-			width: 100%
+			width: 99%
 
 			padding: 0 5px 0 8px
 			margin-bottom: 34px
@@ -1112,7 +1210,8 @@
 			font-size: 12px
 
 		.btn__box
-			transform: translateX(38px)
+			margin-left: 25%
+			transform: translateX(-15.5%)
 
 		&__slide--1
 			background: url('../img/hero-bg__1--320.jpg')
@@ -1129,6 +1228,9 @@
 	// about
 	.about
 		margin-bottom: 41px
+
+		&__paragraph
+			width: 99%
 
 	// gallery
 	.gallery
@@ -1160,7 +1262,7 @@
 			margin-bottom: 28px
 
 		&-slide
-			width: 290px !important
+			// width: 100vw !important
 			height: 367px !important
 
 		&Swiper
@@ -1224,10 +1326,13 @@
 	// catalog
 
 	.catalog
-		margin-bottom: 62px
+		margin-bottom: 60px
 
-		&-languages
+		&__languages
 			transform: translate(0px)
+
+			&-btns
+				margin-bottom: 0px
 
 			&__item
 				width: 32px
@@ -1250,14 +1355,14 @@
 			margin-bottom: 52px
 
 		&__img
-			margin-bottom: 20px
+			margin-bottom: 17px
 
 		&__heading--mini
 			margin-bottom: 16px
 			letter-spacing: 1.25px
 
 		&__paragraph
-			width: 99%
+			width: 98%
 
 	.accordion
 		&__heading
@@ -1296,12 +1401,14 @@
 			margin-bottom: 9px
 
 			img
-				width: 290px
+				width: inherit
+				height: 200px
+
 				margin-bottom: 14px
 
 		&__place,
 		&__date
-			padding-right: 10px
+			padding-right: 13px
 
 		&__date
 			margin-bottom: 3px
@@ -1327,8 +1434,10 @@
 
 			&::after
 				width: 90%
+				bottom: 4px
 
 		&__info
+			width: inherit
 			margin-bottom: 19.9%
 
 		&-btn
@@ -1364,6 +1473,12 @@
 		background: url('../img/edition__bg--320.jpg')
 		// background-size: cover
 
+		&Swiper
+			display: none
+
+			&--phone
+				display: block
+
 		&__inner
 			padding-top: 55px
 			padding-bottom: 43px
@@ -1379,6 +1494,8 @@
 			display: grid !important
 			grid-template-columns: 1fr 1fr
 			gap: 46px 30px
+
+			transform: translate(0) !important
 
 		&__heading
 			margin-bottom: 15px
@@ -1401,7 +1518,7 @@
 
 			&--cost
 				padding: 0
-				margin-bottom: 16px
+				margin-bottom: 13px
 
 		&__group
 			&:first-child
@@ -1435,6 +1552,8 @@
 			.edition__legend
 				position: relative
 				margin: 0px !important
+
+				border-bottom: 1px rgba(256, 256, 256, .5) solid
 
 				&::after
 					@include pseudo
@@ -1554,7 +1673,7 @@
 		margin-bottom: 56px
 
 		&__heading
-			margin-bottom: 19px !important
+			margin-bottom: 18px !important
 
 			&--mini
 				font-size: 18px
@@ -1562,9 +1681,10 @@
 
 		&__paragraph
 			letter-spacing: 1.1px
-			line-height: 32px
+			line-height: 31.97px
 
 			margin-bottom: 7px
+			margin-left: 2px
 
 		&__partners
 			height: 65px
@@ -1576,10 +1696,10 @@
 			&--next
 				margin-left: 18px
 
-		&__slide
-			img
-				width: 195px
-				height: 65px
+		// &__slide
+		// 	img
+		// 		width: 195px
+		// 		height: 65px
 
 	// contacts
 	.ymaps-2-1-79-map,
@@ -1589,6 +1709,13 @@
 		&__menu
 			height: 320px !important
 			padding: 6px 14px 0 14px
+
+		&__map
+			padding: 0
+			margin-bottom: 21px
+
+		&__paragraph
+			margin-bottom: 16px !important
 
 		&__btn
 			padding: 12px 32px

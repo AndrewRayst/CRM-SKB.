@@ -122,9 +122,9 @@ export default () => {
 	
 			const target = event.target
 	
-			target.classList.toggle( `active` )
+			target.classList.toggle( `edition__legend--active` )
 	
-			if ( target.classList.contains( `active` ) ) {
+			if ( target.classList.contains( `edition__legend--active` ) ) {
 	
 				category.style.height = `${ categoryItemHeight * ( categoryItems.length + 1 ) }px`
 	

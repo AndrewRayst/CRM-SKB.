@@ -12,6 +12,8 @@ export default ( Swiper, SwiperCore ) => {
 
 		simulateTouch: false,
 
+		// autoHeight: true,
+
 		pagination: {
 
 			el: `.events__pagination`,

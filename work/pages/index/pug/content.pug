@@ -1382,7 +1382,7 @@ section.edition
 						label.edition__checkbox--label(for=`categories-design`) 
 							| Дизайн
 
-						input.edition__checkbox(type=`checkbox` id=`categories-fashion`  name=`categories`)
+						input.edition__checkbox(type=`checkbox` id=`categories-fashion`  name=`categories` checked)
 						label.edition__checkbox--label(for=`categories-fashion`) 
 							| Мода
 
@@ -1502,7 +1502,7 @@ section.edition
 							input(type="text", name="#" placeholder='2500' autocomplete='off'  aria-label='Цена до')
 							div руб.
 
-			.edition__swiper
+			.edition__swiper(class="edition__swiper")
 				.swiper-container(class='editionSwiper')
 					.swiper__btns(class='edition__btns')
 						button.swiper__btn--prev(tabindex='0' id='edition__button--prev' class='edition__btn--prev'  aria-label='Список изданий, предыдущая страница')
@@ -1711,6 +1711,217 @@ section.edition
 
 									.btn__box
 										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Искусство и визуальное визуальное восприятие. Арнхейм, Рудольф. 2200 рублей. Заказать') Заказать
+
+				.swiper-container(class='editionSwiper--phone')
+					.swiper__btns(class='edition__btns')
+						button.swiper__btn--prev(tabindex='0'  class='edition__btn--prev'  aria-label='Список изданий, предыдущая страница')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
+						.swiper__pagination
+						button.swiper__btn--next(tabindex='0'  class='edition__btn--next'  aria-label='Список изданий, следующая страница')
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="transparent"/>
+								<path d="M14 20L19 15L14 10" stroke="white"/>
+							</svg>
+							
+					.swiper-wrapper(class='edition__wrapper')
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-1--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-1--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-1--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-1--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-1--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-1--1024.jpg")
+
+									source(srcset="img/edition-1.webp", type="image/webp")
+									img(src="img/edition-1.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Искусство цвета
+
+										.edition-slide__cost 620 руб
+
+									.edition-slide__author Иттен, Иоханнес 
+
+									.edition-slide__cost--320 620 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Искусство цвета. Иттен, Иоханнес. 620 рублей. Заказать') Заказать
+
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-2--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-2--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-2--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-2--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-2--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-2--1024.jpg")
+
+									source(srcset="img/edition-2.webp", type="image/webp")
+									img(src="img/edition-2.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Типографика
+
+										.edition-slide__cost 2 450 руб
+
+									.edition-slide__author Рудер, Эмиль 
+
+									.edition-slide__cost--320 2 450 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Типографика. Рудер, Эмиль. 2450 рублей. Заказать') Заказать
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-3--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-3--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-3--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-3--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-3--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-3--1024.jpg")
+
+									source(srcset="img/edition-3.webp", type="image/webp")
+									img(src="img/edition-3.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Книга про буквы
+
+										.edition-slide__cost 2 200 руб
+
+									.edition-slide__author Гордон, Юрий 
+
+									.edition-slide__cost--320 2 200 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Книга про буквы. Гордон, Юрий. 2200 рублей. Заказать') Заказать
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-4--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-4--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-4--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-4--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-4--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-4--1024.jpg")
+
+									source(srcset="img/edition-4.webp", type="image/webp")
+									img(src="img/edition-4.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Николай Ильин
+
+										.edition-slide__cost 1 100 руб
+
+									.edition-slide__author Кричевский, Владимир 
+
+									.edition-slide__cost--320 1 100 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Николай Ильин. Кричевский, Владимир. 1100 рублей. Заказать') Заказать
+
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-5--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-5--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-5--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-5--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-5--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-5--1024.jpg")
+
+									source(srcset="img/edition-5.webp", type="image/webp")
+									img(src="img/edition-5.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Модульные сетки в граф...
+
+										.edition-slide__cost 1 450 руб
+
+									.edition-slide__author Мюллер-Брокманн, Йозеф 
+
+									.edition-slide__cost--320 1 450 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Модульные сетки в графическом дизайне. Мюллер-Брокманн, Йозеф. 1450 рублей. Заказать') Заказать
+
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-6--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-6--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-6--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-6--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-6--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-6--1024.jpg")
+
+									source(srcset="img/edition-6.webp", type="image/webp")
+									img(src="img/edition-6.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Эволюция графических ст...
+
+										.edition-slide__cost 3 200 руб
+
+									.edition-slide__author Хеллер, Чваст
+
+									.edition-slide__cost--320 3 200 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Эволюция графических стилей. Хеллер, Чваст. 3200 рублей. Заказать') Заказать
+
+						.swiper-slide(class='edition-slide') 
+							.swiper-slide__inner
+								picture 
+									source(media="(max-width: 425px)", srcset="img/edition-7--320.webp", type="image/webp")
+									source(media="(max-width: 425px)", srcset="img/edition-7--320.jpg")
+
+									source(media="(max-width: 924px)", srcset="img/edition-7--768.webp", type="image/webp")
+									source(media="(max-width: 924px)", srcset="img/edition-7--768.jpg")
+
+									source(media="(max-width: 1400px)", srcset="img/edition-7--1024.webp", type="image/webp")
+									source(media="(max-width: 1400px)", srcset="img/edition-7--1024.jpg")
+
+									source(srcset="img/edition-7.webp", type="image/webp")
+									img(src="img/edition-7.jpg", alt="Произведение исскуства" loading="lazy")
+									
+								.edition-slide__box 
+									.edition-slide__info 
+										.edition-slide__name Искусство и визуальное в...
+
+										.edition-slide__cost 2 200 руб
+
+									.edition-slide__author Арнхейм, Рудольф 
+
+									.edition-slide__cost--320 2 200 руб
+
+									.btn__box
+										button.btn(class='edition-slide__btn' tabindex='-1' aria-label='Искусство и визуальное визуальное восприятие. Арнхейм, Рудольф. 2200 рублей. Заказать') Заказать
+
+			
 
 section.projects 
 	.container

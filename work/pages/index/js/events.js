@@ -4,29 +4,24 @@ export default () => {
 	const eventsInner = document.querySelector( `.events__inner` )
 	const cardsBox = document.querySelector( `.events__cards` )
 	const cardsLink = document.querySelectorAll( `.events__link` )
-	const cards = document.querySelectorAll( `.events__card` )
+	const cards = cardsBox.querySelectorAll( `.events__card` )
 
 	const card = cards[0]
-	const viewQuantityCards = Math.floor( eventsInner.offsetWidth / card.offsetWidth )
+	let viewQuantityCards = Math.floor( eventsInner.offsetWidth / card.offsetWidth )
 
 	const btn = document.querySelector( `.events__btn` )
 
 	for ( let i = 0; i < viewQuantityCards; i++ ) cardsLink[i].tabIndex = 0
 
+	for ( let i = viewQuantityCards; i < cards.length; i++ ) cards[i].style.display = `none`
+
 	setTimeout( () => {
-
-		const cardsFullHeight = cardsBox.offsetHeight + `px`
-		let cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
-
-		cardsBox.style.maxHeight = cardFullHeight
 
 		btn.addEventListener( `click`, () => {
 
-			cardFullHeight = card.offsetHeight + ( +window.getComputedStyle( card ).marginBottom.replace( `px`, `` ) ) + `px`
+			if ( btn.textContent === `Все события` ) {
 
-			if ( cardsBox.style.maxHeight === cardFullHeight ) {
-
-				cardsBox.style.maxHeight = cardsFullHeight
+				for ( let i = 0; i < cards.length; i++ ) cards[i].style.display = `flex`
 
 				btn.textContent = `Скрыть`
 
@@ -36,7 +31,9 @@ export default () => {
 
 			else {
 
-				cardsBox.style.maxHeight = cardFullHeight
+				viewQuantityCards = Math.floor( eventsInner.offsetWidth / card.offsetWidth )
+
+				for ( let i = viewQuantityCards; i < cards.length; i++ ) cards[i].style.display = `none`
 
 				btn.textContent = `Все события`
 

@@ -4,7 +4,7 @@ export default ( Inputmask ) => {
 
 		const myMap = new ymaps.Map( `map`, {
 
-			center: [55.75702154227088, 37.619143158224915],
+			center: [55.75714779874466, 37.60403641685671],
 			zoom: 15,
 			controls: [],
 

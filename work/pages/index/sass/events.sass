@@ -1,20 +1,14 @@
 .events
-	margin-bottom: 137px !important
+	margin-bottom: 190px !important
 
 	&__inner
 		position: relative
 
 	&__cards
 
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-
-		max-height: inherit
-
-		overflow: hidden
-
-		transition: max-height .6s ease-in-out
+		display: grid
+		grid-template-columns: repeat(3, minmax(200px, 1fr))
+		gap: 52px 47px
 
 	&__card
 		display: flex
@@ -22,17 +16,15 @@
 		flex-direction: column
 		justify-content: space-between
 
-		// height: 700px
-
 		padding-bottom: 36px
-		margin-bottom: 50px
 
 		border: 1px solid rgba(202, 202, 202, 1)
 
 	&__info
-		margin-bottom: 80px
+		margin-bottom: 78px
 
 	&__img
+		width: 100%
 		margin-bottom: 14px
 
 	&__place,
@@ -80,9 +72,9 @@
 		&::after
 			@include pseudo
 			bottom: 5px
-			left: 7px
+			left: 10px
 
-			width: 84%
+			width: 85px
 			border-bottom: 1px solid #9d5cd0
 
 			transition: border-color .2s ease-in-out
@@ -109,7 +101,7 @@
 
 	&-btn__box
 		position: absolute
-		top: 99%
+		top: 106%
 		left: 50%
 
 		transform: translateX(-50%)

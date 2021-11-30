@@ -219,9 +219,11 @@ export default () => {
 
 			else if ( window.innerWidth <= 1024 && window.innerWidth > 924 ) {
 
+				document.querySelector( `.search__btn--cross` ).style.display = ``
+
 				if ( event.currentTarget.parentElement.style.transform === `` ) {
 
-					event.currentTarget.parentElement.style.transform = `translateX(-90%)`
+					event.currentTarget.parentElement.style.transform = `translate(-87%, -4px)`
 					event.currentTarget.parentElement.style.background = `#18171b`
 
 				}
@@ -237,7 +239,7 @@ export default () => {
 
 			else if ( window.innerWidth <= 924 && window.innerWidth > 425 ) {
 
-				headerInner.style.transform = `translateX(-95%)`
+				headerInner.style.transform = `translateX(-96%)`
 				headerInner.style.overflow = `initial`
 
 				input.style.width = '75vw'

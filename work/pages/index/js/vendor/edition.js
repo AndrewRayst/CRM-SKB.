@@ -2,45 +2,47 @@ export default ( Swiper, SwiperCore ) => {
 
 	const windowWidth = document.querySelector( `body` ).offsetWidth
 
-	if ( windowWidth > 425 ) {
+	const swiper = new Swiper( `.editionSwiper`, {
 
-		const swiper = new Swiper( `.editionSwiper`, {
-	
-			slidesPerView: 3,
-			slidesPerGroup: 3,
-			spaceBetween: 34,
-	
-			simulateTouch: false,
-	
-			navigation: {
-				nextEl: `#edition__button--next`,
-				prevEl: `#edition__button--prev`,
-			},
-	
-			pagination: {
-	
-				el: `#edition__pagination`,
-				type: `fraction`,
-			},
+		slidesPerView: 1,
+		slidesPerGroup: 0,
+		spaceBetween: 0,
 
-			breakpoints: {
+		simulateTouch: false,
 
-				668: {
-					slidesPerView: 2,
-					slidesPerGroup: 2,
-					spaceBetween: 38,
-				},
+		navigation: {
+			nextEl: `#edition__button--next`,
+			prevEl: `#edition__button--prev`,
+		},
 
-				1630: {
-					slidesPerView: 3,
-					slidesPerGroup: 3,
-					spaceBetween: 50,
-				},
+		pagination: {
+
+			el: `#edition__pagination`,
+			type: `fraction`,
+		},
+
+		breakpoints: {
+
+			425: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 38,
 			},
 
-		} )
+			668: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 38,
+			},
 
-	}
+			1630: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 50,
+			},
+		},
+
+	} )
 
 	// SWIPER INDEX
 

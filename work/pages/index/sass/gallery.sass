@@ -6,7 +6,7 @@
 	// height: 995px
 
 	padding: 108px 0 74px 0
-	margin-bottom: 88px
+	margin-bottom: 87px
 
 	background: url('../img/gallery--1920.jpg') no-repeat center
 	background-size: cover
@@ -137,7 +137,7 @@
 		align-items: center
 		justify-self: center
 
-		width: 350px !important
+		// width: 350px !important
 		height: 350px !important
 
 		margin: 0 -100px 1px 0
@@ -237,8 +237,11 @@
 	&__item
 		color: #fff !important
 
-	&__list--dropdown
-		z-index: 2
+	&__list
+
+		&--dropdown
+			background: rgba(60, 60, 60, 0.7) !important
+			z-index: 2 !important
 
 .choices__item--choice[aria-selected="true"]
 	background: rgba(256, 256, 256, .2) !important

@@ -21,7 +21,7 @@ export default ( Swiper, SwiperCore, Сhoices ) => {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		slidesPerColumn: 1,
-		spaceBetween: 30,
+		spaceBetween: 34,
 
 		simulateTouch: false,
 

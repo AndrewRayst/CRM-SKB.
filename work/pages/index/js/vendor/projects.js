@@ -18,10 +18,10 @@ export default ( Swiper, SwiperCore, tippy ) => {
 			668: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
-				spaceBetween: 50,
+				spaceBetween: 28,
 			},
 
-			1024: {
+			1025: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 50,
