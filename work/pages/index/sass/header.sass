@@ -1,0 +1,458 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+
+	z-index: 10
+
+	width: 100%
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		transition: transform .3s ease-in-out
+
+	&__up
+		position: relative
+
+		padding: 28px 0
+
+		background: #000
+
+		overflow-x: hidden
+
+	&__down
+		padding: 24px 0
+
+		background: rgba(0, 0, 0, .4)
+
+		transition: top .3s ease-in-out
+
+	&__menu
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+
+		width: 100vw
+
+		padding: 37px 0 51px 0
+
+		background: rgba(0, 0, 0, .9)
+
+		transform: translateY(-100%)
+
+		transition: transform .3s ease-in-out
+
+		.header__btn--cross
+			display: block !important
+
+.logo
+	position: relative
+	display: inline-block
+
+	width: 173px
+	height: 40px
+
+	&:focus::after
+		width: 100%
+
+	&::after
+		@include pseudo
+		bottom: 0
+
+		width: 0
+		height: 1px
+
+		// margin-left: 10%
+
+		background: #7943a4
+
+		transition: width .3s ease-in-out
+
+.nav
+
+	display: block
+
+	&__list
+		display: flex
+		justify-content: space-between
+
+	&__item:not(:last-child)
+		margin-right: 3.23vw
+
+	&__item:last-child
+		margin-right: 100px
+
+	&__link
+		font-family: OpenSans
+		font-size: 18px
+		font-weight: 600
+
+		color: #fff
+
+		&:focus
+			background: #7943a4
+
+			transition: background .3s ease-in-out
+
+		&:active
+			color: #7943a4 !important
+			background: transparent
+
+			transition: color .3s ease-in-out
+
+		&:hover
+			color: #c283f3
+			background: transparent
+
+			transition: color .3s ease-in-out
+
+.signIn
+
+	position: relative
+
+	display: block
+
+	cursor: pointer
+	user-select: none
+
+	&:focus
+		background: #7943a4
+
+		transition: background .3s ease-in-out
+
+	&:active
+		background: transparent
+
+		.signIn__text
+			color: #7943a4 !important
+
+			transition: color .3s ease-in-out
+
+		svg
+			fill: #7943a4 !important
+
+			transition: fill .3s ease-in-out
+
+	&:hover
+		background: transparent
+
+		.signIn__text
+			color: #c283f3
+
+			transition: color .3s ease-in-out
+
+		svg
+			fill: #c283f3
+			transition: fill .3s ease-in-out
+
+	&__text
+		font-family: OpenSans
+		font-size: 18px
+
+		color: #fff
+
+	svg
+		width: 13px
+		height: 13px
+
+		margin-right: 5px
+
+		fill: #fff
+
+.groups
+	display: flex
+	// justify-content: space-between
+
+	width: 100%
+
+	// margin-right: 12.5vw
+
+.group
+	position: relative
+
+	user-select: none
+
+	transform: translateX(-8px)
+
+	transition: transform .3s ease-in-out
+
+	&--search
+		transform: translateY(-200%)
+
+	&--active
+		.group__icon
+			svg
+				transform: rotateZ(180deg)
+
+		.group__title
+			background: transparent
+
+			transition: background .3s ease-in-out
+
+		.group__text
+			color: #fff
+
+			transition: color .3s ease-in-out
+
+	&:not(:last-child)
+		margin-right: 6%
+
+	&:nth-child(3)
+		.group__box
+			transform: translateX(-7px)
+
+	&:nth-child(2n)
+		.group__box
+			transform: translateX(-1px)
+
+	&__title
+		padding: 4px 8px
+
+		cursor: pointer
+
+		transition: background .3s ease-in-out
+
+		&:hover
+			background: transparent !important
+
+			*
+				color: #c283f3
+				background: transparent
+				stroke: #c283f3
+
+				transition: stroke .01s ease-in-out
+
+		&:active
+			*
+				color: #7943a4
+				background: transparent
+				stroke: #7943a4
+
+				transition: stroke .01s ease-in-out
+
+		&:focus
+			background: #7943a4
+
+	&__icon
+		svg
+			width: 12px
+			height: 7px
+
+			stroke: #fff
+
+			transform: translateY(-2px)
+			transform-origin: center 25%
+
+	.group__icon
+		svg
+			transition: transform .3s ease-in-out
+
+	&__text
+		font-size: 18px
+		color: #fff
+
+		transition: color .3s ease-in-out
+
+	&__box
+		position: absolute
+
+		top: 190%
+		left: 0
+
+		z-index: 1000
+
+		width: 300px
+		height: 300px
+		max-height: 0%
+
+		padding: 0 19px 0 40px
+
+		overflow: hidden
+
+		background: rgba(0, 0, 0, .6)
+
+		transition: max-height .3s ease-in-out, padding .2s ease-in-out
+
+		transform: translateX(8px)
+
+	&__list
+		width: 100%
+		height: 100%
+
+		padding-right: 21px
+
+		overflow: auto
+
+	&__item
+		position: relative
+
+		width: 100%
+		padding: 13px 14px
+
+		cursor: pointer
+
+		background: blue
+
+		*
+			font-size: 12px
+			color: #fff
+			letter-spacing: 1.5px
+
+		&:not(:last-child)
+			margin-bottom: 19px
+
+		&::before
+			@include pseudo
+			top: 0
+			left: 0
+
+			width: 100%
+			height: 100%
+
+			background: rgba(194, 131, 243, 0)
+
+			border: 2px solid transparent
+
+			transition: border-color .2s ease-in-out, background .2s ease-in-out
+
+		&:hover
+			&::before
+				border-color: #9d5cd0
+
+		&:focus
+			&::before
+				border-color: #9d5cd0
+
+		&:active
+			&::before
+				background: rgba(194, 131, 243, .4)
+				border-color: #d1a9f0
+
+.simplebar
+	&-content-wrapper
+		overflow: auto
+
+	&-scrollbar
+		&::before
+
+			top: 0 !important
+			right: 0 !important
+			bottom: 0 !important
+			left: 0 !important
+
+			background: #fff !important
+
+			opacity: 1 !important
+
+	&-vertical
+		width: 2px !important
+		background: #000
+
+.search
+
+	display: flex
+	align-items: center
+
+	transition: transform .4s ease-in-out, background .2s ease-in-out
+
+	&--active
+		transform: translateX(0%) !important
+
+	&--1024
+		display: none
+		position: relative
+
+		width: 31px
+		height: 22px
+
+		.search
+			position: absolute
+			top: 0
+			left: 0
+
+			transform: translate(0%, -4px)
+
+	&__input
+
+		width: 11.4vw
+
+		padding: 3px 0
+
+		color: #fff
+
+		background: transparent
+		border-bottom: 1px solid rgba(256, 256, 256, .85)
+
+		// transform: translateY(4px)
+
+		&:focus
+			border-color: #7943a4
+
+			transition: border-color .3s ease-in-out
+
+			&::placeholder
+				color: rgba(256, 256, 256, 0) !important
+
+		&:hover
+			border-color: #c283f3
+
+			transition: border-color .3s ease-in-out
+
+		&:active
+			border-color: #7943a4 !important
+
+			transition: border-color .3s ease-in-out
+
+		&::placeholder
+			font-size: 18px
+
+			color: rgba(256, 256, 256, .85)
+
+	&__btn
+		width: 23px
+		height: 22px
+
+		margin-right: 20px
+
+		background-color: transparent
+		background-size: 450%
+		// transform: translateX(-50%) translateY(2px)
+
+		&--cross
+			display: none
+			color: white
+			background: transparent
+
+			transform: translateY(-6px)
+
+	&__icon
+		width: 22px
+		height: 22px
+
+.search__btn--1024
+	display: none
+
+	width: 30px
+	height: 30px
+
+	transform: translate(0%)
+
+	svg
+		width: inherit
+		height: inherit
+
+.burger
+	display: none
+
+	width: 36px !important
+	height: 28px !important
+
+	background: transparent
+
+	svg
+		width: inherit
+		height: inherit

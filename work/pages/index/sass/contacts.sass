@@ -1,0 +1,136 @@
+.contacts
+	max-width: 1920px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 0
+
+	&__inner
+		display: flex
+
+	&__address
+		&--320
+			display: none
+
+	.heading--mini
+		line-height: 59px
+
+	&__menu
+		flex: 0 1 35.5%
+
+		padding: 104px 122px 120px 160px
+
+		border: 1px solid #cacaca
+		border-bottom: none
+
+		h3
+			line-height: 64px
+
+	&__paragraph
+		margin-bottom: 40px
+
+	&__form
+		margin-bottom: 32px
+
+	&__legend
+		margin-bottom: 19px
+		font-size: 24px
+
+	&__input
+		width: 100%
+		height: 40px
+
+		padding: 0 24px
+		margin-bottom: 19px
+
+		cursor: pointer
+
+		border: 1px solid #333
+		border-radius: 100px
+
+		transition: border-color .2s ease-in-out, background .2s ease-in-out
+
+		&::placeholder
+			color: #999
+
+		&:hover
+			background: #eaeaea
+			border-color: #000
+
+		&:focus
+			background: #eaeaea
+			border-color: #000
+
+	&__btn
+		padding: 17px 35px
+
+		color: #9d5cd0
+
+		background: #fff
+		border: 2px solid #9d5cd0
+
+		transition: color .2s ease-in-out, background .2s ease-in-out, border-color .2s ease-in-out
+
+		&:hover
+			color: #fff
+			background: #9d5cd0
+
+		&:active
+			background: #7943a4
+			border-color: #d1a9f0
+
+	.btn__box
+		transform: translate(-9px, -3px)
+
+	.socials
+		&__item:first-child
+			margin-right: 11px
+
+		&__link
+			svg
+
+				border: 1px solid transparent
+				border-radius: 50%
+
+				transition: opacity .2s ease-in-out, border-color .2s ease-in-out
+
+			&:hover svg
+				opacity: .5
+
+			&:focus svg
+				opacity: .5
+
+			&:active svg
+				border-color: #9643a4
+				opacity: 1
+
+	&__map
+		flex: 0 1 64.5%
+		height: 690px !important
+
+.socials__title
+	margin-bottom: 18px
+
+	font-size: 24px
+
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright__wrap
+	display: none !important
+
+.ymaps-2-1-79-ground-pane
+	filter: grayscale(1) !important
+
+.js-valid__false
+	// position: relative
+
+	.contacts__input
+		border-color: #d11616
+
+	.js-valid__text
+		display: block
+
+		font-size: 12px
+		line-height: 16px
+
+		color: #d11616
+
+		transform: translateX(p(24, 400))

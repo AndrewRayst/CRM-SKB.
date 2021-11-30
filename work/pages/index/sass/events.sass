@@ -1,0 +1,132 @@
+.events
+	margin-bottom: 190px !important
+
+	&__inner
+		position: relative
+
+	&__cards
+
+		display: grid
+		grid-template-columns: repeat(3, minmax(200px, 1fr))
+		gap: 52px 47px
+
+	&__card
+		display: flex
+		flex: 0 1 p(500, 1600)
+		flex-direction: column
+		justify-content: space-between
+
+		padding-bottom: 36px
+
+		border: 1px solid rgba(202, 202, 202, 1)
+
+	&__info
+		margin-bottom: 78px
+
+	&__img
+		width: 100%
+		margin-bottom: 14px
+
+	&__place,
+	&__date
+
+		padding-right: 19px
+
+		font-size: 12px
+		font-weight: 600
+		line-height: 16px
+
+		color: #999
+
+		text-align: right
+
+	&__date
+		margin-bottom: 5px
+
+	&__heading
+		margin-bottom: 23px
+
+		&--mini
+			margin: 0 30px 0 50px
+			line-height: 32px
+
+	&__paragraph
+		width: p(400, 500)
+		margin: 0 0 auto 50px
+
+		line-height: 33px
+
+	&__link
+		position: relative
+
+		display: inline
+		width: p(108, 500)
+
+		margin-left: 42px
+		color: #9d5cd0
+
+		transition: color .2s ease-in-out, background .2s ease-in-out
+
+		padding: 8px 8px 12px 8px
+
+		&::after
+			@include pseudo
+			bottom: 5px
+			left: 10px
+
+			width: 85px
+			border-bottom: 1px solid #9d5cd0
+
+			transition: border-color .2s ease-in-out
+
+		&:hover
+			color: #7943a4
+
+			&::after
+				border-color: #7943a4
+
+		&:active
+			color: #333 !important
+			background: transparent !important
+
+			&::after
+				border-color: #333 !important
+
+		&:focus
+			color: #fff
+			background: #9d5cd0
+
+			&::after
+				border-color: #fff
+
+	&-btn__box
+		position: absolute
+		top: 106%
+		left: 50%
+
+		transform: translateX(-50%)
+
+	&__btn
+		padding: 16px 35px
+
+		color: #9d5cd0
+
+		background: transparent
+
+		border: 3px solid #9d5cd0
+
+		transition: color .2s ease-in-out, background .2s ease-in-out, border-color .2s ease-in-out
+
+		// transform: translateX(-50%)
+
+		&:hover
+			color: #fff
+			background: #9d5cd0
+
+		&:active
+			color: #fff
+			background: #7943a4
+			border-color: #d1a9f0
+
+	&Swiper
+		display: none

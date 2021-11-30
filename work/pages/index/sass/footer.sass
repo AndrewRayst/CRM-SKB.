@@ -1,0 +1,34 @@
+.footer
+	padding: 50px 0
+
+	background: #000
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+.socials
+	&__list
+		display: flex
+
+	&__item:not(:last-child)
+		margin-right: 20px
+
+	&__link
+		svg
+			width: 45px
+			height: 45px
+
+			transition: fill .2s ease-in-out
+
+			fill: #cacaca
+
+		&:hover svg
+			fill: #fff
+
+		&:focus svg
+			fill: #fff
+
+		&:active svg
+			fill: #9d5cd0
