@@ -1,0 +1,13 @@
+extends @pug/html.pug
+
+block var
+	-var name = 'Webpack'
+	-var language = 'ru'
+
+block content
+
+	include @pug/header.pug
+	main.main
+		include @pug/content.pug
+
+	include @pug/footer.pug

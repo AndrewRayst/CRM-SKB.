@@ -1,0 +1,42 @@
+//- mixin icon(name, iconClass, icon__id)
+//- 	if iconClass !== ''
+//- 		svg(class = iconClass id = icon__id)
+//- 			use(xlink:href = 'img/sprite.svg#' + name )
+//- 	else 
+//- 		svg(id = icon__id)
+//- 			use(xlink:href = 'img/sprite.svg#' + name )
+
+//- mixin img(name, mode, ...items)
+//- 	if mode
+//- 		picture 
+//- 			each item in items
+//- 				source(type='image/webp' srcset=`img/${name}-1x-${item}.webp` media=`max-width:${item}px`)
+
+//- 				if true
+//- 					source(srcset=`img/${name}-1x-${item}.jpg` media=`max-width:${item}px`)
+
+//- 				else
+//- 					source(srcset=`img/${name}-1x-${item}.jpg` media=`max-width:${item}px`)
+			
+//- 			source(type='image/webp' srcset=`img/${name}-1x.webp 1x, img/${name}-1x.webp 2x, img/${name}-1x.webp 3x`)
+
+//- 			img(src=`img/${name}-1x.jpg` srcset=`img/${name}-1x.jpg 2x, img/${name}-1x.jpg 3x`)
+	
+//- 	else 
+//- 		picture
+//- 			each item in items
+//- 				source(type='image/webp' srcset=`img/${name}-1x-${item}.webp 1x` media=`max-width:${item}px`)
+
+//- 				if `img/${name}-1x${item}.png`
+//- 					source(srcset=`img/${name}-1x-${item}.png 1x` media=`max-width:${item}px`)
+
+//- 				else
+//- 					source(srcset=`img/${name}-1x-${item}.jpeg 1x` media=`max-width:${item}px`)
+			
+//- 			source(type='image/webp' srcset=`img/${name}-1x.webp 1x, img/${name}-1x.webp 2x, img/${name}-1x.webp 3x`)
+
+//- 			img(srcset=`img/${name}-1x.png 1x, img/${name}-1x.png 2x, img/${name}-1x.png 3x` class=`${name}`)
+
+
+mixin img(name, alt = '' )
+	img(src=require(`@img/${name}`), alt=`${alt}`)
