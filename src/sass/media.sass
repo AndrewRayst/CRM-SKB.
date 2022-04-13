@@ -1,0 +1,180 @@
+@media screen and ( max-width: 1024px )
+	.app
+		&-table
+			&__header
+				margin-bottom: 1px
+
+				.app-table__cell--date
+					padding-right: 3px
+
+			&__cell
+				&--name
+					flex: 0 1 24%
+
+				&--date
+					flex: 0 1 16%
+
+				&--contacts
+					flex: 0 1 15.5%
+
+		&__btn
+			&--secondary
+				padding: 12px 26px !important
+
+		&-search
+			width: 57vw
+
+			&__input
+				width: 100%
+
+		&-modal
+			padding-top: 14.6%
+
+			&__inner
+				width: 44%
+
+@media screen and ( max-width: 924px )
+	.app
+		&-table
+			&__header
+				margin-bottom: 1px
+
+				.app-table__cell--date
+					padding-right: 3px
+
+			&__item
+				padding: 10px 0 8px
+
+			&__cell
+				&--ID
+					flex: 0 1 8%
+
+				&--name
+					flex: 0 1 34%
+
+			&__text
+				&--date
+					display: block
+
+					margin: 0 0 8px 0
+
+			&__btns
+				flex-direction: column
+
+			&__btn
+				&--change
+					margin: 0 23px 2px 0
+
+					.app-table__btn--img
+						transform: translate(1px, -3px)
+
+				&--delete
+					margin-right: 31px
+
+					.app-table__btn--img
+						padding-right: 4px !important
+
+				&--img
+					padding: 0 !important
+
+		&-search
+			width: 76vw
+
+		&-modal
+			padding-top: 19.4%
+
+			&__inner
+				width: 59%
+
+@media screen and ( max-width: 700px )
+
+	// header
+
+	.header
+		display: flex
+		justify-content: center
+
+		&__inner
+			padding: 8px 0
+
+	.logo
+		margin-right: 0px
+
+	#app-header
+		display: none
+
+	// app
+
+	.app
+		position: absolute
+
+		&-table
+			min-width: 728px
+
+			&__header
+				margin-bottom: 12px
+
+			&__cell
+				&--ID
+					flex: 0 1 9%
+
+				&--name
+					flex: 0 1 37%
+
+				&--date
+					flex: 0 1 17%
+
+				&--change
+					flex: 0 1 18%
+
+		&-modal
+			padding-top: 16%
+
+			&__inner
+				width: 94%
+
+@media screen and ( max-width: 425px )
+
+	.container
+		padding: 0 10px
+
+	.main
+		padding: 33px 0
+
+	// header
+
+	.logo
+		width: 24px
+		height: 24px
+
+		font-size: 8px
+
+	// app
+	.app
+		&__heading
+			font-size: 18px
+
+			margin-bottom: 24px
+
+		&-modal
+			padding-top: 47%
+
+			&--add
+				padding: 27px 16px 30px !important
+
+				.app-modal__heading
+					margin-bottom: 8px
+
+			&__id
+				display: block
+
+			&__form
+				margin-top: 38px
+
+			&__btn
+				&--exit
+					top: 10px
+					right: 11px
+
+			&__contact--wrapper .choices
+				flex: 0 1 56%

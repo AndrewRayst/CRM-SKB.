@@ -1,0 +1,813 @@
+.app
+	&__heading
+		font-weight: 700
+		font-size: 24px
+		color: #333
+
+		margin-bottom: 30px
+
+	&__btn
+		&--primary
+			position: relative
+
+			background: #9873ff
+
+			padding: 13px 35px
+
+			font-size: 14px
+			font-weight: 600
+			color: #fff
+
+			transition: background .2s ease-in-out
+
+			&:hover
+				background: #b89eff
+
+			&:active
+				background: #8052ff !important
+
+			&:disabled
+				background: #c8c5d1 !important
+
+		&--secondary
+			border: 1px solid #9873ff
+
+			font-size: 14px
+			font-weight: 600
+			color: #9873ff
+
+			padding: 13px 35px
+
+			transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out
+
+			&:hover
+				background: #b89eff
+
+				color: #fff
+
+			&:active
+				background: #8052ff !important
+
+				color: #fff
+
+			&:disabled
+				background: transparent !important
+				border-color: #c8c5d1
+
+				color: #c8c5d1
+
+	&-table
+		width: 100%
+
+		margin-bottom: 40px
+
+		&__header
+			display: flex
+
+			margin-bottom: 7px
+
+			.app-table
+				display: flex
+				align-items: center
+
+				&__cell
+					color: #b0b0b0
+					font-size: 12px
+
+				&__btn
+					position: relative
+
+					&--bottom
+						&::after, &::before
+							transform: rotateZ(180deg)
+
+					&--ID
+						color: #9873ff
+
+						&::after
+							content: ''
+
+							position: absolute
+							top: 3px
+
+							display: inline-block
+
+							width: 12px
+							height: 12px
+
+							background: url('@img/arrow.svg')
+
+					&--name
+						font-size: 10px
+						color: #9873ff
+
+						padding-left: 13px
+
+						&::before
+							content: ''
+
+							position: absolute
+							top: 1px
+							left: 0
+
+							display: inline-block
+
+							width: 12px
+							height: 12px
+
+							background: url('@img/arrow.svg')
+
+					&--date, &--change
+						&::before
+							content: ''
+
+							position: absolute
+							top: -9px
+							left: 0
+
+							display: inline-block
+
+							width: 12px
+							height: 12px
+
+							background: url('@img/arrow.svg')
+
+		&__body
+			.app-table
+				&__item
+					background: #fff
+
+				&__btns
+					width: 100%
+					height: inherit
+
+					display: flex
+					align-items: center
+
+				&__btn
+					display: flex
+					align-items: center
+					font-size: 14px
+
+					background: transparent
+
+					transition: color .2s ease-in-out
+
+					&--change
+						margin-right: 23px
+
+						&:disabled
+							color: #9873ff
+
+						&:hover
+							color: #9873ff
+
+					&--delete
+						&:hover
+							color: #f06a4d
+
+					&--img
+						padding-right: 4px
+
+					&--loader
+						width: 10px !important
+						height: 10px !important
+
+						margin-right: 10px
+
+						img
+							width: 10px !important
+							height: 10px !important
+
+		&__item
+			display: flex
+			align-items: center
+
+			padding: 21px 0 20px 0
+			margin-bottom: 2px
+
+			&--active
+				outline: 1px solid #9873ff
+
+		&__cell
+			padding-left: 20px
+
+			&--ID
+				flex: 0 1 7%
+
+				color: #b0b0b0
+
+			&--name
+				flex: 0 1 31%
+
+				font-size: 14px
+
+			&--date
+				flex: 0 1 15%
+
+			&--change
+				flex: 0 1 14.4%
+
+			&--contacts
+				display: grid
+				grid-template-columns: repeat(5, 16px)
+				grid-template-rows: 1fr
+				grid-gap: 7px
+
+				flex: 0 1 13.5%
+
+			&--activities
+				flex: 0 1 19%
+
+		&__text
+			&--date
+				font-size: 14px
+
+				margin-right: 8px
+
+			&--time
+				font-size: 14px
+				color: #b0b0b0
+
+		&__contact
+			opacity: .7
+			cursor: pointer
+
+			transition: opacity .2s ease-in-out
+
+			&:hover
+				opacity: 1
+
+			&--link
+				color: #fff
+
+				cursor: pointer
+
+				transition: color .2s ease-in-out
+
+				&:hover
+					color: #9873ff !important
+
+				&:visited, &:focus
+					color: #fff
+
+			&--extra
+				width: 16px
+				height: 16px
+
+				padding: 1px 3px 2px 1px
+
+				background: transparent
+				border: 1px solid #9873ff
+				border-radius: 50%
+
+				font-size: 8px
+				font-weight: 600
+
+				transition: color .2s ease-in-out, background .2s ease-in-out
+
+				&:hover
+					color: #fff
+					background: #9873ff
+
+		&__btn
+			&--add
+				display: block
+				margin: 0 auto
+
+				padding: 13px 26px !important
+
+				&:hover,
+				&:active
+					img
+						filter: brightness(2)
+						transition: filter 0s 0s linear
+
+				img
+					margin-right: 8px
+
+					transition: filter 0s .05s linear
+
+	&-menu
+		width: 90px
+		min-height: 100%
+
+		position: absolute
+		top: 100%
+		left: 0
+
+		// overflow: hidden
+		z-index: 1
+		pointer-events: none
+
+		&--open
+			.app-menu__inner
+				transform: translateX(0)
+
+		&__inner
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+
+			width: 100%
+			height: inherit
+
+			border-top: 1px solid #c8c5d1
+
+			padding: 40px 15px
+
+			background: #fff
+
+			transform: translateX(-35vw)
+
+			transition: transform .2s ease-in-out
+
+			pointer-events: auto
+
+		&__up
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			margin-bottom: 3vw
+
+		&__nav
+			margin-bottom: 249%
+
+		&__list
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&__item
+			width: 24px
+			height: 24px
+
+			margin-bottom: 40px
+
+			cursor: pointer
+
+			&--img
+				transition: filter .3s ease-in-out
+
+				&:hover
+					filter: brightness(0.5)
+
+				iframe
+					width: 24px
+					height: 24px
+
+					svg
+						fill: #c8c5d1 !important
+
+		&__profile
+			&--img
+				border-radius: 50%
+
+		&__down
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+
+			width: 100%
+
+			padding-top: 40px
+
+			border-top: 1px solid #c8c5d1
+
+		&__theme, &__log-out
+			width: 24px
+			height: 24px
+
+			background: transparent
+
+			cursor: pointer
+
+			transition: filter .3s ease-in-out
+
+			&:hover
+				filter: brightness(0.5)
+
+			iframe
+				width: 24px
+				height: 24px
+
+		&__theme
+			margin-bottom: 40px
+
+	&-search
+		position: relative
+
+		width: 43vw
+
+		&__input
+			width: 99%
+
+			font-size: 14px
+			color: #333
+
+			background: #fff
+			border: 1px solid rgba(51, 51, 51, 0.2)
+
+			padding: 13px 16px 12px
+
+			&::placeholder
+				color: #b0b0b0
+
+		&__box
+			position: absolute
+
+			display: none
+
+			top: 100%
+
+			width: 100%
+
+			padding: 16px 0
+
+			background: #f4f3f6
+
+			z-index: 1
+
+		&__list
+			width: 100%
+			height: 100%
+
+		&__item
+			padding: 1.5% 16px
+
+			cursor: pointer
+
+			translate: background .2s ease-in-out
+
+			&:hover, &:focus
+				background: #e7e5eb
+
+			&--name
+				margin-right: 5%
+
+			mark
+				background: #9873ff !important
+				color: #fff !important
+
+	&-modal
+		position: absolute
+		top: 0
+		left: 0
+
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+		width: 100%
+		min-height: 100%
+
+		padding-top: 16.6%
+
+		z-index: 1
+
+		background: rgba(51, 51, 51, 0.2)
+
+		&--disable
+			position: absolute
+			top: 0
+
+			width: 100%
+			height: 100%
+
+			background: rgba(0, 0, 0, .3)
+
+		&__error
+			width: 70%
+
+			font-size: 10px
+			color: #f06a4d
+
+			text-align: center
+
+			margin: 8px auto
+
+		&--delete
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&--add
+			padding: 27px 30px 23px !important
+
+			.app-modal__heading
+				margin-bottom: 38px
+
+		&__inner
+			position: relative
+
+			width: 33%
+
+			padding: 25px 0 27px
+
+			background: #fff
+
+			animation: ModalOpen .2s linear
+
+		&__heading
+			display: inline-block
+
+			font-size: 18px
+			font-weight: 700
+
+			margin-bottom: 15px
+
+			margin-right: 9px
+
+		&__id
+			color: #b0b0b0
+
+		&__message
+			width: 52%
+
+			font-size: 14px
+			line-height: 19px
+
+			text-align: center
+
+			margin-bottom: 26px
+
+		&__btn
+			margin-bottom: 6px
+
+			&--subbtn
+				line-height: 16px
+
+				background: transparent
+
+				border-bottom: 1px solid #333
+
+				transition: color .2s ease-in-out, border-color .2s ease-in-out
+
+				&:hover
+					color: #9873ff
+					border-color: #9873ff
+
+			&--exit
+				position: absolute
+				top: 23px
+				right: 20px
+
+				width: 16px
+				height: 16px
+
+				background: transparent
+
+				transition: filter .2s ease-in-out
+
+				&:hover
+					filter: brightness( .5 )
+
+			&--contact
+				display: block
+
+				font-size: 14px
+				font-weight: 600
+
+				background: transparent
+
+				margin: 9px auto 7px
+
+				transition: color .2s ease-in-out
+
+				&:hover,
+				&:active
+					color: #9873ff
+
+					span
+						background: #9873ff
+						border-color: #9873ff
+
+					img
+						filter: brightness(2)
+						transition: filter 0s 0s linear
+
+				span
+					display: inline-flex
+					justify-content: center
+					align-items: center
+
+					width: 12px
+					height: 12px
+
+					margin-right: 4px
+
+					border: 1px solid transparent
+					border-radius: 50%
+
+					transform: translateY(2px)
+
+					transition: background .2s ease-in-out, border-color .2s ease-in-out
+
+				img
+					transition: filter 0s .1s linear
+
+		&__form
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&__label
+			position: relative
+
+			width: 100%
+
+			&:not(:last-of-type)
+				margin-bottom: 8%
+
+		&__input
+			width: 100%
+
+			padding: 0 0 5px 0
+
+			font-size: 14px
+			font-weight: 600
+			color: #333
+
+			border-bottom: 1px solid #c8c5d1
+
+			&--value + .app-modal__place-holder,
+			&:focus + .app-modal__place-holder
+				font-size: 10px
+
+				transform: translateY(-100%)
+
+		&__place-holder
+			position: absolute
+			top: 0
+			left: 0
+
+			font-size: 14px
+			color: #b0b0b0
+
+			transition: transfrom .2s ease-in-out
+
+			&--required
+				font-weight: 600
+				color: #9873ff
+
+		&__contacts
+			width: 100%
+
+			padding: 25px 0
+
+			&--list
+				margin-bottom: 25px
+
+		&__contact
+			&--wrapper
+				width: 100%
+				display: flex
+				align-items: center
+
+				border-right: 1px solid #c8c5d1
+
+				&:first-child
+					margin-top: 25px
+
+				&:not(:last-child)
+					margin-bottom: 15px
+
+				.is-open
+					&::after
+						transform: rotateZ(180deg)
+
+				.choices
+					flex: 0 1 52%
+
+					margin-bottom: 0
+
+					background: #e7e5eb
+					border: 1px solid #c8c5d1
+
+					&::after
+						width: 12px !important
+						height: 12px !important
+
+						background: url( '@img/arrow--section.svg' ) no-repeat
+
+						border: none !important
+
+						margin-top: -5.5px !important
+
+						transition: transform .2s ease-in-out
+
+					&__inner
+						min-height: 36px
+
+						padding-bottom: 6px !important
+
+					&__list--dropdown
+						.choices__item
+							padding: 7px 10px !important
+
+							background: #f4f3f6
+
+							transition: background .2s ease-in-out
+
+							&:hover
+								background: #e7e5eb !important
+
+					&__input
+						display: none !important
+
+					&__item
+						font-family: OpenSans, serif
+						font-size: 12px
+						color: #333
+
+			&--input
+				width: 100%
+				min-height: 38px
+
+				font-size: 14px
+				color: #333
+
+				padding: 0 9px
+
+				border-top: 1px solid #c8c5d1
+				border-bottom: 1px solid #c8c5d1
+
+				&::placeholder
+					color: #b0b0b0
+
+			&--btn
+				display: none
+				width: 27px
+				height: 38px
+				background: #e7e5eb
+
+				border: 1px solid #c8c5d1
+
+				transition: border-color .2s ease-in-out
+
+				&:hover
+					border-color: #f06a4d
+
+					img
+						filter: grayscale(0)
+
+				img
+					filter: grayscale(1)
+
+					transition: filter .2s ease-in-out
+
+	&-loader
+		&__wrapper
+			width: 100%
+			height: 100%
+
+			display: inline-flex
+			justify-content: center
+			align-items: center
+
+		&__loader
+			width: 72px
+			height: 72px
+
+			margin-top: 7%
+
+			z-index: 1
+
+			animation: LoaderAnim 1s linear infinite
+
+		&--btn
+			position: absolute
+			top: 0
+			left: -35%
+
+			.app-loader__loader
+				width: 10px
+				height: 10px
+
+				margin-top: 0
+
+				filter: brightness(2.8)
+
+.tippy-box
+	padding: 2px 0
+	border-radius: 0px !important
+
+@keyframes ModalOpen
+	0%
+		transform: translateY(10%)
+		opacity: 0
+
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@keyframes LoaderAnim
+	0%
+		transform: rotateZ(0deg)
+
+	100%
+		transform: rotateZ(360deg)

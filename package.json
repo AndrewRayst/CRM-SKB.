@@ -68,5 +68,10 @@
 		"webpack-dev-server": "^4.7.4",
 		"xml-loader": "^1.2.1"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"choices.js": "^10.1.0",
+		"just-validate": "^3.5.1",
+		"redom": "^3.27.1",
+		"tippy.js": "^6.3.7"
+	}
 }
