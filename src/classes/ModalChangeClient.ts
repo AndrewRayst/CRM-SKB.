@@ -1,4 +1,4 @@
-import AddClient from '@classes/AddClient.ts'
+import ModalAddClient from './ModalAddClient'
 
 import { el, mount } from 'redom'
 
@@ -7,24 +7,29 @@ import 'tippy.js/dist/tippy.css'
 
 interface IDataClient {
 
-	name: string,
-	surname: string,
-	lastName: string,
-	contacts: [
+	id: string
+
+	name: string
+	surname: string
+	lastName?: string
+	contacts?: [
 		{
-			type: string,
+			type: string
 			value: string
 		}
 	]
 
 }
 
-export default class ChangeClient extends AddClient {
+export default class ModalChangeClient extends ModalAddClient {
 
-	client: object
+	client: IDataClient
 
-	btnSave: object
-	btnDel: object
+	btnSave: HTMLButtonElement
+	btnDel: HTMLButtonElement
+
+	modal: HTMLDivElement
+	modalInner: HTMLDivElement
 
 	constructor(client) {
 
@@ -44,7 +49,7 @@ export default class ChangeClient extends AddClient {
 		const btnSave = el('button', 'Сохранить', { class: 'app__btn--primary app-modal__btn' })
 		const btnDel = el('button', 'Удалить клиента', { class: 'app-modal__btn--subbtn' })
 
-		const form = this.getForm([btnSave, btnDel], this.client)
+		const form = super.getForm([btnSave, btnDel], this.client)
 
 		mount(this.modalInner, heading)
 		mount(this.modalInner, id)
@@ -53,7 +58,7 @@ export default class ChangeClient extends AddClient {
 		this.btnSave = btnSave
 		this.btnDel = btnDel
 
-		this.validation()
+		super.validation()
 
 		return this.modal
 

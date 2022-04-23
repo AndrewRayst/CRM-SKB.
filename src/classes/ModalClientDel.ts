@@ -1,7 +1,7 @@
 import { el, mount } from 'redom'
 import Modal from '@classes/Modal.ts'
 
-export default class DelClient extends Modal {
+export default class ModalClientDel extends Modal {
 
 	btnDel: object
 	btnCancel: object

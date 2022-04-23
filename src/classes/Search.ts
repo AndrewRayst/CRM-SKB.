@@ -147,6 +147,8 @@ export default class Search {
 
 				const item = await this.getSearchItem({ name })
 
+				console.log(this.clients[i])
+
 				this.searchEvents(item, this.clients[i])
 
 				mount(this.list, item)
@@ -176,8 +178,6 @@ export default class Search {
 	searchEvents(component, client) {
 
 		component.addEventListener('click', () => {
-
-			this.searchBox.style.display = ''
 
 			client.classList.add('app-table__item--active')
 
@@ -273,6 +273,13 @@ export default class Search {
 		}
 
 		return searchItems
+
+	}
+
+	syncData(data, clients) {
+
+		this.data = data
+		this.clients = clients
 
 	}
 

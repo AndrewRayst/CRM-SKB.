@@ -1,4 +1,4 @@
-import Modal from '@classes/Modal.ts'
+import Modal from '@classes/Modal'
 
 import { el, mount } from 'redom'
 import tippy from 'tippy.js';
@@ -11,12 +11,14 @@ import 'tippy.js/dist/tippy.css'
 import addClientSvg from '@img/add.svg'
 import cancelSVG from '@img/cancel.svg'
 
+type fn = () => void
+
 interface IDataClient {
 
 	name: string,
 	surname: string,
 	lastName: string,
-	contacts: [
+	contacts?: [
 		{
 			type: string,
 			value: string
@@ -25,20 +27,45 @@ interface IDataClient {
 
 }
 
-export default class AddClient extends Modal {
+interface Icontact {
 
-	form: object
+	component: HTMLLabelElement
 
-	btnSave: object
-	btnCancel: object
-	btnAddContacts: object
+	input: HTMLInputElement
+	inputID: string
 
-	contacts: object
-	contactsList: object
+	btnDel: HTMLButtonElement
+	btnDelImg: HTMLImageElement
+
+	select: HTMLSelectElement
+
+}
+
+interface Ivalidation {
+
+	addField: (id: string, options: Array<object>) => Ivalidation
+	onSuccess: (cb: fn) => void
+
+}
+
+export default class ModalAddClient extends Modal {
+
+	form: HTMLFormElement
+
+	btnSave: HTMLButtonElement
+	btnCancel: HTMLButtonElement
+	btnAddContacts: HTMLButtonElement
+
+	contacts: HTMLElement
+	contactsList: HTMLElement
 	contactsInputsID: string[] = []
 
 	data: object
-	validator: object
+	validator: Ivalidation
+
+	modal: HTMLDivElement
+	modalInner: HTMLDivElement
+	btnExit: HTMLButtonElement
 
 	constructor() {
 
@@ -135,7 +162,7 @@ export default class AddClient extends Modal {
 
 			el('label', { class: 'app-modal__label' }, [
 
-				inutLastName,
+				inputSurname,
 				el('div', 'Фамилия', { class: 'app-modal__place-holder' }, [
 
 					el('span', '*', { class: 'app-modal__place-holder--required' })
@@ -157,12 +184,8 @@ export default class AddClient extends Modal {
 
 			el('label', { class: 'app-modal__label' }, [
 
-				inputSurname,
-				el('div', 'Отчество', { class: 'app-modal__place-holder' }, [
-
-					el('span', '*', { class: 'app-modal__place-holder--required' })
-
-				])
+				inutLastName,
+				el('div', 'Отчество', { class: 'app-modal__place-holder' })
 
 			]),
 			contacts,
@@ -218,6 +241,8 @@ export default class AddClient extends Modal {
 		return formComponent.form
 
 	}
+
+	// CONTACTS
 
 	createContacts() {
 
@@ -305,7 +330,7 @@ export default class AddClient extends Modal {
 
 	}
 
-	createContact(data = false): object {
+	createContact(data = false): Icontact {
 
 		const inputID = `app-modal__contact--input-${this.contactsList.children.length}` /* id нужен для валидации  */
 
@@ -342,7 +367,7 @@ export default class AddClient extends Modal {
 
 		return {
 
-			wrapper,
+			component: wrapper,
 
 			input,
 			inputID,
@@ -366,7 +391,8 @@ export default class AddClient extends Modal {
 
 	Возвращает компонент контакта и ID инпута для валидации (СТРОГО ПОСЛЕ ДОБАВЛЕНИЯ В DOM!!!)
 	*/
-	getContact(data = false): object {
+
+	getContact(data = false): Partial<Icontact> {
 
 		const contact = this.createContact(data)
 
@@ -394,15 +420,21 @@ export default class AddClient extends Modal {
 
 			this.btnAddContacts.style.display = ''
 
-			super.deleteComponent(contact.wrapper)
+			super.deleteComponent(contact.component)
 
 		})
 
-		new Choices(contact.select, {
+		const choice = new Choices(contact.select, {
 
 			itemSelectText: '',
 
 		})
+
+		if (data) {
+
+			choice.setValue([data.type])
+
+		}
 
 		tippy(contact.btnDelImg, {
 
@@ -415,8 +447,9 @@ export default class AddClient extends Modal {
 
 		return {
 
-			component: contact.wrapper,
-			id: contact.inputID, /* Для валидации */
+			component: contact.component,
+			select: contact.select,
+			inputID: contact.inputID, /* Для валидации */
 
 		}
 
@@ -424,19 +457,27 @@ export default class AddClient extends Modal {
 
 	appendContact(data = false): void {
 
-		const contact = this.getContact(data)
+		const contact: Partial<Icontact> = this.getContact(data)
 
 		mount(this.contactsList, contact.component)
 
-		this.contactsInputsID.push(contact.id)
+		this.contactsInputsID.push(contact.inputID)
 
-		if (this.validator != undefined) this.validateContacts()
+		this.validateContact(contact.select, contact.inputID)
+
+		if (this.validator != undefined) {
+
+			this.validateContacts(contact.select, contact.inputID)
+
+		}
 
 	}
 
+	// VALIDATION
+
 	validation(): object {
 
-		const validation = new JustValidate(this.form, {
+		const validation: Ivalidation = new JustValidate(this.form as Element, {
 
 			tooltip: {
 				position: 'top',
@@ -446,10 +487,6 @@ export default class AddClient extends Modal {
 
 		validation
 			.addField('#app-modal__input--lastName', [
-				{
-					rule: 'required',
-					errorMessage: 'Обязательно для заполнения',
-				},
 				{
 					rule: 'minLength',
 					value: 2,
@@ -525,24 +562,95 @@ export default class AddClient extends Modal {
 
 		this.validator = validation
 
-		this.validateContacts()
+		// this.validateContacts()
 
 		return validation
 
 	}
 
-	validateContacts() {
+	validateContact<I extends HTMLSelectElement>(select: I, inputId: string): void {
 
-		for (let id of this.contactsInputsID) {
+		select.addEventListener('change', () => {
 
-			this.validator
-				.addField(`#${id}`, [
-					{
-						rule: 'required',
-						errorMessage: 'Обязательно для заполнения',
-					},
-				])
+			this.validateContacts(select, inputId)
 
+		})
+
+	}
+
+	validateContacts(select, inputId) {
+
+		switch (select.value.toLowerCase()) {
+
+			case 'телефон':
+				this.validator
+					.addField(`#${inputId}`, [
+						{
+							rule: 'required',
+							errorMessage: 'Обязательно для заполнения',
+						},
+						{
+							validator: (value) => {
+
+								return /^(\+|\d)(\d| )+$/g.test(value)
+
+							},
+							errorMessage: 'Только цифры',
+						},
+
+					])
+				break;
+
+			case 'email':
+				this.validator
+					.addField(`#${inputId}`, [
+						{
+							rule: 'required',
+							errorMessage: 'Обязательно для заполнения',
+						},
+
+						{
+
+							rule: 'email',
+							errorMessage: 'Неверная почта',
+
+						}
+
+					])
+				break;
+
+			case 'facebook':
+			case 'vk':
+				this.validator
+					.addField(`#${inputId}`, [
+						{
+							rule: 'required',
+							errorMessage: 'Обязательно для заполнения',
+						},
+
+						{
+
+							validator: (value) => {
+
+								return /^(http|https):\/\/.+\..+\/.+$/g.test(value)
+
+							},
+							errorMessage: 'Неверная ссылка',
+
+						}
+
+					])
+				break;
+
+			default:
+				this.validator
+					.addField(`#${inputId}`, [
+						{
+							rule: 'required',
+							errorMessage: 'Обязательно для заполнения',
+						},
+
+					])
 		}
 
 	}
@@ -550,8 +658,6 @@ export default class AddClient extends Modal {
 	error(msg) {
 
 		const message = el('p', `${msg}`, { class: 'app-modal__error' })
-
-		console.log(message)
 
 		this.form.insertBefore(message, this.contacts.nextSibling)
 

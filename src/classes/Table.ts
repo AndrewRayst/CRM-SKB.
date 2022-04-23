@@ -1,6 +1,6 @@
 import { el } from 'redom'
 
-import BaseApp from '@classes/BaseApp.ts'
+import BaseApp from '@classes/BaseApp'
 
 import addClientSvg from '@img/addClientSvg.svg'
 
@@ -15,22 +15,35 @@ type contact = [
 
 ]
 
+interface IAPI {
+
+	fetch: () => Promise<{}>
+	addClient: (data: object) => Promise<{}>
+	updateClient: (data: object[], id: string) => Promise<{}>
+	deleteClient: (id: string) => Promise<{}>
+	getClient: (id: string) => Promise<{}>
+
+}
+
 export default class Table extends BaseApp {
 
 	data: object
 
 	Client: object
+	API: IAPI
 	Loader: object
 	Search: object
-	DelClient: object
-	AddClient: object
-	ChangeClient: object
+	ModalClientDel: object
+	ModalAddClient: object
+	ModalChangeClient: object
 
 	appContainer: object
 	table: object
 	tableContainer: object
 	tableWidth: number
 	appHeaderContainer: object
+
+	search: object
 
 	dragAndDrop = {
 
@@ -75,31 +88,34 @@ export default class Table extends BaseApp {
 
 			})
 
-		await import('@classes/Loader.ts')
+		await import('./Loader')
 			.then(data => this.Loader = data.default)
 
 		const loader = new this.Loader(this.appContainer)
 
-		await import('@classes/Client.ts')
+		await import('./API')
+			.then(data => this.API = new data.default)
+
+		await import('./Client')
 			.then(data => this.Client = data.default)
 
-		await import('@classes/Search.ts')
+		await import('./Search')
 			.then(data => this.Search = data.default)
 
-		await import('@classes/DelClient.ts')
-			.then(data => this.DelClient = data.default)
+		await import('./ModalClientDel')
+			.then(data => this.ModalClientDel = data.default)
 
-		await import('@classes/AddClient.ts')
-			.then(data => this.AddClient = data.default)
+		await import('./ModalAddClient')
+			.then(data => this.ModalAddClient = data.default)
 
-		await import('@classes/ChangeClient.ts')
-			.then(data => this.ChangeClient = data.default)
+		await import('./ModalChangeClient')
+			.then(data => this.ModalChangeClient = data.default)
 
 		this.initHashClient()
 
 		this.sizeEvents()
 
-		this.fetch()
+		this.API.fetch()
 			.then(async data => {
 
 				data = await this.filter(data, 'id')
@@ -111,6 +127,8 @@ export default class Table extends BaseApp {
 				this.filterInit()
 
 				const search = new this.Search(data, this.clients)
+
+				this.search = search
 
 				loader.removeLoader()
 
@@ -140,7 +158,7 @@ export default class Table extends BaseApp {
 
 			const hash = this.url.hash.split('#')[1]
 
-			this.getClient(hash)
+			this.API.getClient(hash)
 				.then(async response => {
 
 					if (response.status != 200 && response.status != 201) return
@@ -334,7 +352,7 @@ export default class Table extends BaseApp {
 
 	modalAdd() {
 
-		const modal = new this.AddClient()
+		const modal = new this.ModalAddClient()
 
 		const component = modal.getComponent()
 
@@ -356,7 +374,7 @@ export default class Table extends BaseApp {
 
 		return await new Promise((resolve => {
 
-			const modal = new this.ChangeClient(client.client)
+			const modal = new this.ModalChangeClient(client.client)
 
 			super.appendComponent(document.body, modal.getComponent())
 
@@ -379,7 +397,7 @@ export default class Table extends BaseApp {
 
 		return await new Promise((resolve => {
 
-			const modal = new this.DelClient()
+			const modal = new this.ModalClientDel()
 
 			super.appendComponent(document.body, modal.getComponent())
 
@@ -387,7 +405,7 @@ export default class Table extends BaseApp {
 
 			modal.btnDel.addEventListener('click', () => {
 
-				this.deleteClient(client.id)
+				this.API.deleteClient(client.id)
 					.then(response => {
 
 						if (response.status == (200 || 201)) {
@@ -416,7 +434,7 @@ export default class Table extends BaseApp {
 
 		const loader = new this.Loader(modal.btnSave, 'app-loader--btn')
 
-		this.updateClient(modal.data, id)
+		this.API.updateClient(modal.data, id)
 			.then(data => {
 
 				super.deleteComponent(document.querySelector('.app-modal--disable'))
@@ -437,7 +455,7 @@ export default class Table extends BaseApp {
 
 		const loader = new this.Loader(modal.btnSave, 'app-loader--btn')
 
-		this.addClient(modal.data)
+		this.API.addClient(modal.data)
 			.then(data => {
 
 				super.deleteComponent(document.querySelector('.app-modal--disable'))
@@ -456,7 +474,7 @@ export default class Table extends BaseApp {
 
 			modal.removeModal()
 
-			this.fetch()
+			this.API.fetch()
 				.then(async data => {
 
 					data = await this.filter(data, 'id')
@@ -464,6 +482,12 @@ export default class Table extends BaseApp {
 					this.data = data
 
 					this.loadClients(data)
+						.then(() => {
+
+							this.search.syncData(data, this.clients)
+
+						})
+
 
 				})
 
@@ -581,72 +605,6 @@ export default class Table extends BaseApp {
 		}
 
 		return this.quickSort(less, type).concat(pivot).concat(this.quickSort(greater, type))
-
-	}
-
-	/* 
-		API
-	*/
-
-	async fetch() {
-
-		const response = await fetch('http://localhost:3000/api/clients')
-
-		const data = await response.json()
-
-		return data
-
-	}
-
-	async addClient(data: object) {
-
-		return await fetch('http://localhost:3000/api/clients', {
-
-			method: 'POST',
-
-			headers: {
-
-				'Content-Type': 'application/json'
-
-			},
-
-			body: JSON.stringify(data)
-
-		})
-
-	}
-
-	async updateClient(data: object[], id: string) {
-
-		return await fetch(`http://localhost:3000/api/clients/${id}`, {
-
-			method: 'PATCH',
-
-			headers: {
-
-				'Content-Type': 'application/json'
-
-			},
-
-			body: JSON.stringify(data)
-
-		})
-
-	}
-
-	async deleteClient(id: string) {
-
-		return await fetch(`http://localhost:3000/api/clients/${id}`, {
-
-			method: 'DELETE',
-
-		})
-
-	}
-
-	async getClient(id: string) {
-
-		return await fetch(`http://localhost:3000/api/clients/${id}`)
 
 	}
 

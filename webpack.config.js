@@ -30,7 +30,7 @@ module.exports = env => ( {
 	},
 	resolve: {
 
-		extensions: [ `ts`, `.js`, `.json` ],
+		extensions: [ `.ts`, `.js`, `.json` ],
 		alias: {
 
 			'@modules': path.resolve( __dirname, `src/modules` ),
